@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1280px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+#headertop {
+  display: flex;
+}
+
+#headerbottom {
+  display: flex;
+}
+
+ul {
+  display: flex;
+}
+
+.sub {
+  display: none;
+}
