@@ -18,15 +18,20 @@ ol {
   padding: 0;
 }
 
-.BOOK {
-  height: 340px;
-}
-
 .container {
   width: 1280px;
   height: auto;
   margin: 0 auto;
   border: 1px solid red;
+}
+
+.BOOK,
+.MD {
+  height: 340px;
+}
+
+h3 {
+  align-self: flex-start;
 }
 
 #headertop {
@@ -77,20 +82,209 @@ li {
   position: relative;
 }
 
-.BOOK,
-.MD {
-  height: 340px;
-}
-
-#book2 {
-  height: 999px;
+#book1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
+#book1 div {
+  height: 285px;
+  width: 1200px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book1 div .arryboxslider {
+  background-color: bisque;
+  width: 1032px;
+  height: 250px;
+  overflow: hidden;
+}
+#book1 div .arryboxslider .arrybox {
+  width: 1720px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book1 div .arryboxslider .arrybox div {
+  background-color: chocolate;
+  width: 170px;
+  height: 250px;
+  margin: 0 6px;
+}
+
+#book2 {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book2 h4 {
+  margin: 0 0 255px 0;
+  font-size: 1.5rem;
+}
 #book2 div {
-  height: 300px;
-  width: 1100px;
-  background-color: aquamarine;
+  height: 310px;
+  width: 1200px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 46px;
+}
+#book2 div .book2boxslider {
+  background-color: bisque;
+  width: 883px;
+  height: 280px;
+  overflow: hidden;
+}
+#book2 div .book2boxslider .book2box {
+  width: 1367px;
+  background-color: aqua;
+}
+#book2 div .book2boxslider .book2box .book2box2 {
+  background-color: chocolate;
+  width: 202px;
+  height: 260px;
+  margin: 0 20px;
+}
+
+#book3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book3 .book3-1 {
+  height: 285px;
+  width: 1200px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book3 .book3-1 .mdslider {
+  background-color: bisque;
+  width: 1020px;
+  height: 250px;
+  overflow: hidden;
+}
+#book3 .book3-1 .mdslider .mdbox {
+  width: 1700px;
+  height: 250px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+}
+#book3 .book3-1 .mdslider .mdbox .mdbox1 {
+  width: 300px;
+  height: 200px;
+  margin: 0 20px;
+  background-color: chocolate;
+}
+
+#book4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book4 div {
+  height: 285px;
+  width: 1200px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book4 div .arryboxslider {
+  background-color: bisque;
+  width: 1032px;
+  height: 250px;
+  overflow: hidden;
+}
+#book4 div .arryboxslider .arrybox {
+  width: 1720px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book4 div .arryboxslider .arrybox div {
+  background-color: chocolate;
+  width: 170px;
+  height: 250px;
+  margin: 0 6px;
+}
+
+#book5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book5 div {
+  height: 285px;
+  width: 1200px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book5 div .arryboxslider {
+  background-color: bisque;
+  width: 1032px;
+  height: 250px;
+  overflow: hidden;
+}
+#book5 div .arryboxslider .arrybox {
+  width: 1720px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book5 div .arryboxslider .arrybox div {
+  background-color: chocolate;
+  width: 170px;
+  height: 250px;
+  margin: 0 6px;
+}
+
+#book6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book6 .book6-1 {
+  height: 285px;
+  width: 1200px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book6 .book6-1 .eslider {
+  background-color: bisque;
+  width: 1020px;
+  height: 250px;
+  overflow: hidden;
+}
+#book6 .book6-1 .eslider .ebox {
+  width: 1700px;
+  height: 250px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+}
+#book6 .book6-1 .eslider .ebox .ebox1 {
+  width: 300px;
+  height: 200px;
+  margin: 0 20px;
+  background-color: chocolate;
 }
