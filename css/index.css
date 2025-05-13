@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -34,12 +35,29 @@ h3 {
   align-self: flex-start;
 }
 
-#headertop {
-  display: flex;
+.btnArea {
+  position: relative;
 }
 
-#headerbottom {
+.buttonbox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.buttonbox button {
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 ul {
@@ -54,8 +72,72 @@ li {
   margin: 0 10px;
 }
 
-#sliderbox {
+#headerbox {
+  border-bottom: 1px solid gray;
+  height: 110px;
+}
+#headerbox header {
+  height: 110px;
+}
+
+#headertop {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#headerbottom {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headerbottom .search-wrapper {
+  border-radius: 5px;
+  width: 280px;
+  height: 45px;
+  background-color: rgb(235, 235, 235);
+  border-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 (필요한 경우) */
+  gap: 25px; /* 아이콘과 input 사이 간격 */
+}
+#headerbottom .search-wrapper #search-input {
+  border-style: none;
+  background-color: rgb(235, 235, 235);
+}
+
+#AllCat {
+  margin-left: 690px;
+}
+
+#s1SBox {
   height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#s1SBox .s1slider {
+  background-color: bisque;
+  width: 1280px;
+  height: 300px;
+  overflow: hidden;
+}
+#s1SBox .s1slider .s1sliderybox {
+  width: 7224px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#s1SBox .s1slider .s1sliderybox .contents {
+  background-color: chocolate;
+  width: 1032px;
+  height: 250px;
 }
 
 #buttonbox {
@@ -88,32 +170,32 @@ li {
   justify-content: space-evenly;
   align-items: center;
 }
-#book1 div {
+#book1 > div {
   height: 285px;
-  width: 1200px;
+  width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book1 div .arryboxslider {
+#book1 > div .arryboxslider {
   background-color: bisque;
-  width: 1032px;
+  width: 1280px;
   height: 250px;
   overflow: hidden;
 }
-#book1 div .arryboxslider .arrybox {
-  width: 1720px;
+#book1 > div .arryboxslider .arrybox {
+  width: 2560px;
   background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book1 div .arryboxslider .arrybox div {
+#book1 > div .arryboxslider .arrybox > div {
   background-color: chocolate;
-  width: 170px;
+  width: 198px;
   height: 250px;
-  margin: 0 6px;
+  margin: 0 29px;
 }
 
 #book2 {
@@ -124,33 +206,32 @@ li {
   align-items: center;
 }
 #book2 h4 {
-  margin: 0 0 255px 0;
   font-size: 1.5rem;
 }
-#book2 div {
+#book2 > div {
   height: 310px;
-  width: 1200px;
+  width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-right: 46px;
 }
-#book2 div .book2boxslider {
+#book2 > div .book2boxslider {
   background-color: bisque;
-  width: 883px;
+  width: 1280px;
   height: 280px;
   overflow: hidden;
 }
-#book2 div .book2boxslider .book2box {
-  width: 1367px;
+#book2 > div .book2boxslider .book2box {
+  width: 1920px;
   background-color: aqua;
+  display: flex;
 }
-#book2 div .book2boxslider .book2box .book2box2 {
+#book2 > div .book2boxslider .book2box .book2box2 {
   background-color: chocolate;
-  width: 202px;
-  height: 260px;
-  margin: 0 20px;
+  width: 262px;
+  height: 280px;
+  margin: 0 29px;
 }
 
 #book3 {
@@ -161,7 +242,7 @@ li {
 }
 #book3 .book3-1 {
   height: 285px;
-  width: 1200px;
+  width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
@@ -169,21 +250,21 @@ li {
 }
 #book3 .book3-1 .mdslider {
   background-color: bisque;
-  width: 1020px;
+  width: 1280px;
   height: 250px;
   overflow: hidden;
 }
 #book3 .book3-1 .mdslider .mdbox {
-  width: 1700px;
+  width: 2133.333px;
   height: 250px;
   background-color: aqua;
   display: flex;
   align-items: center;
 }
 #book3 .book3-1 .mdslider .mdbox .mdbox1 {
-  width: 300px;
+  width: 368.666px;
   height: 200px;
-  margin: 0 20px;
+  margin: 0 29px;
   background-color: chocolate;
 }
 
@@ -193,32 +274,32 @@ li {
   justify-content: space-evenly;
   align-items: center;
 }
-#book4 div {
+#book4 > div {
   height: 285px;
-  width: 1200px;
+  width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book4 div .arryboxslider {
+#book4 > div .arryboxslider {
   background-color: bisque;
-  width: 1032px;
+  width: 1280px;
   height: 250px;
   overflow: hidden;
 }
-#book4 div .arryboxslider .arrybox {
-  width: 1720px;
+#book4 > div .arryboxslider .arrybox {
+  width: 2560px;
   background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book4 div .arryboxslider .arrybox div {
+#book4 > div .arryboxslider .arrybox > div {
   background-color: chocolate;
-  width: 170px;
+  width: 198px;
   height: 250px;
-  margin: 0 6px;
+  margin: 0 29px;
 }
 
 #book5 {
@@ -227,32 +308,32 @@ li {
   justify-content: space-evenly;
   align-items: center;
 }
-#book5 div {
+#book5 > div {
   height: 285px;
-  width: 1200px;
+  width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book5 div .arryboxslider {
+#book5 > div .arryboxslider {
   background-color: bisque;
-  width: 1032px;
+  width: 1280px;
   height: 250px;
   overflow: hidden;
 }
-#book5 div .arryboxslider .arrybox {
-  width: 1720px;
+#book5 > div .arryboxslider .arrybox {
+  width: 2560px;
   background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book5 div .arryboxslider .arrybox div {
+#book5 > div .arryboxslider .arrybox > div {
   background-color: chocolate;
-  width: 170px;
+  width: 198px;
   height: 250px;
-  margin: 0 6px;
+  margin: 0 29px;
 }
 
 #book6 {
@@ -261,30 +342,64 @@ li {
   justify-content: space-evenly;
   align-items: center;
 }
-#book6 .book6-1 {
-  height: 285px;
-  width: 1200px;
+#book6 .eventarry {
+  height: 200px;
+  width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#book6 .book6-1 .eslider {
+#book6 .eventarry .eslider {
   background-color: bisque;
-  width: 1020px;
-  height: 250px;
+  width: 1280px;
+  height: 130px;
   overflow: hidden;
 }
-#book6 .book6-1 .eslider .ebox {
-  width: 1700px;
-  height: 250px;
+#book6 .eventarry .eslider .ebox {
+  width: 1706.666px;
+  height: 130px;
   background-color: aqua;
   display: flex;
   align-items: center;
 }
-#book6 .book6-1 .eslider .ebox .ebox1 {
-  width: 300px;
+#book6 .eventarry .eslider .ebox .ebox1 {
+  width: 397.6666px;
+  height: 130px;
+  margin: 0 29px;
+  background-color: chocolate;
+}
+
+#book7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book7 .eventarry {
   height: 200px;
-  margin: 0 20px;
+  width: 1280px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book7 .eventarry .eslider {
+  background-color: bisque;
+  width: 1280px;
+  height: 130px;
+  overflow: hidden;
+}
+#book7 .eventarry .eslider .ebox {
+  width: 1706.666px;
+  height: 130px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+}
+#book7 .eventarry .eslider .ebox .ebox1 {
+  width: 397.6666px;
+  height: 130px;
+  margin: 0 29px;
   background-color: chocolate;
 }

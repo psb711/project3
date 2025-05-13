@@ -33,19 +33,19 @@
             </div>
             <div id="headerbottom">
                <div id="searchbox">
-                  <form role="search" class="fig-1f3tl64 et3830u0">
-                     <div tabindex="-1" class="fig-1h5lkgg">
-                        <div class="fig-q3rd3s et3830u1"><label class="fig-1elmr86"><svg width="1em" height="1em"
-                                 viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                 class="fig-1hsho1o">
-                                 <path fill-rule="evenodd"
-                                    d="M13.28 8.18a5.1 5.1 0 11-10.2 0 5.1 5.1 0 0110.2 0zm-1.031 5.069a6.5 6.5 0 11.991-.989l4.695 4.695a.7.7 0 11-.99.99l-4.696-4.696z">
-                                 </path>
-                              </svg><input type="text" maxlength="64" tabindex="-1" class="fig-iqyz32" value=""></label>
-                        </div>
+                  <form role="search" class="search-form">
+                     <div class="search-wrapper">
+                        <label for="search-input" class="search-label">
+                           <svg class="search-icon" width="1.4em" height="1.4em" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd"
+                                 d="M13.28 8.18a5.1 5.1 0 11-10.2 0 5.1 5.1 0 0110.2 0zm-1.031 5.069a6.5 6.5 0 11.991-.989l4.695 4.695a.7.7 0 11-.99.99l-4.696-4.696z" />
+                           </svg>
+                        </label>
+                        <input type="text" id="search-input" name="search" class="search-input" maxlength="64"
+                           placeholder="찾는 책이 있으신가요?" />
                      </div>
                   </form>
-               </div>
+</div>
                <nav>
                   <ul>
                      <li><a href="">회원가입</a></li>
@@ -57,9 +57,9 @@
 
       </div>
 
-      <div class="s1 container">
+      <div class="s1 container btnArea">       
 
-         <nav>
+         <nav>    
             <ul class="main">
 
                <li><a href="">기획전</a></li>
@@ -68,7 +68,7 @@
                <li><a href="">에세이/시</a></li>
                <li><a href="">자기계발</a></li>
                <li><a href="">어린이/청소년</a></li>
-               <li>전체카테고리
+               <li id="AllCat">전체카테고리
                   <ul class="sub">
                      <li>소설
                         <ul class="subs">
@@ -229,24 +229,38 @@
                            <li><a href="">성인(19+)</a></li>
                         </ul>
                      </li>
-                  </ul>
-               </li>
-            </ul>
-         </nav>
-         <div id="sliderbox" class="container">
-
-         </div>
-      </div>
-      <div id="buttonbox" class="container">
-         <nav>
-            <div class="circlebutton">
-               <img src="" alt="">
-               <p>신간</p>
-               </img>
-            </div>
-            <div class="circlebutton">
-               <img src="" alt="">
-               <p>북스 베스트</p>
+                     </ul>
+                     </li>
+                     </ul>
+                     </nav>
+                     <div id="s1SBox" class="container ">
+                        <div class="s1slider">
+                           <div class="s1sliderbox">
+                              <div class="contents"></div>
+                              <div class="contents"></div>
+                              <div class="contents"></div>
+                              <div class="contents"></div>
+                              <div class="contents"></div>
+                              <div class="contents"></div>
+                              <div class="contents"></div>
+                           </div>
+                        </div>
+                        </div>
+                        <div class="buttonbox">
+                           <button type="button" class="leftbutton">좌</button>
+                           <button type="button" class="rightbutton">우</button>
+                        </div>
+                        </div>
+                        <div id="buttonbox" class="container">
+                           <nav>
+                           <div class="circlebutton">
+                              <img src="" alt="">
+                              <p>신간</p>
+                              </img>
+                           </div>
+                           <div class="circlebutton">
+                              <img src="" alt="">
+                              <p>북스 베스트</p>
                </img>
             </div>
             <div class="circlebutton">
@@ -284,8 +298,8 @@
       <div id="book1" class="BOOK container">
          <h3>오늘,리디의발견</h3>
 
-         <div id="book1-1" class="bookarry">
-            <button type="button">좌</button>
+         <div id="book1-1" class="bookarry btnArea">
+
             <div class="arryboxslider">
                <div class="arrybox">
                   <div class="bookbox"></div>
@@ -298,16 +312,20 @@
                   <div class="bookbox"></div>
                   <div class="bookbox"></div>
                   <div class="bookbox"></div>
-               </div>
-            </div>
-            <button type="button">우</button>
-         </div>
-      </div>
+                  </div>
+                  </div>
+                  <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
+                  
+                  </div>
+                  </div>
       <div id="book2" class="container">
          <h3>한주,분야별 리디랭킹</h3>
-         <div class="book2-1">
-            <h4>소설</h4>
-            <button type="button">좌</button>
+             <h4>소설</h4> <div class="book2-1 btnArea">
+       
+           
             <div class="book2boxslider">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -318,12 +336,14 @@
                   <div class="book2box2"></div>
                </div>
             </div>
-
-            <button type="button">우</button>
+ <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
          </div>
-         <div class="book2-1">
-            <h4>정치</h4>
-            <button type="button">좌</button>
+         <h4>정치</h4>  <div class="book2-1 btnArea">
+          
+      
             <div class="book2boxslider">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -334,12 +354,14 @@
                   <div class="book2box2"></div>
                </div>
             </div>
-
-            <button type="button">우</button>
+ <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
          </div>
-         <div class="book2-1">
-            <h4>경제</h4>
-            <button type="button">좌</button>
+         <h4>경제</h4> <div class="book2-1 btnArea">
+           
+          
             <div class="book2boxslider">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -351,13 +373,16 @@
                </div>
             </div>
 
-            <button type="button">우</button>
+        <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
          </div>
       </div>
       <!-- MD's Pick -->
       <div id="book3" class="MD container">
          <h3>MD's Pick</h3>
-         <div class="book3-1 "> <button type="button">좌</button>
+         <div class="book3-1  btnArea"> 
             <div class="mdslider">
                <div class="mdbox">
                   <div class="mdbox1">
@@ -403,15 +428,18 @@
 
                </div>
             </div>
-            <button type="button">우</button>
+ <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
          </div>
 
       </div>
       <div id="book4" class="BOOK container">
          <h3>지금,리디에서만!선 출간 신작</h3>
-         <div id="book4-1" class="bookarry">
-            <div id="book4-1" class="bookarry">
-               <button type="button">좌</button>
+         <div id="book4-1" class="bookarry btnArea">
+        
+      
                <div class="arryboxslider">
                   <div class="arrybox">
                      <div class="bookbox"></div>
@@ -426,15 +454,18 @@
                      <div class="bookbox"></div>
                   </div>
                </div>
-               <button type="button">우</button>
-            </div>
+             <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
+         
          </div>
       </div>
       <div id="book5" class="BOOK container">
          <h3>새로 나온 작품</h3>
-         <div id="book5-1" class="bookarry">
-            <div id="book5-1" class="bookarry">
-               <button type="button">좌</button>
+         <div id="book5-1" class="bookarry btnArea">
+           
+           
                <div class="arryboxslider">
                   <div class="arrybox">
                      <div class="bookbox"></div>
@@ -449,16 +480,19 @@
                      <div class="bookbox"></div>
                   </div>
                </div>
-               <button type="button">우</button>
-            </div>
+     <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
+         
 
          </div>
       </div>
       <!--한 주 한 책,셀렉트 레터  -->
       <div id="book6" class="event container">
          <h3>한 주 한 책,셀렉트 레터</h3>
-         <div id="book6-1" class="eventarry">
-            <button type="button">좌</button>
+         <div id="book6-1" class="eventarry btnArea">
+
             <div class="eslider">
                <div class="ebox">
                   <div class="ebox1 Abox">
@@ -471,17 +505,22 @@
 
                   <div class="ebox1 Abox">
                   </div>
+                     <div class="ebox1 Abox">
+                  </div>
                </div>
 
             </div>
-            <button type="button">우</button>
+          <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
          </div>
       </div>
 <!-- 이벤트 -->
       <div id="book7" class="event container">
          <h3>이벤트</h3>
-         <div id="book7-1" class="eventarry">
-      <button type="button">좌</button>
+         <div id="book7-1" class="eventarry btnArea">
+ 
             <div class="eslider">
                <div class="ebox">
                   <div class="ebox1 Abox">
@@ -494,10 +533,17 @@
 
                   <div class="ebox1 Abox">
                   </div>
+
+                  
+                  <div class="ebox1 Abox">
+                  </div>
                </div>
 
             </div>
-            <button type="button">우</button>
+ <div class="buttonbox">
+                     <button type="button" class="leftbutton">좌</button>
+                     <button type="button" class="rightbutton">우</button>
+                  </div>
          </div>
       </div>
       <div id="footerbox">
