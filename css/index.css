@@ -1,9 +1,12 @@
-@charset "UTF-8";
+:root {
+  font-size: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 15px;
+  font-family: inherit;
 }
 
 a {
@@ -19,11 +22,17 @@ ol {
   padding: 0;
 }
 
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .container {
   width: 1280px;
   height: auto;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid rgb(207, 191, 191);
 }
 
 .BOOK,
@@ -74,24 +83,34 @@ li {
 
 #headerbox {
   border-bottom: 1px solid gray;
-  height: 110px;
+  height: 120px;
 }
 #headerbox header {
-  height: 110px;
+  height: 120px;
+}
+#headerbox ul {
+  font-weight: 800;
+  font-size: 1rem;
 }
 
 #headertop {
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+#headertop ul {
+  font-weight: 800;
+}
 
 #headerbottom {
-  height: 55px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#headerbottom ul {
+  font-weight: 700;
 }
 #headerbottom .search-wrapper {
   border-radius: 5px;
@@ -101,17 +120,136 @@ li {
   border-style: none;
   text-align: center;
   display: flex;
-  align-items: center; /* 수직 가운데 정렬 */
-  justify-content: center; /* 수평 가운데 정렬 (필요한 경우) */
-  gap: 25px; /* 아이콘과 input 사이 간격 */
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-left: 30px;
+  margin-bottom: 9px;
+}
+#headerbottom .search-wrapper .search-icon {
+  color: #1e9eff;
 }
 #headerbottom .search-wrapper #search-input {
   border-style: none;
   background-color: rgb(235, 235, 235);
+  outline: none;
+  caret-color: #1e9eff;
+}
+
+.main {
+  position: relative;
+  font-weight: 600;
 }
 
 #AllCat {
+  z-index: 5;
   margin-left: 690px;
+}
+#AllCat .sub {
+  display: flex;
+  position: absolute;
+  top: 23px;
+  right: -2px;
+  width: 1283px;
+  background-color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  height: 298px;
+  align-content: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 80px;
+}
+#AllCat .AllCatsub {
+  font-weight: 700;
+  display: flex;
+  height: 32px;
+  width: 100px;
+  font-size: 0.9rem;
+  background-color: azure;
+  margin: 2px;
+  align-items: center;
+  position: relative;
+  color: #1e9eff;
+  padding: 5px;
+}
+#AllCat .AllCatsub:hover {
+  color: aliceblue;
+  background-color: #1e9eff;
+}
+#AllCat .AllCatsub #nov {
+  height: 97px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#AllCat .subs {
+  font-weight: initial;
+  position: absolute;
+  width: 878px;
+  height: 32px;
+  background-color: aliceblue;
+  top: 0px;
+  display: none;
+}
+#AllCat .subs > li {
+  display: flex;
+  align-items: center;
+}
+#AllCat .subs > li :hover {
+  color: #1e9eff;
+}
+
+.AllCatsub:nth-of-type(1) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(2) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(3) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(4) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(5) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(6) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(7) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(8) .subs {
+  left: 224px;
+}
+.AllCatsub:nth-of-type(9) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(10) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(11) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(12) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(13) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(14) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(15) .subs {
+  left: 120px;
+}
+.AllCatsub:nth-of-type(16) .subs {
+  left: 120px;
 }
 
 #s1SBox {
@@ -123,7 +261,7 @@ li {
 }
 #s1SBox .s1slider {
   background-color: bisque;
-  width: 1280px;
+  width: 1220px;
   height: 300px;
   overflow: hidden;
 }
@@ -402,4 +540,24 @@ li {
   height: 130px;
   margin: 0 29px;
   background-color: chocolate;
+}
+
+#footerbox {
+  height: 300px;
+}
+#footerbox footer {
+  height: 100%;
+  display: flex;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+#footerbox footer #footerleft {
+  width: 50%;
+}
+#footerbox footer #footerleft #BRN p {
+  display: none;
+}
+#footerbox footer #footerright {
+  width: 50%;
+  color: #1e9eff;
 }

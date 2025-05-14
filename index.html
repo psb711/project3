@@ -6,7 +6,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LIDI</title>
    <link rel="stylesheet" href="./css/index.css">
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -70,8 +71,8 @@
                <li><a href="">어린이/청소년</a></li>
                <li id="AllCat">전체카테고리
                   <ul class="sub">
-                     <li>소설
-                        <ul class="subs">
+                     <li class="AllCatsub"  >소설
+                        <ul class="subs"id="nov">
                            <li class="whole"><a href="">소설 전체</a></li>
                            <li><a href="">한국 소설</a></li>
                            <li><a href="">일본 소설</a></li>
@@ -92,7 +93,7 @@
                            <li><a href="">서양 고전문학</a></li>
                         </ul>
                      </li>
-                     <li>인문/사회/역사
+                     <li class="AllCatsub">인문/사회/역사
                         <ul class="subs">
                            <li class="whole"><a href="">인문/사회/역사 전체</a></li>
                            <li><a href="">인문</a></li>
@@ -101,14 +102,14 @@
                            <li><a href="">역사</a></li>
                         </ul>
                      </li>
-                     <li>에세이/시
+                     <li class="AllCatsub">에세이/시
                         <ul class="subs">
                            <li class="whole"><a href="">에세이/시 전체</a></li>
                            <li><a href="">에세이</a></li>
                            <li><a href="">시</a></li>
                         </ul>
                      </li>
-                     <li>종교
+                     <li class="AllCatsub">종교
                         <ul class="subs">
                            <li class="whole"><a href="">종교 전체</a></li>
                            <li><a href="">종교일반</a></li>
@@ -118,7 +119,7 @@
                            <li><a href="">기타</a></li>
                         </ul>
                      </li>
-                     <li>과학
+                     <li class="AllCatsub">과학
                         <ul class="subs">
                            <li class="whole"><a href="">과학 전체</a></li>
                            <li><a href="">과학일반</a></li>
@@ -128,7 +129,7 @@
 
                         </ul>
                      </li>
-                     <li>컴퓨터/IT
+                     <li class="AllCatsub">컴퓨터/IT
                         <ul class="subs">
                            <li class="whole"><a href="">컴퓨터/IT 전체</a></li>
                            <li><a href="">IT비즈니스</a></li>
@@ -138,7 +139,7 @@
                            <li><a href="">IT해외원서</a></li>
                         </ul>
                      </li>
-                     <li>가정/생활
+                     <li class="AllCatsub">가정/생활
                         <ul class="subs">
                            <li class="whole"><a href="">가정/생활 전체</a></li>
                            <li><a href="">결혼/임신/출산</a></li>
@@ -146,8 +147,13 @@
                            <li><a href="">취미/요리/기타</a></li>
                         </ul>
                      </li>
-                     <li>해외도서</li>
-                     <li>경영/경제
+                     <li class="AllCatsub">해외도서
+                           <ul class="subs">
+                           <li class="whole"><a href="">해외도서 전체</a></li>
+                           
+                        </ul>
+                     </li>
+                     <li class="AllCatsub">경영/경제
                         <ul class="subs">
                            <li class="whole"><a href="">경영/경제 전체</a></li>
                            <li><a href="">경영일반</a></li>
@@ -157,7 +163,7 @@
                            <li><a href="">CEO/리더십</a></li>
                         </ul>
                      </li>
-                     <li>자기계발
+                     <li class="AllCatsub">자기계발
                         <ul class="subs">
                            <li class="whole"><a href="">자기계발 전체</a></li>
                            <li><a href="">성공/삶의 자세</a></li>
@@ -168,7 +174,7 @@
                            <li><a href="">인간관계</a></li>
                         </ul>
                      </li>
-                     <li>여행
+                     <li class="AllCatsub">여행
                         <ul class="subs">
                            <li class="whole"><a href="">여행 전체</a></li>
                            <li><a href="">국내여행</a></li>
@@ -176,7 +182,7 @@
 
                         </ul>
                      </li>
-                     <li>외국어
+                     <li class="AllCatsub">외국어
                         <ul class="subs">
                            <li class="whole"><a href="">외국어 전체</a></li>
                            <li><a href="">비즈니스영어</a></li>
@@ -186,7 +192,7 @@
 
                         </ul>
                      </li>
-                     <li>진로/교육/교재
+                     <li class="AllCatsub">진로/교육/교재
                         <ul class="subs">
                            <li class="whole"><a href="">진로/교육/교재 전체</a></li>
                            <li><a href="">공부법</a></li>
@@ -200,7 +206,7 @@
 
                         </ul>
                      </li>
-                     <li>건강/다이어트
+                     <li class="AllCatsub">건강/다이어트
                         <ul class="subs">
                            <li class="whole"><a href="">건강/다이어트 전체</a></li>
                            <li><a href="">다이어트/운동/스포츠</a></li>
@@ -208,7 +214,7 @@
                            <li><a href="">건강</a></li>
                         </ul>
                      </li>
-                     <li>어린이/청소년
+                     <li class="AllCatsub">어린이/청소년
                         <ul class="subs">
                            <li class="whole"><a href="">어린이/청소년 전체</a></li>
                            <li><a href="">유아</a></li>
@@ -216,7 +222,7 @@
                            <li><a href="">청소년</a></li>
                         </ul>
                      </li>
-                     <li>잡지
+                     <li class="AllCatsub">잡지
                         <ul class="subs">
                            <li class="whole"><a href="">잡지 전체</a></li>
                            <li><a href="">경영/재테크</a></li>
@@ -550,7 +556,43 @@
          <footer class="container">
             <div id="footerleft">
                <div id="snsbox">
-
+                  <ul class="fig-u7t8s2">
+                     <li class="fig-rgkzmi"><a href="https://www.facebook.com/official.ridi" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M14.61 13.253l.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A8.796 8.796 0 0013.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647h1.634z"
+                                 fill="currentColor"></path>
+                           </svg><span class="fig-fynarx">페이스북</span></a></li>
+                     <li class="fig-rgkzmi"><a href="https://instagram.com/ridi_official_/" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M14.687 6.3H9.314A3.013 3.013 0 006.3 9.313v5.373A3.013 3.013 0 009.314 17.7h5.373a3.013 3.013 0 003.013-3.012V9.313A3.012 3.012 0 0014.687 6.3zm0-1.3H9.314A4.314 4.314 0 005 9.313v5.373A4.313 4.313 0 009.314 19h5.373A4.312 4.312 0 0019 14.688V9.313A4.31 4.31 0 0014.687 5zm1.871 3.28a.937.937 0 11-1.874-.002.937.937 0 011.874.001zM14.2 12a2.2 2.2 0 11-4.4 0 2.2 2.2 0 014.4 0zm1.3 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
+                                 fill="currentColor"></path>
+                           </svg><span class="fig-fynarx">인스타그램</span></a></li>
+                     <li class="fig-rgkzmi"><a href="https://twitter.com/RIDI_twt" rel="noopener noreferrer" target="_blank"
+                           class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M5.776 5.5l4.83 6.43-4.856 5.237h1.092l4.254-4.583 3.433 4.583h3.721l-5.101-6.796L17.674 5.5h-1.092l-3.923 4.217L9.497 5.5h-3.72zm1.607.802h1.713l7.547 10.063H14.93L7.383 6.302z"
+                                 fill="#787878"></path>
+                           </svg><span class="fig-fynarx">트위터</span></a></li>
+                     <li class="fig-rgkzmi"><a href="https://www.youtube.com/user/ridibooks0331" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M10.521 16.57A1 1 0 019 15.717V8.283a1 1 0 011.521-.853l6.083 3.717a1 1 0 010 1.706L10.52 16.57z"
+                                 fill="currentColor"></path>
+                           </svg><span class="fig-fynarx">유튜브</span></a></li>
+                     <li class="fig-rgkzmi"><a href="https://www.tiktok.com/@ridi.official" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M12.371 5h2.411s1.113 2.656 3.718 2.911l-.46 2.35s-1.838-.052-3.268-1.533v5.822s0 1.226-.664 2.247c0 0-1.073 1.941-3.473 2.145 0 0-1.736.205-3.268-.919 0 0-1.635-1.021-1.839-3.268 0 0-.357-2.094 1.481-3.83 0 0 1.226-1.43 3.984-1.226v2.4h-.767s-1.532-.102-2.144 1.43c0 0-.562 1.48.663 2.502 0 0 .92.817 2.146.409 0 0 1.174-.307 1.43-1.634 0 0 .05-.154.05-.766V5z"
+                                 fill="#787878"></path>
+                           </svg><span class="fig-fynarx">틱톡</span></a></li>
+                  </ul>
                </div>
                <div id="BRN">
                   <nav>
@@ -576,8 +618,8 @@
                </nav>
                <p>©
                   RIDI Corp.</p>
-
-            </div>
+               
+               </div>
             <div id="footerright">
                <nav>
                   <ul id=footermain>
