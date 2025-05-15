@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LIDI</title>
    <link rel="stylesheet" href="./css/index.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="./js/index.js"></script>
 </head>
 
@@ -37,7 +37,8 @@
                   <form role="search" class="search-form">
                      <div class="search-wrapper">
                         <label for="search-input" class="search-label">
-                           <svg class="search-icon" width="1.4em" height="1.4em" viewBox="0 0 20 20" fill="currentColor">
+                           <svg class="search-icon" width="1.4em" height="1.4em" viewBox="0 0 20 20"
+                              fill="currentColor">
                               <path fill-rule="evenodd"
                                  d="M13.28 8.18a5.1 5.1 0 11-10.2 0 5.1 5.1 0 0110.2 0zm-1.031 5.069a6.5 6.5 0 11.991-.989l4.695 4.695a.7.7 0 11-.99.99l-4.696-4.696z" />
                            </svg>
@@ -46,7 +47,7 @@
                            placeholder="찾는 책이 있으신가요?" />
                      </div>
                   </form>
-</div>
+               </div>
                <nav>
                   <ul>
                      <li><a href="">회원가입</a></li>
@@ -58,9 +59,9 @@
 
       </div>
 
-      <div class="s1 container btnArea">       
+      <div class="s1 container btnArea">
 
-         <nav>    
+         <nav>
             <ul class="main">
 
                <li><a href="">기획전</a></li>
@@ -70,9 +71,10 @@
                <li><a href="">자기계발</a></li>
                <li><a href="">어린이/청소년</a></li>
                <li id="AllCat">전체카테고리
-                  <ul class="sub">
-                     <li class="AllCatsub"  >소설
-                        <ul class="subs"id="nov">
+                  <div class="subwrap"><ul class="sub">
+                     <li class="AllCatsub">소설
+                        
+                        <ul class="subs" id="nov">
                            <li class="whole"><a href="">소설 전체</a></li>
                            <li><a href="">한국 소설</a></li>
                            <li><a href="">일본 소설</a></li>
@@ -148,9 +150,9 @@
                         </ul>
                      </li>
                      <li class="AllCatsub">해외도서
-                           <ul class="subs">
+                        <ul class="subs">
                            <li class="whole"><a href="">해외도서 전체</a></li>
-                           
+
                         </ul>
                      </li>
                      <li class="AllCatsub">경영/경제
@@ -235,70 +237,71 @@
                            <li><a href="">성인(19+)</a></li>
                         </ul>
                      </li>
-                     </ul>
-                     </li>
-                     </ul>
-                     </nav>
-                     <div id="s1SBox" class="container ">
-                        <div class="s1slider">
-                           <div class="s1sliderbox">
-                              <div class="contents"></div>
-                              <div class="contents"></div>
-                              <div class="contents"></div>
-                              <div class="contents"></div>
-                              <div class="contents"></div>
-                              <div class="contents"></div>
-                              <div class="contents"></div>
-                           </div>
-                        </div>
-                        </div>
-                        <div class="buttonbox">
-                           <button type="button" class="leftbutton">좌</button>
-                           <button type="button" class="rightbutton">우</button>
-                        </div>
-                        </div>
-                        <div id="buttonbox" class="container">
-                           <nav>
-                           <div class="circlebutton">
-                              <img src="" alt="">
-                              <p>신간</p>
-                              </img>
-                           </div>
-                           <div class="circlebutton">
-                              <img src="" alt="">
-                              <p>북스 베스트</p>
-               </img>
+                  </ul></div>
+               </li>
+            </ul>
+         </nav>
+         <div id="s1SBox" class="container ">
+            <div class="s1slider">
+               <div class="s1sliderbox">
+                  <div class="contents"></div>
+                  <div class="contents"></div>
+                  <div class="contents"></div>
+                  <div class="contents"></div>
+                  <div class="contents"></div>
+                  <div class="contents"></div>
+                  <div class="contents"></div>
+               </div>
             </div>
+         </div>
+         <div class="buttonbox">
+            <button type="button" class="leftbutton">좌</button>
+            <button type="button" class="rightbutton">우</button>
+         </div>
+      </div>
+      <div id="mbuttonbox" class="container">
+         <nav>
             <div class="circlebutton">
-               <img src="" alt="">
+               <img src="./img/pointback.webp" alt="100%포백">
+               <p>100%포백</p>
+               </img> </div>
+               <div class="circlebutton">
+                  <img src="./img/new.d0c590b8b2fe4f364eadecb600491294.webp" alt="신간">
+                  <p>신간</p>
+                  </img>
+               </div>
+               <div class="circlebutton">
+                  <img src="./img/bestseller.d954cea8b85b182e7cfbffdb9519bb07.webp" alt="북스 베스트">
+                  <p>북스 베스트</p>
+                  </img>
+               </div>
+           
+            <div class="circlebutton">
+               <img src="./img/only.7d71bce5c941b4fcb325ffac8ae50410.webp" alt="단독 선출간">
                <p>단독 선출간</p>
                </img>
             </div>
             <div class="circlebutton">
-               <img src="" alt="">
+               <img src="./img/event.895183ca4353ae354bca3f5e896cec55.webp" alt="이벤트">
                <p>이벤트</p>
                </img>
             </div>
             <div class="circlebutton">
-               <img src="" alt="">
+               <img src="./img/coupon.3934aadf872c47ffcc59586ce12c6c34.webp" alt="이달의 쿠폰">
                <p>이달의 쿠폰</p>
                </img>
             </div>
             <div class="circlebutton">
-               <img src="" alt="">
+               <img src="./img/new.d0c590b8b2fe4f364eadecb600491294.webp" alt="신작 캘린더">
                <p>신작 캘린더</p>
                </img>
             </div>
             <div class="circlebutton">
-               <img src="" alt="">
+               <img src="./img/promotion_map.3199d6755aef129b824783b255e3f1a1.webp" alt="혜택 모아봄">
                <p>혜택 모아봄</p>
                </img>
             </div>
-            <div class="circlebutton">
-               <img src="" alt="">
-               <p>대여</p>
-               </img>
-            </div>
+
          </nav>
       </div>
       <div id="book1" class="BOOK container">
@@ -318,20 +321,21 @@
                   <div class="bookbox"></div>
                   <div class="bookbox"></div>
                   <div class="bookbox"></div>
-                  </div>
-                  </div>
-                  <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
-                  
-                  </div>
-                  </div>
+               </div>
+            </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
+
+         </div>
+      </div>
       <div id="book2" class="container">
          <h3>한주,분야별 리디랭킹</h3>
-             <h4>소설</h4> <div class="book2-1 btnArea">
-       
-           
+         <h4>소설</h4>
+         <div class="book2-1 btnArea">
+
+
             <div class="book2boxslider">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -342,14 +346,15 @@
                   <div class="book2box2"></div>
                </div>
             </div>
- <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
          </div>
-         <h4>정치</h4>  <div class="book2-1 btnArea">
-          
-      
+         <h4>정치</h4>
+         <div class="book2-1 btnArea">
+
+
             <div class="book2boxslider">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -360,14 +365,15 @@
                   <div class="book2box2"></div>
                </div>
             </div>
- <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
          </div>
-         <h4>경제</h4> <div class="book2-1 btnArea">
-           
-          
+         <h4>경제</h4>
+         <div class="book2-1 btnArea">
+
+
             <div class="book2boxslider">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -379,16 +385,16 @@
                </div>
             </div>
 
-        <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
          </div>
       </div>
       <!-- MD's Pick -->
       <div id="book3" class="MD container">
          <h3>MD's Pick</h3>
-         <div class="book3-1  btnArea"> 
+         <div class="book3-1  btnArea">
             <div class="mdslider">
                <div class="mdbox">
                   <div class="mdbox1">
@@ -434,63 +440,63 @@
 
                </div>
             </div>
- <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
          </div>
 
       </div>
       <div id="book4" class="BOOK container">
          <h3>지금,리디에서만!선 출간 신작</h3>
          <div id="book4-1" class="bookarry btnArea">
-        
-      
-               <div class="arryboxslider">
-                  <div class="arrybox">
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                  </div>
+
+
+            <div class="arryboxslider">
+               <div class="arrybox">
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
                </div>
-             <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
-         
+            </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
+
          </div>
       </div>
       <div id="book5" class="BOOK container">
          <h3>새로 나온 작품</h3>
          <div id="book5-1" class="bookarry btnArea">
-           
-           
-               <div class="arryboxslider">
-                  <div class="arrybox">
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                     <div class="bookbox"></div>
-                  </div>
+
+
+            <div class="arryboxslider">
+               <div class="arrybox">
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
+                  <div class="bookbox"></div>
                </div>
-     <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
-         
+            </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
+
 
          </div>
       </div>
@@ -511,22 +517,22 @@
 
                   <div class="ebox1 Abox">
                   </div>
-                     <div class="ebox1 Abox">
+                  <div class="ebox1 Abox">
                   </div>
                </div>
 
             </div>
-          <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
          </div>
       </div>
-<!-- 이벤트 -->
+      <!-- 이벤트 -->
       <div id="book7" class="event container">
          <h3>이벤트</h3>
          <div id="book7-1" class="eventarry btnArea">
- 
+
             <div class="eslider">
                <div class="ebox">
                   <div class="ebox1 Abox">
@@ -540,74 +546,81 @@
                   <div class="ebox1 Abox">
                   </div>
 
-                  
+
                   <div class="ebox1 Abox">
                   </div>
                </div>
 
             </div>
- <div class="buttonbox">
-                     <button type="button" class="leftbutton">좌</button>
-                     <button type="button" class="rightbutton">우</button>
-                  </div>
+            <div class="buttonbox">
+               <button type="button" class="leftbutton">좌</button>
+               <button type="button" class="rightbutton">우</button>
+            </div>
          </div>
       </div>
       <div id="footerbox">
          <footer class="container">
             <div id="footerleft">
                <div id="snsbox">
-                  <ul class="fig-u7t8s2">
-                     <li class="fig-rgkzmi"><a href="https://www.facebook.com/official.ridi" rel="noopener noreferrer"
-                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                  <ul class="snsul">
+                     <li class="snsli"><a href="https://www.facebook.com/official.ridi" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="30" height="30" viewBox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
                                  d="M14.61 13.253l.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A8.796 8.796 0 0013.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647h1.634z"
                                  fill="currentColor"></path>
-                           </svg><span class="fig-fynarx">페이스북</span></a></li>
-                     <li class="fig-rgkzmi"><a href="https://instagram.com/ridi_official_/" rel="noopener noreferrer"
-                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                           </svg></a></li>
+                     <li class="snsli"><a href="https://instagram.com/ridi_official_/" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="30" height="30" viewBox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd"
                                  d="M14.687 6.3H9.314A3.013 3.013 0 006.3 9.313v5.373A3.013 3.013 0 009.314 17.7h5.373a3.013 3.013 0 003.013-3.012V9.313A3.012 3.012 0 0014.687 6.3zm0-1.3H9.314A4.314 4.314 0 005 9.313v5.373A4.313 4.313 0 009.314 19h5.373A4.312 4.312 0 0019 14.688V9.313A4.31 4.31 0 0014.687 5zm1.871 3.28a.937.937 0 11-1.874-.002.937.937 0 011.874.001zM14.2 12a2.2 2.2 0 11-4.4 0 2.2 2.2 0 014.4 0zm1.3 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
                                  fill="currentColor"></path>
-                           </svg><span class="fig-fynarx">인스타그램</span></a></li>
-                     <li class="fig-rgkzmi"><a href="https://twitter.com/RIDI_twt" rel="noopener noreferrer" target="_blank"
-                           class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           </svg></a></li>
+                     <li class="snsli"><a href="https://twitter.com/RIDI_twt" rel="noopener noreferrer" target="_blank"
+                           class="fig-ta6alf"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <path
                                  d="M5.776 5.5l4.83 6.43-4.856 5.237h1.092l4.254-4.583 3.433 4.583h3.721l-5.101-6.796L17.674 5.5h-1.092l-3.923 4.217L9.497 5.5h-3.72zm1.607.802h1.713l7.547 10.063H14.93L7.383 6.302z"
                                  fill="#787878"></path>
-                           </svg><span class="fig-fynarx">트위터</span></a></li>
-                     <li class="fig-rgkzmi"><a href="https://www.youtube.com/user/ridibooks0331" rel="noopener noreferrer"
-                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                           </svg></a></li>
+                     <li class="snsli"><a href="https://www.youtube.com/user/ridibooks0331" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="30" height="30" viewBox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
                                  d="M10.521 16.57A1 1 0 019 15.717V8.283a1 1 0 011.521-.853l6.083 3.717a1 1 0 010 1.706L10.52 16.57z"
                                  fill="currentColor"></path>
-                           </svg><span class="fig-fynarx">유튜브</span></a></li>
-                     <li class="fig-rgkzmi"><a href="https://www.tiktok.com/@ridi.official" rel="noopener noreferrer"
-                           target="_blank" class="fig-ta6alf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
+                           </svg></a></li>
+                     <li class="snsli"><a href="https://www.tiktok.com/@ridi.official" rel="noopener noreferrer"
+                           target="_blank" class="fig-ta6alf"><svg width="30" height="30" viewBox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
                                  d="M12.371 5h2.411s1.113 2.656 3.718 2.911l-.46 2.35s-1.838-.052-3.268-1.533v5.822s0 1.226-.664 2.247c0 0-1.073 1.941-3.473 2.145 0 0-1.736.205-3.268-.919 0 0-1.635-1.021-1.839-3.268 0 0-.357-2.094 1.481-3.83 0 0 1.226-1.43 3.984-1.226v2.4h-.767s-1.532-.102-2.144 1.43c0 0-.562 1.48.663 2.502 0 0 .92.817 2.146.409 0 0 1.174-.307 1.43-1.634 0 0 .05-.154.05-.766V5z"
                                  fill="#787878"></path>
-                           </svg><span class="fig-fynarx">틱톡</span></a></li>
+                           </svg></a></li>
                   </ul>
                </div>
                <div id="BRN">
                   <nav>
-                     <h5>리디(주)사업자정보</h5>
+                     <span class="BizInfo">
+                        <h5>리디(주)사업자정보</h5><svg width="1em" height="1em" viewBox="0 0 9 9" fill="none"
+                           xmlns="http://www.w3.org/2000/svg" class="fig-1qx34im">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z"
+                              fill="currentColor"></path>
+                        </svg>
+                     </span>
                      <p>대표자
-                        배기식|
-                        사업자 등록번호
-                        120-87-27435|
-                        통신판매업 신고번호
-                        제 2009-서울강남 35-02139호|
-                        이메일
-                        help@ridi.com|
-                        대표전화
-                        1644-0331|
-                        주소
+                        배기식:
+                        사업자 등록번호:
+                        120-87-27435 /
+                        통신판매업 신고번호:
+                        제 2009-서울강남 35-02139호 <br>
+                        이메일:
+                        help@ridi.com /
+                        대표전화:
+                        1644-0331 <br>
+                        주소:
                         서울시 강남구 역삼동 702-28 어반벤치빌딩 4,10,11층(테헤란로 325)</p>
                </div>
                <nav>
@@ -618,8 +631,8 @@
                </nav>
                <p>©
                   RIDI Corp.</p>
-               
-               </div>
+
+            </div>
             <div id="footerright">
                <nav>
                   <ul id=footermain>
@@ -641,7 +654,13 @@
                      </li>
                      <li>회사<ul id=footersub>
                            <li><a href="">회사소개</a></li>
-                           <li><a href="">인재채용</a></li>
+                           <li><a href="">인재채용<svg width="1em" height="1em" viewBox="0 0 14 14" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" aria-label="NEW" class="fig-18yedlc">
+                                    <circle cx="7" cy="7" r="7" fill="currentColor"></circle>
+                                    <path
+                                       d="M9.18 9.798h-.992L5.932 6.302v3.496H4.82V4.102h.992L8.068 7.59V4.102H9.18v5.696z"
+                                       fill="#fff"></path>
+                                 </svg></a></li>
 
                         </ul>
                      </li>
