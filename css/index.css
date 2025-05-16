@@ -303,22 +303,29 @@ li {
   align-items: center;
 }
 #s1SBox .s1slider {
-  background-color: bisque;
-  width: 1220px;
-  height: 300px;
+  width: 1280px;
   overflow: hidden;
+  border-radius: 20px;
 }
-#s1SBox .s1slider .s1sliderybox {
-  width: 7224px;
-  background-color: aqua;
+#s1SBox .s1slider .s1sliderbox {
+  width: 9224px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  height: 300px;
+  position: relative;
 }
-#s1SBox .s1slider .s1sliderybox .contents {
-  background-color: chocolate;
-  width: 1032px;
-  height: 250px;
+#s1SBox .s1slider .s1sliderbox .contents {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 298px;
+  width: 1279px;
+  background-size: contain;
+  background-position: center;
+  border-radius: 20px;
+  float: left;
+  margin-right: 5px;
 }
 
 #mbuttonbox {
@@ -386,39 +393,43 @@ li {
 }
 
 #book2 {
-  height: 1000px;
+  width: 1230px;
+  background-color: #333;
+  height: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
+#book2 h3 {
+  margin-left: -29px;
+}
 #book2 h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 #book2 > div {
-  height: 310px;
+  height: 200px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book2 > div .book2boxslider {
   background-color: bisque;
-  width: 1280px;
-  height: 280px;
+  width: 960px;
+  height: 200px;
   overflow: hidden;
 }
 #book2 > div .book2boxslider .book2box {
-  width: 1920px;
+  width: 1440px;
   background-color: aqua;
   display: flex;
 }
 #book2 > div .book2boxslider .book2box .book2box2 {
   background-color: chocolate;
-  width: 262px;
-  height: 280px;
-  margin: 0 29px;
+  width: 200px;
+  height: 240px;
+  margin: 0 20px;
 }
 
 #book3 {
@@ -453,6 +464,43 @@ li {
   height: 200px;
   margin: 0 29px;
   background-color: chocolate;
+}
+
+.TLank {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.TLank #TLankDiv {
+  height: 685px;
+  width: 1280px;
+  background-color: rgb(84, 156, 132);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.TLank #TLankDiv .TLankslider {
+  background-color: bisque;
+  width: 1260px;
+  height: 650px;
+  overflow: hidden;
+}
+.TLank #TLankDiv .TLankslider .TLankbox {
+  width: 2520px;
+  height: 650px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 {
+  background-color: chocolate;
+  width: 362px;
+  height: 200px;
+  margin: 0px 29px;
 }
 
 #book4 {

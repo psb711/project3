@@ -59,7 +59,62 @@ $(".circlebutton").hover(
   }
 );
 
+
+
+
+
     
  
 
 });
+
+// 메인슬라이더
+const slides = document.querySelectorAll('.s1sliderbox .contents');
+  const leftBtn = document.querySelector('.leftbutton');
+  const rightBtn = document.querySelector('.rightbutton');
+
+  let currentIndex = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+      slide.style.zIndex = i === index ? '1' : '0';
+    });
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  function prevSlide() {
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(prevIndex);
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(slideInterval);
+  }
+
+  // 버튼 이벤트
+  rightBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  leftBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  // 초기화
+  showSlide(0);
+  startAutoSlide();
