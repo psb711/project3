@@ -1,0 +1,805 @@
+@import "reset", "headerfooter";
+
+@font-face {
+   font-family: 'RIDIBatang';
+   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+// 컬러
+$Lidi: #1e9eff;
+
+@mixin bookx {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+
+   >div {
+
+      height: 350px;
+      width: 1280px;
+      background-color: rgb(84, 156, 132);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .arryboxslider {
+         background-color: bisque;
+         width: 1280px;
+         height: 290px;
+         overflow: hidden;
+
+         .arrybox {
+            width: 2560px;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            >div {
+               background-color: chocolate;
+               width: 215px;
+               height: 295px;
+           margin: 0 15px 0 5px;
+
+            }
+
+         }
+      }
+   }
+}
+
+@mixin event {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+
+   .eventarry {
+      height: 200px;
+      width: 1280px;
+      background-color: rgb(84, 156, 132);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .eslider {
+         background-color: bisque;
+         width: 1280px;
+         height: 130px;
+         overflow: hidden;
+
+         .ebox {
+            width: 1706.666px;
+            height: 130px;
+            background-color: aqua;
+            display: flex;
+
+            align-items: center;
+
+            .ebox1 {
+               width: 397.6666px;
+               height: 130px;
+               margin: 0 29px;
+               background-color: chocolate;
+            }
+
+         }
+      }
+   }
+}
+
+// 박스별기본크기
+.container {
+   width: 1280px;
+   height: auto;
+   margin: 0 auto;
+   border: 1px solid rgb(207, 191, 191);
+}
+
+.BOOK,
+.MD {
+   height: 360px;
+}
+
+h3 {
+   align-self: flex-start;
+   font-size: 1.4rem;
+}
+
+// 전체버튼공통
+.btnArea {
+   position: relative;
+}
+
+.buttonbox {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   transform: translateY(-50%);
+   pointer-events: none;
+}
+
+.buttonbox button {
+   pointer-events: auto;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   font-size: 16px;
+}
+.leftbutton{transform: rotate(180deg);}
+
+// 전체UL하위들공통
+ul {
+   display: flex;
+}
+
+.sub {
+   display: none;
+}
+
+li {
+   margin: 0 10px;
+}
+
+// 헤더
+#headerbox {
+   border-bottom: 1px solid gray;
+   height: 120px;
+
+   header {
+      height: 120px;
+   }
+
+   ul {
+      font-weight: 800;
+      font-size: 1rem;
+   }
+}
+
+#headertop {
+   height: 60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   ul {
+      font-weight: 800;
+   }
+}
+
+#headerbottom {
+   height: 60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   ul {
+      font-weight: 700;
+   }
+
+   .search-wrapper {
+
+      border-radius: 5px;
+      width: 280px;
+      height: 45px;
+      background-color: rgb(235, 235, 235);
+      border-style: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin-left: 30px;
+      margin-bottom: 9px;
+
+      .search-icon {
+         color: $Lidi;
+      }
+
+      #search-input {
+         border-style: none;
+         background-color: rgb(235, 235, 235);
+         outline: none;
+         caret-color: $Lidi;
+
+
+      }
+   }
+}
+
+// 메인슬라이더메뉴바
+.s1 {
+   nav {
+      height: 36px;
+      margin-top: 6px;
+   }
+}
+
+.main {
+   position: relative;
+   font-weight: 600;
+
+   li {
+      margin: 5px;
+
+      display: block;
+      // padding: 8px 14px;
+      color: #333;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+
+      &:hover>a {
+         color: #1e9eff;
+      }
+
+      &.selected>a {
+         background-color: #1e9eff;
+         color: #fff;
+      }
+
+
+   }
+}
+
+#AllCat {
+   z-index: 5;
+   padding: 7px;
+   border-radius: 36px;
+
+   margin: -3px 9px 6px 697px;
+
+   &:hover {
+      color: #1e9eff;
+   }
+
+   &.selected {
+      background-color: #1e9eff;
+      color: #fff;
+   }
+
+}
+
+.subwrap {
+   display: none;
+   height: 400px;
+   position: absolute;
+   top: 38px;
+   right: -2px;
+
+   .sub {
+      display: flex;
+      // position: absolute;
+      // top: 38px;
+      // right: -2px;
+      width: 1283px;
+      background-color: rgb(255, 255, 255);
+      font-size: 0.8rem;
+    
+      align-content: flex-start;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding-left: 80px;
+ height: 400px;
+   }
+}
+
+.AllCatsub {
+   font-weight: 700;
+   display: flex;
+   height: 45px;
+   width: 100px;
+   font-size: 0.9rem;
+   background-color: azure;
+   margin: 2px !important;
+   align-items: center;
+   position: relative;
+   color: #1e9eff;
+   padding: 5px;
+
+   &:hover {
+      color: aliceblue;
+      background-color: #1e9eff;
+   }
+
+   #nov {
+      height: 97px;
+      padding-top: 0px;
+      margin-top: 0px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+}
+
+.whole {
+   font-weight: 700;
+
+   a {
+      color: rgb(77, 77, 77);
+   }
+}
+
+.subs {
+   font-weight: initial;
+   position: absolute;
+   width: 878px;
+   height: 45px;
+   background-color: aliceblue;
+   top: 0px;
+
+   display: none;
+
+
+   >li {
+      display: flex;
+      font-weight: 500;
+      align-items: center;
+
+      :hover {
+         color: #1e9eff;
+      }
+
+   }
+
+}
+
+
+
+
+.AllCatsub {
+   @for $i from 1 through 8 {
+      &:nth-of-type(#{$i}) .subs {
+         left: 224px;
+      }
+   }
+
+   @for $i from 9 through 16 {
+      &:nth-of-type(#{$i}) .subs {
+         left: 120px;
+      }
+   }
+}
+
+
+// 메인슬라이더
+#s1SBox {
+
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+
+   align-items: center;
+
+   .s1slider {
+      width: 1280px;
+      overflow: hidden;
+  
+
+      .s1sliderbox {
+     width: 9224px;
+    display: flex
+;
+    margin-left: 0;
+    padding: 0;
+    transition: none;
+    height: 400px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+         .contents {
+     height: 400px;
+    width: 1162px;
+   //  background-position: center !important;
+   background-position: 280px 0px !important;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    flex-shrink: 0;
+    transition: none;
+   /* margin: 0 7px; */
+      margin-right: 9px;
+      position: relative;
+     box-shadow: 0px -58px 342px -69px #1a1a1a inset;
+   
+      .Twrap {
+         display: none;
+         position: absolute;
+         bottom: 50px;
+         left: 50px;
+         color: rgb(255, 255, 255);
+         width: 500px;
+
+   
+         .L {
+            display: inline-flex;
+            border: 1px solid rgb(236, 236, 236);
+            width: auto;
+   
+            p {
+               border-right: 1px solid aliceblue;
+               padding: 5px;
+            }
+         }
+   
+         .STM {
+            font-size: 3rem;
+            font-weight: 700;
+         }
+   
+         .STS {
+            font-size: 1.5rem;
+         }
+      }
+   
+      .pagewrap {
+         display: none;
+         position: absolute;
+$color: #1f1e1e;
+background-color: transparentize($color, 0.8);
+         border-radius: 20px;
+         padding: 10px;
+         font-size: 1.4rem;
+         bottom: 20px;
+         right: 40px;
+         color: #f3f3f3;
+      span{font-weight: 700;}
+      }
+   }
+   }
+   }
+   }
+   
+   
+   // 버튼박스
+   #mbuttonbox {
+   nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 10px;
+
+      p {
+         position: relative;
+         top: 0px;
+         font-size: 1.01rem;
+         text-align: center;
+         font-weight: 500;
+      }
+   }
+
+
+   width: 800px;
+   height: 124px;
+}
+
+.circlebutton {
+   &:hover { cursor: pointer;
+      img {
+         transform: scale(1.1);
+      }
+
+
+   }
+
+   width: 75px;
+   height: 75px;
+
+   border-radius: 50%;
+   position: relative;
+
+   img {
+      width: 100%;
+   }
+}
+
+
+
+// 오늘,리디의발견
+#book1 {
+   @include bookx()
+  
+}
+ .bookbox{text-align: center;
+.bookbox1{ img{
+   width: 165px;
+}}
+.titbox{padding: 0 21px ; font-size: 0.9rem;}
+}
+
+// 한주,분야별 리디랭킹
+#book2 {
+       width: 1230px;
+    background-color: #333;
+    height: 1200px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -50px;
+    margin-bottom: 40px;
+
+   h3 {
+         margin-left: -29px;
+    padding-top: 46px;
+   }
+
+   h4 {
+
+      font-size: 1.4rem;
+   }
+
+   >div {
+      height: 200px;
+      width: 1280px;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+
+
+      .book2boxslider {
+         background-color: bisque;
+         width: 1240px;
+         height: 200px;
+         overflow: hidden;
+
+         .book2box {
+            width: 1860px;
+
+            background-color: aqua;
+            display: flex;
+
+            .book2box2 {
+               background-color: chocolate;
+               width: 300px;
+               height: 220px;
+               margin: 0 5px;
+
+            }
+         }
+
+      }
+   }
+}
+
+// MD'PICK
+#book3 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+
+   .book3-1 {
+      height: 285px;
+      width: 1280px;
+      background-color: rgb(84, 156, 132);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .mdslider {
+         background-color: bisque;
+         width: 1280px;
+         height: 250px;
+         overflow: hidden;
+
+         .mdbox {
+            width: 2133.333px;
+            height: 250px;
+            background-color: aqua;
+            display: flex;
+
+            align-items: center;
+
+            .mdbox1 {
+               width: 368.666px;
+               height: 200px;
+               margin: 0 29px;
+               background-color: chocolate;
+            }
+
+         }
+      }
+   }
+}
+
+// 지금 많이 읽고있는 작품
+.TLank {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+
+   #TLankDiv {
+      height: 685px;
+      width: 1280px;
+      background-color: rgb(84, 156, 132);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .TLankslider {
+         background-color: bisque;
+         width: 1260px;
+         height: 650px;
+         overflow: hidden;
+
+         .TLankbox {
+            width: 2520px;
+            height: 650px;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .TLankbox1 {
+               background-color: chocolate;
+               width: 362px;
+               height: 200px;
+
+               margin: 0px 29px;
+
+            }
+
+         }
+      }
+   }
+}
+
+// 
+#book4 {
+   // 새로나온작품
+   @include bookx
+}
+
+// 지금, 리디에서만 선출간 신작새로나온작품
+#book5 {
+   @include bookx
+}
+
+
+// 한주한주,셀렉트레터
+#book6 {
+   @include event
+}
+
+// 이벤트
+#book7 {
+   @include event
+}
+
+// 푸터
+#footerbox {
+   height: 300px;
+   border-top: 1px solid black;
+
+   footer {
+      height: 100%;
+      padding: 30px;
+      display: flex;
+      font-size: 0.8rem;
+      overflow: hidden;
+
+      #footerleft {
+         width: 50%;
+
+         #snsbox {
+            .snsul {
+               margin-bottom: 50px;
+               margin-top: 15px;
+
+               .snsli {
+                  &:hover {
+                     border: 1px solid #1e9eff;
+                  }
+
+                  width: 50px;
+                  height: 50px;
+                  text-align: center;
+                  border: 0.5px solid rgb(185, 184, 184);
+                  border-radius: 100px;
+                  padding-top: 9px;
+
+                  svg {
+                     path {
+                        margin: auto 0;
+                     }
+                  }
+               }
+            }
+         }
+
+         nav {
+            margin: 10px 0;
+
+            a::before {
+               content: "";
+               display: inline-block;
+               background: rgb(240, 240, 240);
+               width: 1px;
+               height: 9px;
+               margin: 2px 6px;
+            }
+
+            a:hover {
+               color: #aaa8a8;
+            }
+
+         }
+
+         #BRN {
+            span {
+               display: inline-flex;
+
+               svg {
+                  transform: rotate(90deg);
+
+                  transition: transform 0.3s ease;
+
+                  margin: 2px 0 0 3px;
+               }
+            }
+
+            p {
+               display: none;
+            }
+         }
+      }
+
+      #footerright {
+         width: 50%;
+         color: #1e9eff;
+
+      }
+
+   }
+}
+
+#footermain {
+   text-align: left;
+   ;
+   display: flex;
+   justify-content: space-evenly;
+
+
+   #footersub {
+      display: flex;
+      flex-direction: column;
+
+      >li {
+         margin: 2px 0;
+
+         &:nth-of-type(2)a svg {
+            color: #1e9eff;
+
+
+
+            margin-left: 3px;
+
+            text-align: center;
+            vertical-align: baseline;
+         }
+
+         a:hover {
+            color: #aaa8a8;
+         }
+      }
+   }
+}
