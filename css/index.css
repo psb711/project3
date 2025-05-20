@@ -37,11 +37,12 @@ ol {
 
 .BOOK,
 .MD {
-  height: 340px;
+  height: 360px;
 }
 
 h3 {
   align-self: flex-start;
+  font-size: 1.4rem;
 }
 
 .btnArea {
@@ -67,6 +68,10 @@ h3 {
   padding: 10px;
   cursor: pointer;
   font-size: 16px;
+}
+
+.leftbutton {
+  transform: rotate(180deg);
 }
 
 ul {
@@ -176,7 +181,7 @@ li {
 
 .subwrap {
   display: none;
-  height: 298px;
+  height: 400px;
   position: absolute;
   top: 38px;
   right: -2px;
@@ -186,18 +191,18 @@ li {
   width: 1283px;
   background-color: rgb(255, 255, 255);
   font-size: 0.8rem;
-  height: 298px;
   align-content: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
   padding-left: 80px;
+  height: 400px;
 }
 
 .AllCatsub {
   font-weight: 700;
   display: flex;
-  height: 32px;
+  height: 45px;
   width: 100px;
   font-size: 0.9rem;
   background-color: azure;
@@ -232,7 +237,7 @@ li {
   font-weight: initial;
   position: absolute;
   width: 878px;
-  height: 32px;
+  height: 45px;
   background-color: aliceblue;
   top: 0px;
   display: none;
@@ -296,36 +301,79 @@ li {
 }
 
 #s1SBox {
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 #s1SBox .s1slider {
   width: 1280px;
   overflow: hidden;
-  border-radius: 20px;
 }
 #s1SBox .s1slider .s1sliderbox {
   width: 9224px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 300px;
+  margin-left: 0;
+  padding: 0;
+  transition: none;
+  height: 400px;
   position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
 }
 #s1SBox .s1slider .s1sliderbox .contents {
-  top: 0;
-  left: 0;
+  height: 400px;
+  width: 1162px;
+  background-position: 280px 0px !important;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  flex-shrink: 0;
+  transition: none;
+  /* margin: 0 7px; */
+  margin-right: 9px;
+  position: relative;
+  box-shadow: 0px -58px 342px -69px #1a1a1a inset;
+}
+#s1SBox .s1slider .s1sliderbox .contents .Twrap {
+  display: none;
   position: absolute;
-  height: 298px;
-  width: 1279px;
-  background-size: contain;
-  background-position: center;
+  bottom: 50px;
+  left: 50px;
+  color: rgb(255, 255, 255);
+  width: 500px;
+}
+#s1SBox .s1slider .s1sliderbox .contents .Twrap .L {
+  display: inline-flex;
+  border: 1px solid rgb(236, 236, 236);
+  width: auto;
+}
+#s1SBox .s1slider .s1sliderbox .contents .Twrap .L p {
+  border-right: 1px solid aliceblue;
+  padding: 5px;
+}
+#s1SBox .s1slider .s1sliderbox .contents .Twrap .STM {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#s1SBox .s1slider .s1sliderbox .contents .Twrap .STS {
+  font-size: 1.5rem;
+}
+#s1SBox .s1slider .s1sliderbox .contents .pagewrap {
+  display: none;
+  position: absolute;
+  background-color: rgba(31, 30, 30, 0.2);
   border-radius: 20px;
-  float: left;
-  margin-right: 5px;
+  padding: 10px;
+  font-size: 1.4rem;
+  bottom: 20px;
+  right: 40px;
+  color: #f3f3f3;
+}
+#s1SBox .s1slider .s1sliderbox .contents .pagewrap span {
+  font-weight: 700;
 }
 
 #mbuttonbox {
@@ -351,6 +399,9 @@ li {
   border-radius: 50%;
   position: relative;
 }
+.circlebutton:hover {
+  cursor: pointer;
+}
 .circlebutton:hover img {
   transform: scale(1.1);
 }
@@ -365,7 +416,7 @@ li {
   align-items: center;
 }
 #book1 > div {
-  height: 285px;
+  height: 350px;
   width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
@@ -375,7 +426,7 @@ li {
 #book1 > div .arryboxslider {
   background-color: bisque;
   width: 1280px;
-  height: 250px;
+  height: 290px;
   overflow: hidden;
 }
 #book1 > div .arryboxslider .arrybox {
@@ -387,9 +438,20 @@ li {
 }
 #book1 > div .arryboxslider .arrybox > div {
   background-color: chocolate;
-  width: 198px;
-  height: 250px;
-  margin: 0 29px;
+  width: 215px;
+  height: 295px;
+  margin: 0 15px 0 5px;
+}
+
+.bookbox {
+  text-align: center;
+}
+.bookbox .bookbox1 img {
+  width: 165px;
+}
+.bookbox .titbox {
+  padding: 0 21px;
+  font-size: 0.9rem;
 }
 
 #book2 {
@@ -400,9 +462,12 @@ li {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: -50px;
+  margin-bottom: 40px;
 }
 #book2 h3 {
   margin-left: -29px;
+  padding-top: 46px;
 }
 #book2 h4 {
   font-size: 1.4rem;
@@ -416,20 +481,20 @@ li {
 }
 #book2 > div .book2boxslider {
   background-color: bisque;
-  width: 960px;
+  width: 1240px;
   height: 200px;
   overflow: hidden;
 }
 #book2 > div .book2boxslider .book2box {
-  width: 1440px;
+  width: 1860px;
   background-color: aqua;
   display: flex;
 }
 #book2 > div .book2boxslider .book2box .book2box2 {
   background-color: chocolate;
-  width: 200px;
-  height: 240px;
-  margin: 0 20px;
+  width: 300px;
+  height: 220px;
+  margin: 0 5px;
 }
 
 #book3 {
@@ -510,7 +575,7 @@ li {
   align-items: center;
 }
 #book4 > div {
-  height: 285px;
+  height: 350px;
   width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
@@ -520,7 +585,7 @@ li {
 #book4 > div .arryboxslider {
   background-color: bisque;
   width: 1280px;
-  height: 250px;
+  height: 290px;
   overflow: hidden;
 }
 #book4 > div .arryboxslider .arrybox {
@@ -532,9 +597,9 @@ li {
 }
 #book4 > div .arryboxslider .arrybox > div {
   background-color: chocolate;
-  width: 198px;
-  height: 250px;
-  margin: 0 29px;
+  width: 215px;
+  height: 295px;
+  margin: 0 15px 0 5px;
 }
 
 #book5 {
@@ -544,7 +609,7 @@ li {
   align-items: center;
 }
 #book5 > div {
-  height: 285px;
+  height: 350px;
   width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
@@ -554,7 +619,7 @@ li {
 #book5 > div .arryboxslider {
   background-color: bisque;
   width: 1280px;
-  height: 250px;
+  height: 290px;
   overflow: hidden;
 }
 #book5 > div .arryboxslider .arrybox {
@@ -566,9 +631,9 @@ li {
 }
 #book5 > div .arryboxslider .arrybox > div {
   background-color: chocolate;
-  width: 198px;
-  height: 250px;
-  margin: 0 29px;
+  width: 215px;
+  height: 295px;
+  margin: 0 15px 0 5px;
 }
 
 #book6 {

@@ -1,28 +1,25 @@
-$(document).ready(function () {
-  
- 
- 
+$(function () {
   $(".AllCatsub").hover(function (e) {
 
     $(".AllCatsub").not(this).find(".subs").slideUp();
 
-    
+
     $(this).find(".subs").stop().slideToggle();
 
     e.stopPropagation();
   });
-// 푸터 사업자 정보 슬라이드토글
+  // 푸터 사업자 정보 슬라이드토글
   $(".BizInfo").click(function () {
-   $(this).nextAll("p").first().stop().slideToggle();
-});
-//메인메뉴 
+    $(this).nextAll("p").first().stop().slideToggle();
+  });
+  //메인메뉴 
 
 
- let isOpen = false;
+  let isOpen = false;
 
- 
+
   $("#AllCat").click(function (e) {
-    e.stopPropagation(); 
+    e.stopPropagation();
     e.preventDefault();
     if (isOpen) {
       $(".subwrap").stop().slideUp();
@@ -34,87 +31,80 @@ $(document).ready(function () {
     isOpen = !isOpen;
   });
 
-  $(window).click(function(){
+  $(window).click(function () {
     isOpen = false;
     $(".subwrap").stop().slideUp();
     $("#AllCat").removeClass("selected");
   })
-// 버튼박스 글씨 호버
-$(".circlebutton").hover(
+  // 버튼박스 글씨 호버
+  $(".circlebutton").hover(
+    function () {
+      const index = $(".circlebutton").index(this);
+      $("#mbuttonbox p").eq(index).css({
+
+        transition: "transform 0.2s",
+        fontWeight: "600"
+      });
+    },
+    function () {
+      const index = $(".circlebutton").index(this);
+      $("#mbuttonbox p").eq(index).css({
+
+        transition: "transform 0.2s",
+        fontWeight: "500"
+      });
+    }
+  );
+// 메인슬라이더
+    $(".contents").not(":first").css({ "width": "60px" })
+     $(".contents .Twrap:first").css({ "display": "block" })
+         $(".contents .pagewrap:first").css({ "display": "block" })
+
+    const prev = () => {
+      $(".contents:last").css({ width: 0 }).prependTo(".s1sliderbox");
+      $(".contents:first").stop(true).animate({ "width": 1134 }, "slow", "linear");
+      $(".contents").eq(1).stop().animate({ "width": 60 }, "slow", "linear");
+       
+$(".contents:first").find(".Twrap").fadeIn("slow");
+         $(".contents:first").find(".pagewrap").fadeIn("slow");
+         $(".contents").eq(1).find(".Twrap").fadeOut("slow");
+        $(".contents").eq(1).find(".pagewrap").fadeOut("slow");
+ ;
+    };
+
+    const next = () => {
+      $(".contents:first").stop().animate({ "width": 0 }, "slow", "linear");
+      $(".contents").eq(1).stop(true).animate({ "width": 1134 }, "slow", "linear", function () {
+        $(".contents:first").appendTo(".s1sliderbox");
+        $(".contents:last").css({ "width": "60px" });
+        $(".contents:last").find(".Twrap").fadeOut("slow");
+        $(".contents:last").find(".pagewrap").fadeOut("slow");
+        $(".contents:first .Twrap").fadeIn("slow");
+        $(".contents:first .pagewrap").fadeIn("slow");
+          // $(".contents").eq(1).find(".Twrap").fadeOut("slow");
+          //  $(".pagewrap").eq(1).fadeIn("slow");
+    // $(".pagewrap").eq(0).fadeOut("slow");
+      })
+    }
+
+let sliderInterval = setInterval(next, 7000);
+
+$(".s1sliderbox").hover(
   function () {
-    const index = $(".circlebutton").index(this);
-    $("#mbuttonbox p").eq(index).css({
-   
-      transition: "transform 0.2s",
-      fontWeight: "600"
-    });
+    
+    clearInterval(sliderInterval);
+    $(this).css("cursor", "pointer"); 
   },
   function () {
-    const index = $(".circlebutton").index(this);
-    $("#mbuttonbox p").eq(index).css({
-      
-      transition: "transform 0.2s",
-       fontWeight: "500"
-    });
+  
+    sliderInterval = setInterval(next, 7000);
   }
 );
 
+    // 버튼 이벤트
+    $('.s1 .leftbutton').click(prev);
+    $('.s1 .rightbutton').click(next);
 
-
-
-
+    // 오늘리디의발견 슬라이드
     
- 
-
 });
-
-// 메인슬라이더
-const slides = document.querySelectorAll('.s1sliderbox .contents');
-  const leftBtn = document.querySelector('.leftbutton');
-  const rightBtn = document.querySelector('.rightbutton');
-
-  let currentIndex = 0;
-  let slideInterval;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.opacity = i === index ? '1' : '0';
-      slide.style.zIndex = i === index ? '1' : '0';
-    });
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
-
-  function prevSlide() {
-    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(prevIndex);
-  }
-
-  function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(slideInterval);
-  }
-
-  // 버튼 이벤트
-  rightBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    nextSlide();
-    startAutoSlide();
-  });
-
-  leftBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    prevSlide();
-    startAutoSlide();
-  });
-
-  // 초기화
-  showSlide(0);
-  startAutoSlide();

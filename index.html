@@ -8,6 +8,9 @@
    <link rel="stylesheet" href="./css/index.css">
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="./js/index.js"></script>
+   <script src="./js/Book.js"></script>
+   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -71,191 +74,277 @@
                <li><a href="">자기계발</a></li>
                <li><a href="">어린이/청소년</a></li>
                <li id="AllCat">전체카테고리
-                  <div class="subwrap"><ul class="sub">
-                     <li class="AllCatsub">소설
-                        
-                        <ul class="subs" id="nov">
-                           <li class="whole"><a href="">소설 전체</a></li>
-                           <li><a href="">한국 소설</a></li>
-                           <li><a href="">일본 소설</a></li>
-                           <li><a href="">영미 소설</a></li>
-                           <li><a href="">중국 소설</a></li>
-                           <li><a href="">북유럽 소설</a></li>
-                           <li><a href="">독일 소설</a></li>
-                           <li><a href="">프랑스 소설</a></li>
-                           <li><a href="">기타 국가 소설</a></li>
-                           <li><a href="">추리/미스터리/스릴러</a></li>
-                           <li><a href="">SF 소설</a></li>
-                           <li><a href="">국내 판타지 소설</a></li>
-                           <li><a href="">해외 판타지 소설</a></li>
-                           <li><a href="">국내 역사소설</a></li>
-                           <li><a href="">해외 역사소설</a></li>
-                           <li><a href="">대체 역사소설</a></li>
-                           <li><a href="">동양 고전문학</a></li>
-                           <li><a href="">서양 고전문학</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">인문/사회/역사
-                        <ul class="subs">
-                           <li class="whole"><a href="">인문/사회/역사 전체</a></li>
-                           <li><a href="">인문</a></li>
-                           <li><a href="">정치/사회</a></li>
-                           <li><a href="">예술/문화</a></li>
-                           <li><a href="">역사</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">에세이/시
-                        <ul class="subs">
-                           <li class="whole"><a href="">에세이/시 전체</a></li>
-                           <li><a href="">에세이</a></li>
-                           <li><a href="">시</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">종교
-                        <ul class="subs">
-                           <li class="whole"><a href="">종교 전체</a></li>
-                           <li><a href="">종교일반</a></li>
-                           <li><a href="">가톨릭</a></li>
-                           <li><a href="">기독교(개신교)</a></li>
-                           <li><a href="">불교</a></li>
-                           <li><a href="">기타</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">과학
-                        <ul class="subs">
-                           <li class="whole"><a href="">과학 전체</a></li>
-                           <li><a href="">과학일반</a></li>
-                           <li><a href="">수학</a></li>
-                           <li><a href="">자연과학</a></li>
-                           <li><a href="">응용과학</a></li>
+                  <div class="subwrap">
+                     <ul class="sub">
+                        <li class="AllCatsub">소설
 
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">컴퓨터/IT
-                        <ul class="subs">
-                           <li class="whole"><a href="">컴퓨터/IT 전체</a></li>
-                           <li><a href="">IT비즈니스</a></li>
-                           <li><a href="">개발/프로그래밍</a></li>
-                           <li><a href="">컴퓨터/앱활용</a></li>
-                           <li><a href="">IT자격증</a></li>
-                           <li><a href="">IT해외원서</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">가정/생활
-                        <ul class="subs">
-                           <li class="whole"><a href="">가정/생활 전체</a></li>
-                           <li><a href="">결혼/임신/출산</a></li>
-                           <li><a href="">육아/자녀교육</a></li>
-                           <li><a href="">취미/요리/기타</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">해외도서
-                        <ul class="subs">
-                           <li class="whole"><a href="">해외도서 전체</a></li>
+                           <ul class="subs" id="nov">
+                              <li class="whole"><a href="">소설 전체</a></li>
+                              <li><a href="">한국 소설</a></li>
+                              <li><a href="">일본 소설</a></li>
+                              <li><a href="">영미 소설</a></li>
+                              <li><a href="">중국 소설</a></li>
+                              <li><a href="">북유럽 소설</a></li>
+                              <li><a href="">독일 소설</a></li>
+                              <li><a href="">프랑스 소설</a></li>
+                              <li><a href="">기타 국가 소설</a></li>
+                              <li><a href="">추리/미스터리/스릴러</a></li>
+                              <li><a href="">SF 소설</a></li>
+                              <li><a href="">국내 판타지 소설</a></li>
+                              <li><a href="">해외 판타지 소설</a></li>
+                              <li><a href="">국내 역사소설</a></li>
+                              <li><a href="">해외 역사소설</a></li>
+                              <li><a href="">대체 역사소설</a></li>
+                              <li><a href="">동양 고전문학</a></li>
+                              <li><a href="">서양 고전문학</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">인문/사회/역사
+                           <ul class="subs">
+                              <li class="whole"><a href="">인문/사회/역사 전체</a></li>
+                              <li><a href="">인문</a></li>
+                              <li><a href="">정치/사회</a></li>
+                              <li><a href="">예술/문화</a></li>
+                              <li><a href="">역사</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">에세이/시
+                           <ul class="subs">
+                              <li class="whole"><a href="">에세이/시 전체</a></li>
+                              <li><a href="">에세이</a></li>
+                              <li><a href="">시</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">종교
+                           <ul class="subs">
+                              <li class="whole"><a href="">종교 전체</a></li>
+                              <li><a href="">종교일반</a></li>
+                              <li><a href="">가톨릭</a></li>
+                              <li><a href="">기독교(개신교)</a></li>
+                              <li><a href="">불교</a></li>
+                              <li><a href="">기타</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">과학
+                           <ul class="subs">
+                              <li class="whole"><a href="">과학 전체</a></li>
+                              <li><a href="">과학일반</a></li>
+                              <li><a href="">수학</a></li>
+                              <li><a href="">자연과학</a></li>
+                              <li><a href="">응용과학</a></li>
 
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">경영/경제
-                        <ul class="subs">
-                           <li class="whole"><a href="">경영/경제 전체</a></li>
-                           <li><a href="">경영일반</a></li>
-                           <li><a href="">경제일반</a></li>
-                           <li><a href="">마케팅/세일즈</a></li>
-                           <li><a href="">재테크/금융/부동산</a></li>
-                           <li><a href="">CEO/리더십</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">자기계발
-                        <ul class="subs">
-                           <li class="whole"><a href="">자기계발 전체</a></li>
-                           <li><a href="">성공/삶의 자세</a></li>
-                           <li><a href="">기획/창의/리더십</a></li>
-                           <li><a href="">설득/화술/협상</a></li>
-                           <li><a href="">취업/창업</a></li>
-                           <li><a href="">여성</a></li>
-                           <li><a href="">인간관계</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">여행
-                        <ul class="subs">
-                           <li class="whole"><a href="">여행 전체</a></li>
-                           <li><a href="">국내여행</a></li>
-                           <li><a href="">해외여행</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">컴퓨터/IT
+                           <ul class="subs">
+                              <li class="whole"><a href="">컴퓨터/IT 전체</a></li>
+                              <li><a href="">IT비즈니스</a></li>
+                              <li><a href="">개발/프로그래밍</a></li>
+                              <li><a href="">컴퓨터/앱활용</a></li>
+                              <li><a href="">IT자격증</a></li>
+                              <li><a href="">IT해외원서</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">가정/생활
+                           <ul class="subs">
+                              <li class="whole"><a href="">가정/생활 전체</a></li>
+                              <li><a href="">결혼/임신/출산</a></li>
+                              <li><a href="">육아/자녀교육</a></li>
+                              <li><a href="">취미/요리/기타</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">해외도서
+                           <ul class="subs">
+                              <li class="whole"><a href="">해외도서 전체</a></li>
 
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">외국어
-                        <ul class="subs">
-                           <li class="whole"><a href="">외국어 전체</a></li>
-                           <li><a href="">비즈니스영어</a></li>
-                           <li><a href="">일반영어</a></li>
-                           <li><a href="">제2외국어</a></li>
-                           <li><a href="">어학시험</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">경영/경제
+                           <ul class="subs">
+                              <li class="whole"><a href="">경영/경제 전체</a></li>
+                              <li><a href="">경영일반</a></li>
+                              <li><a href="">경제일반</a></li>
+                              <li><a href="">마케팅/세일즈</a></li>
+                              <li><a href="">재테크/금융/부동산</a></li>
+                              <li><a href="">CEO/리더십</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">자기계발
+                           <ul class="subs">
+                              <li class="whole"><a href="">자기계발 전체</a></li>
+                              <li><a href="">성공/삶의 자세</a></li>
+                              <li><a href="">기획/창의/리더십</a></li>
+                              <li><a href="">설득/화술/협상</a></li>
+                              <li><a href="">취업/창업</a></li>
+                              <li><a href="">여성</a></li>
+                              <li><a href="">인간관계</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">여행
+                           <ul class="subs">
+                              <li class="whole"><a href="">여행 전체</a></li>
+                              <li><a href="">국내여행</a></li>
+                              <li><a href="">해외여행</a></li>
 
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">진로/교육/교재
-                        <ul class="subs">
-                           <li class="whole"><a href="">진로/교육/교재 전체</a></li>
-                           <li><a href="">공부법</a></li>
-                           <li><a href="">특목고/자사고</a></li>
-                           <li><a href="">대입 수시</a></li>
-                           <li><a href="">대입 논술</a></li>
-                           <li><a href="">대입 합격수기</a></li>
-                           <li><a href="">진로 탐색</a></li>
-                           <li><a href="">유학/MBA</a></li>
-                           <li><a href="">교재/수험서</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">외국어
+                           <ul class="subs">
+                              <li class="whole"><a href="">외국어 전체</a></li>
+                              <li><a href="">비즈니스영어</a></li>
+                              <li><a href="">일반영어</a></li>
+                              <li><a href="">제2외국어</a></li>
+                              <li><a href="">어학시험</a></li>
 
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">건강/다이어트
-                        <ul class="subs">
-                           <li class="whole"><a href="">건강/다이어트 전체</a></li>
-                           <li><a href="">다이어트/운동/스포츠</a></li>
-                           <li><a href="">스타일/뷰티</a></li>
-                           <li><a href="">건강</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">어린이/청소년
-                        <ul class="subs">
-                           <li class="whole"><a href="">어린이/청소년 전체</a></li>
-                           <li><a href="">유아</a></li>
-                           <li><a href="">어린이</a></li>
-                           <li><a href="">청소년</a></li>
-                        </ul>
-                     </li>
-                     <li class="AllCatsub">잡지
-                        <ul class="subs">
-                           <li class="whole"><a href="">잡지 전체</a></li>
-                           <li><a href="">경영/재테크</a></li>
-                           <li><a href="">문학/교양</a></li>
-                           <li><a href="">여성/패션/뷰티</a></li>
-                           <li><a href="">디자인/예술</a></li>
-                           <li><a href="">건강/스포츠</a></li>
-                           <li><a href="">종교</a></li>
-                           <li><a href="">만화</a></li>
-                           <li><a href="">성인(19+)</a></li>
-                        </ul>
-                     </li>
-                  </ul></div>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">진로/교육/교재
+                           <ul class="subs">
+                              <li class="whole"><a href="">진로/교육/교재 전체</a></li>
+                              <li><a href="">공부법</a></li>
+                              <li><a href="">특목고/자사고</a></li>
+                              <li><a href="">대입 수시</a></li>
+                              <li><a href="">대입 논술</a></li>
+                              <li><a href="">대입 합격수기</a></li>
+                              <li><a href="">진로 탐색</a></li>
+                              <li><a href="">유학/MBA</a></li>
+                              <li><a href="">교재/수험서</a></li>
+
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">건강/다이어트
+                           <ul class="subs">
+                              <li class="whole"><a href="">건강/다이어트 전체</a></li>
+                              <li><a href="">다이어트/운동/스포츠</a></li>
+                              <li><a href="">스타일/뷰티</a></li>
+                              <li><a href="">건강</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">어린이/청소년
+                           <ul class="subs">
+                              <li class="whole"><a href="">어린이/청소년 전체</a></li>
+                              <li><a href="">유아</a></li>
+                              <li><a href="">어린이</a></li>
+                              <li><a href="">청소년</a></li>
+                           </ul>
+                        </li>
+                        <li class="AllCatsub">잡지
+                           <ul class="subs">
+                              <li class="whole"><a href="">잡지 전체</a></li>
+                              <li><a href="">경영/재테크</a></li>
+                              <li><a href="">문학/교양</a></li>
+                              <li><a href="">여성/패션/뷰티</a></li>
+                              <li><a href="">디자인/예술</a></li>
+                              <li><a href="">건강/스포츠</a></li>
+                              <li><a href="">종교</a></li>
+                              <li><a href="">만화</a></li>
+                              <li><a href="">성인(19+)</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
                </li>
             </ul>
          </nav>
          <div id="s1SBox" class="container ">
             <div class="s1slider">
                <div class="s1sliderbox">
-                  <div class="contents" style="background: url(./img/mainslider1.webp);"></div>
-                  <div class="contents" style="background: url(./img/mainslider2.webp);"></div>
-                  <div class="contents" style="background: url(./img/mainslider3.webp);"></div>
-                  <div class="contents" style="background: url(./img/mainslider4.webp);"></div>
-                  <div class="contents" style="background: url(./img/mainslider5.webp);"></div>
-                  <div class="contents" style="background: url(./img/mainslider6.webp);"></div>
+                  <div class="contents" style="background: url(./img/mainslider1.webp);">
+                     <div class="Twrap">
+                        <div class="L">
+                           <p>셀렉트</p>
+                           <p>10%할인</p>
+                        </div>
+                        <div class="STM"><span>
+                              죽어서도 차별받는 <br>
+                              과제충 귀신들의 분투기
+                           </span></div>
+                        <div class="STS"><span>범유진 신작 <과체중 귀신 연합>리뷰 이벤트</span></div>
+                     </div>
+                     <div class="pagewrap"><span class="page">1</span><span>/6</span></div>
+                  </div>
+                  <div class="contents" style="background: url(./img/mainslider6.webp);">
+                     <div class="Twrap">
+                        <div class="L">
+                           <p>세트</p>
+                           <p>10%할인</p>
+                        </div>
+                        <div class="STM"><span>5월 가정의 달 기념 <br> 해리포터 특별 세트전</span></div>
+                        <div class="STS"><span>기간 한정! 특가세트+추가 10% 할인</span></div>
+                     </div>
+                     <div class="pagewrap"><span class="page">2</span><span>/6</span></div>
+                  </div>
+                  <div class="contents" style="background: url(./img/mainslider2.webp);">
+                     <div class="Twrap">
+                        <div class="L">
+                           <p>마감임박</p>
+                           <p>R only</p>
+                           <p>대여</p>
+                        </div>
+                        <div class="STM"><span>성인 ADHD를 위한 <br> 일상 전략 안내서</span></div>
+                        <div class="STS"><span>
+                              <왜 나는 쓸데없는 일에만 집중할까> 단독 선출간
+                           </span></div>
+                     </div>
+                     <div class="pagewrap"><span class="page">3</span><span>/6</span></div>
+                  </div>
+                  <div class="contents" style="background: url(./img/mainslider3.webp);">
+                     <div class="Twrap">
+                        <div class="L">
+                           <p>50%할인</p>
+                           <p>대여</p>
+                        </div>
+                        <div class="STM"><span>법정이라는 무대, <br> 진실과 거짓의 공방전</span></div>
+                        <div class="STS"><span>황금가지 '법을 소재로 한 소설들'대여전</span></div>
+                     </div>
+                     <div class="pagewrap"><span class="page">4</span><span>/6</span></div>
+                  </div>
+                  <div class="contents" style="background: url(./img/mainslider4.webp);">
+                     <div class="Twrap">
+                        <div class="L">
+                           <p>NEW</p>
+                           <p>셀렉트</p>
+                        </div>
+                        <div class="STM">
+                           <span>조선 의학 서스펜스!<br>
+                              <탄금> 장다혜 작가 신작
+                           </span>
+                        </div>
+                        <div class="STS">
+                           <span class="fig-1ja0pj2 eiiinp91">대표작 소장 할인, 리디셀렉트 무료이용권까지</span>
+                        </div>
+                     </div>
+                     <div class="pagewrap"><span class="page">5</span><span>/6</span></div>
+                  </div>
+                  <div class="contents" style="background: url(./img/mainslider5.webp);">
+                     <div class="Twrap">
+                        <div class="L">
+                           <p>세트</p>
+                           <p>대여</p>
+                        </div>
+                        <div class="STM"><span>교양 만화의 선구자 <br>
+                              <먼나라 이웃나라>
+                           </span></div>
+                        <div class="STS"><span>개정증보판 e-book 출간 기념 특가 세트</span></div>
+                     </div>
+                     <div class="pagewrap"><span class="page">6</span><span>/6</span></div>
+                  </div>
                </div>
             </div>
          </div>
          <div class="buttonbox">
-            <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-            <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+            <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                     fill="currentColor"></path>
+               </svg></button>
+            <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                     fill="currentColor"></path>
+               </svg></button>
          </div>
       </div>
       <div id="mbuttonbox" class="container">
@@ -263,18 +352,19 @@
             <div class="circlebutton">
                <img src="./img/pointback.webp" alt="100%포백">
                <p>100%포백</p>
-               </img> </div>
-               <div class="circlebutton">
-                  <img src="./img/new.d0c590b8b2fe4f364eadecb600491294.webp" alt="신간">
-                  <p>신간</p>
-                  </img>
-               </div>
-               <div class="circlebutton">
-                  <img src="./img/bestseller.d954cea8b85b182e7cfbffdb9519bb07.webp" alt="북스 베스트">
-                  <p>북스 베스트</p>
-                  </img>
-               </div>
-           
+               </img>
+            </div>
+            <div class="circlebutton">
+               <img src="./img/new.d0c590b8b2fe4f364eadecb600491294.webp" alt="신간">
+               <p>신간</p>
+               </img>
+            </div>
+            <div class="circlebutton">
+               <img src="./img/bestseller.d954cea8b85b182e7cfbffdb9519bb07.webp" alt="북스 베스트">
+               <p>북스 베스트</p>
+               </img>
+            </div>
+
             <div class="circlebutton">
                <img src="./img/only.7d71bce5c941b4fcb325ffac8ae50410.webp" alt="단독 선출간">
                <p>단독 선출간</p>
@@ -310,21 +400,51 @@
 
             <div class="arryboxslider">
                <div class="arrybox">
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
-                  <div class="bookbox"></div>
+                  <div class="bookbox">
+                     
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
+                  <div class="bookbox">
+
+                  </div>
                </div>
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
 
          </div>
@@ -333,8 +453,8 @@
          <h3>한주,분야별 리디랭킹</h3>
          <h4>소설</h4>
          <div class="book2-1 ">
-      
-      
+
+
             <div class="book2boxslider btnArea">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -345,16 +465,26 @@
                   <div class="book2box2"></div>
                </div>
                <div class="buttonbox">
-                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
+                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
                </div>
             </div>
-      
+
          </div>
          <h4>정치</h4>
          <div class="book2-1">
-      
-      
+
+
             <div class="book2boxslider btnArea">
                <div class="book2box">
                   <div class="book2box2"></div>
@@ -365,32 +495,55 @@
                   <div class="book2box2"></div>
                </div>
                <div class="buttonbox">
-                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
+                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
                </div>
             </div>
-      
+
          </div>
          <h4>경제</h4>
          <div class="book2-1 ">
-      
-      
+
+
             <div class="book2boxslider btnArea">
                <div class="book2box">
-                  <div class="book2box2"></div>
+                  <div class="book2box2">
+                     <div class="bookbox2"></div>
+                     <div class="titbox2"></div>
+                  </div>
                   <div class="book2box2"></div>
                   <div class="book2box2"></div>
                   <div class="book2box2"></div>
                   <div class="book2box2"></div>
                   <div class="book2box2"></div>
                </div>
-           
-            <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+
+               <div class="buttonbox">
+                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
+                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
+               </div>
             </div>
-             </div>
-            </div>
+         </div>
          <h4>에세이</h4>
          <div class="book2-1">
             <div class="book2boxslider btnArea">
@@ -402,12 +555,22 @@
                   <div class="book2box2"></div>
                   <div class="book2box2"></div>
                </div>
-           
-            <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+
+               <div class="buttonbox">
+                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
+                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                           fill="currentColor"></path>
+                     </svg></button>
+               </div>
             </div>
-       </div>
          </div>
       </div>
       <!-- MD's Pick -->
@@ -460,15 +623,25 @@
                </div>
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
          </div>
 
       </div>
       <div class="TLank container">
-<h3>지금 많이 읽고있는작품</h3>
-  <div id="TLankDiv" class="bookarry btnArea">
+         <h3>지금 많이 읽고있는작품</h3>
+         <div id="TLankDiv" class="bookarry btnArea">
 
 
             <div class="TLankslider">
@@ -483,7 +656,7 @@
                   <div class="TLankbox1"></div>
                   <div class="TLankbox1"></div>
                   <div class="TLankbox1"></div>
-                    <div class="TLankbox1"></div>
+                  <div class="TLankbox1"></div>
                   <div class="TLankbox1"></div>
                   <div class="TLankbox1"></div>
                   <div class="TLankbox1"></div>
@@ -494,8 +667,18 @@
                </div>
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
 
          </div>
@@ -520,8 +703,18 @@
                </div>
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
 
          </div>
@@ -546,8 +739,18 @@
                </div>
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
 
 
@@ -576,8 +779,18 @@
 
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
          </div>
       </div>
@@ -606,8 +819,18 @@
 
             </div>
             <div class="buttonbox">
-               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
-               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z" fill="currentColor"></path></svg></button>
+               <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
+               <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" class="fig-0">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
+                        fill="currentColor"></path>
+                  </svg></button>
             </div>
          </div>
       </div>
