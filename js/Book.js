@@ -23,36 +23,11 @@ async function fetchBooks(query) {
 }
 // 오픈ai카카오 불러오기
 
-async function bookData() {
-   try {
-      const querys = ['요리'];
 
-      querys.forEach(async (query, i) => {
-         const data = await fetchBooks(query);
-
-         // for문 (10개)
-         const divs = $('#book1-1 .bookbox')
-
-         for (let j = 0; j < divs.length; j++) {
-            divs.eq(j).append(`
-               <a href="">
-                  <div class="bookbox1">
-                     <img src=${data.documents[j].thumbnail}>
-                  </div>
-                  <div class="titbox">
-                     <h3>${data.documents[j].title}</h3>
-                  </div>
-               </a>`);
-         }
-      })
-   } catch (error) {
-      console.log('에러발생', error);
-   }
-}
 
 async function bookData1() {
    try {
-      const querys = ['요리','사람은 무엇으로 사는가'];
+      const querys = ['빛들의 환대','사람은 무엇으로 사는가','감정수업','탁영','파과','나는 어떻게 삶의 해답을 찾는가','호랑골동품점'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
@@ -74,6 +49,34 @@ async function bookData1() {
       console.log('에러발생', error);
    }
 }
+async function bookData() {
+   try {
+      const querys = ['소설'];
 
-// bookData();
+      querys.forEach(async (query, i) => {
+         const data = await fetchBooks(query);
+
+         // for문 (10개)
+   const firstBox = $('.book2box').first();
+
+         for (let j = 0; j < divs.length; j++) {
+            divs.eq(j).append(`
+               <a href="">
+                  <div class="book2box2">
+                     <img src=${data.documents[j].thumbnail}>
+                  </div>
+                  <div class="titbox">
+                     <h4>${data.documents[j].title}</h4>
+                     <p>${data.documents[j].title}</p>
+                  </div>
+               </a>`);
+         }
+      })
+   } catch (error) {
+      console.log('에러발생', error);
+   }
+}
+
+
 bookData1();
+bookData();
