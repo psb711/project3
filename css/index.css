@@ -457,7 +457,7 @@ li {
 #book2 {
   width: 1230px;
   background-color: #333;
-  height: 1200px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -467,7 +467,7 @@ li {
 }
 #book2 h3 {
   margin-left: -29px;
-  padding-top: 46px;
+  padding-top: 26px;
 }
 #book2 h4 {
   font-size: 1.4rem;
@@ -798,4 +798,4 @@ li {
 }
 #footermain #footersub > li a:hover {
   color: #aaa8a8;
-}
+}/*# sourceMappingURL=index.css.map */
