@@ -25,7 +25,7 @@ async function fetchBooks(query) {
 
 
 
-async function bookData1() {
+async function bookData0() {
    try {
       const querys = ['빛들의 환대','사람은 무엇으로 사는가','감정수업','탁영','파과','나는 어떻게 삶의 해답을 찾는가','호랑골동품점'];
 
@@ -49,23 +49,22 @@ async function bookData1() {
       console.log('에러발생', error);
    }
 }
-async function bookData() {
+async function bookData1() {
    try {
-      const querys = ['소설'];
-
-      querys.forEach(async (query, i) => {
+      const querys = ['소설','기욤뮈소','박완서'];
+     querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
 
          // for문 (10개)
-   const firstBox = $('.book2box').first();
+   const firstBox = $('.book2box1');
 
-         for (let j = 0; j < divs.length; j++) {
-            divs.eq(j).append(`
+         for (let j = 0; j<6; j++) {
+            firstBox.eq(j).append(`
                <a href="">
-                  <div class="book2box2">
+                  <div class="book2box1-Thumnail">
                      <img src=${data.documents[j].thumbnail}>
                   </div>
-                  <div class="titbox">
+                  <div class="titbox2">
                      <h4>${data.documents[j].title}</h4>
                      <p>${data.documents[j].title}</p>
                   </div>
@@ -78,5 +77,5 @@ async function bookData() {
 }
 
 
+bookData0();
 bookData1();
-bookData();
