@@ -43,7 +43,8 @@ $Lidi: #1e9eff;
                width: 215px;
                height: 295px;
            margin: 0 15px 0 5px;
-
+h4{text-align:left ;
+padding-left: 8px;}
             }
 
          }
@@ -81,9 +82,12 @@ $Lidi: #1e9eff;
 
             .ebox1 {
                width: 397.6666px;
-               height: 130px;
+               height: 109px;
                margin: 0 29px;
                background-color: chocolate;
+               display: flex;
+               .txtbox{width: 50%;}
+               .imgbox{ img {width: 100%}}
             }
 
          }
@@ -514,9 +518,9 @@ background-color: transparentize($color, 0.8);
 }
  .bookbox{text-align: center;
 .bookbox1{ img{
-   width: 165px;
+   width: 155px;
 }}
-.titbox{padding: 0 21px ; font-size: 0.9rem;}
+.titbox1{padding: 0 21px ; h4{font-size: 1.3rem;} }
 }
 
 // 한주,분야별 리디랭킹
@@ -542,54 +546,69 @@ background-color: transparentize($color, 0.8);
       font-size: 1.4rem;
    }
 
-   >div {
-      height: 200px;
-      width: 1280px;
-
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-
-
-
-      .book2boxslider {
-         background-color: bisque;
-         width: 1240px;
+      >div {
          height: 200px;
-         overflow: hidden;
-
-         .book2box {
-            width: 2478px;
-height: 200px;
-            background-color: rgb(32, 192, 11);
+         width: 1280px;
+   
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+   
+   
+   
+         .book2boxslider {
+            background-color: bisque;
+            width: 1240px;
+            height: 200px;
+            overflow: hidden;
+   
+            .book2box {
+               width: 2478px;
+               height: 200px;
+               background-color: rgb(32, 192, 11);
                display: flex;
-            
+   
                .book2box1 {
                   background-color: chocolate;
                   width: 408.3333px;
                   height: 220px;
                   margin: 0 5px;
-            
-                  a { width: 100%;
+   
+                  a {
+                     width: 100%;
                      display: flex;
-            height: 200px;
+                     height: 200px;
+                     align-items: center;
+                     padding: 31px;
+   
                      .book2box1-Thumnail {
                         width: 50%;
+                        img{width: 130px;}
+                        
                      }
-            
+   
                      .titbox2 {
                         width: 50%;
+   
+                        h4 {
+                           font-size: 1.1rem
+                        }
+   
+                        p:first-of-type {
+                           margin: 4px 0;
+                           font-size: 0.9rem;
+                           color: #1f1e1e;
+                        }
                      }
-            
+   
                   }
-           
-
+   
+               }
             }
-         } 
-
+   
+         }
       }
-   }
-}
+      }
 
 // MD'PICK
 #book3 {
@@ -599,7 +618,7 @@ height: 200px;
    align-items: center;
 
    .book3-1 {
-      height: 285px;
+      height: 355px;
       width: 1280px;
       background-color: rgb(84, 156, 132);
       display: flex;
@@ -609,23 +628,46 @@ height: 200px;
       .mdslider {
          background-color: bisque;
          width: 1280px;
-         height: 250px;
+         height: 300px;
          overflow: hidden;
 
          .mdbox {
             width: 2133.333px;
-            height: 250px;
+            height: 300px;
             background-color: aqua;
             display: flex;
 
             align-items: center;
 
-            .mdbox1 {
+              .mdbox1 {
                width: 368.666px;
-               height: 200px;
-               margin: 0 29px;
-               background-color: chocolate;
-            }
+                  height: 300px;
+                  margin: 0 29px;
+                  background-color: chocolate;
+                        position: relative;   
+                  .bookimg {
+                        background-color: #1e9eff;
+                        width: 184.33px;
+                        height: 200px;
+                         margin: 0 auto;                  
+                     }
+                     .bground {
+                           background-color: #c9d1d6;
+                           width: 368.66px;
+                           height: 100px;
+                           position: absolute;
+                           bottom: 99px;
+                           left: 0px;
+                          
+                        }
+                     .tbox {
+                  
+                        width: 80%;
+                        height: 100px;
+                        position: absolute;
+                        margin:0 37px;
+                     }
+                  }
 
          }
       }
@@ -669,7 +711,34 @@ height: 200px;
                height: 200px;
 
                margin: 0px 29px;
-
+     a {
+                     width: 100%;
+                     display: flex;
+                     height: 200px;
+                     align-items: center;
+                     padding: 31px;
+   
+                     .book2box1-Thumnail {
+                        width: 40%;
+                        img{width: 100px;}
+                     }
+   
+                     .titbox2 {
+                        width: 60%;
+   
+                        h4 {
+                           font-size: 1.1rem
+                        }
+   
+                        p:first-of-type {
+                           margin: 4px 0;
+                           font-size: 0.9rem;
+                           color: #1f1e1e;
+                      
+                        }
+                     }
+   
+                  }
             }
 
          }
@@ -685,13 +754,14 @@ height: 200px;
 
 // 지금, 리디에서만 선출간 신작새로나온작품
 #book5 {
-   @include bookx
+   @include bookx 
 }
 
 
 // 한주한주,셀렉트레터
 #book6 {
    @include event
+   
 }
 
 // 이벤트

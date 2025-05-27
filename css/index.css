@@ -442,16 +442,22 @@ li {
   height: 295px;
   margin: 0 15px 0 5px;
 }
+#book1 > div .arryboxslider .arrybox > div h4 {
+  text-align: left;
+  padding-left: 8px;
+}
 
 .bookbox {
   text-align: center;
 }
 .bookbox .bookbox1 img {
-  width: 165px;
+  width: 155px;
 }
-.bookbox .titbox {
+.bookbox .titbox1 {
   padding: 0 21px;
-  font-size: 0.9rem;
+}
+.bookbox .titbox1 h4 {
+  font-size: 1.3rem;
 }
 
 #book2 {
@@ -501,12 +507,25 @@ li {
   width: 100%;
   display: flex;
   height: 200px;
+  align-items: center;
+  padding: 31px;
 }
 #book2 > div .book2boxslider .book2box .book2box1 a .book2box1-Thumnail {
   width: 50%;
 }
+#book2 > div .book2boxslider .book2box .book2box1 a .book2box1-Thumnail img {
+  width: 130px;
+}
 #book2 > div .book2boxslider .book2box .book2box1 a .titbox2 {
   width: 50%;
+}
+#book2 > div .book2boxslider .book2box .book2box1 a .titbox2 h4 {
+  font-size: 1.1rem;
+}
+#book2 > div .book2boxslider .book2box .book2box1 a .titbox2 p:first-of-type {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #1f1e1e;
 }
 
 #book3 {
@@ -516,7 +535,7 @@ li {
   align-items: center;
 }
 #book3 .book3-1 {
-  height: 285px;
+  height: 355px;
   width: 1280px;
   background-color: rgb(84, 156, 132);
   display: flex;
@@ -526,21 +545,42 @@ li {
 #book3 .book3-1 .mdslider {
   background-color: bisque;
   width: 1280px;
-  height: 250px;
+  height: 300px;
   overflow: hidden;
 }
 #book3 .book3-1 .mdslider .mdbox {
   width: 2133.333px;
-  height: 250px;
+  height: 300px;
   background-color: aqua;
   display: flex;
   align-items: center;
 }
 #book3 .book3-1 .mdslider .mdbox .mdbox1 {
   width: 368.666px;
-  height: 200px;
+  height: 300px;
   margin: 0 29px;
   background-color: chocolate;
+  position: relative;
+}
+#book3 .book3-1 .mdslider .mdbox .mdbox1 .bookimg {
+  background-color: #1e9eff;
+  width: 184.33px;
+  height: 200px;
+  margin: 0 auto;
+}
+#book3 .book3-1 .mdslider .mdbox .mdbox1 .bground {
+  background-color: #c9d1d6;
+  width: 368.66px;
+  height: 100px;
+  position: absolute;
+  bottom: 99px;
+  left: 0px;
+}
+#book3 .book3-1 .mdslider .mdbox .mdbox1 .tbox {
+  width: 80%;
+  height: 100px;
+  position: absolute;
+  margin: 0 37px;
 }
 
 .TLank {
@@ -579,6 +619,30 @@ li {
   height: 200px;
   margin: 0px 29px;
 }
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a {
+  width: 100%;
+  display: flex;
+  height: 200px;
+  align-items: center;
+  padding: 31px;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .book2box1-Thumnail {
+  width: 40%;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .book2box1-Thumnail img {
+  width: 100px;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .titbox2 {
+  width: 60%;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .titbox2 h4 {
+  font-size: 1.1rem;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .titbox2 p:first-of-type {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #1f1e1e;
+}
 
 #book4 {
   display: flex;
@@ -612,6 +676,10 @@ li {
   width: 215px;
   height: 295px;
   margin: 0 15px 0 5px;
+}
+#book4 > div .arryboxslider .arrybox > div h4 {
+  text-align: left;
+  padding-left: 8px;
 }
 
 #book5 {
@@ -647,6 +715,10 @@ li {
   height: 295px;
   margin: 0 15px 0 5px;
 }
+#book5 > div .arryboxslider .arrybox > div h4 {
+  text-align: left;
+  padding-left: 8px;
+}
 
 #book6 {
   display: flex;
@@ -677,9 +749,16 @@ li {
 }
 #book6 .eventarry .eslider .ebox .ebox1 {
   width: 397.6666px;
-  height: 130px;
+  height: 109px;
   margin: 0 29px;
   background-color: chocolate;
+  display: flex;
+}
+#book6 .eventarry .eslider .ebox .ebox1 .txtbox {
+  width: 50%;
+}
+#book6 .eventarry .eslider .ebox .ebox1 .imgbox img {
+  width: 100%;
 }
 
 #book7 {
@@ -711,9 +790,16 @@ li {
 }
 #book7 .eventarry .eslider .ebox .ebox1 {
   width: 397.6666px;
-  height: 130px;
+  height: 109px;
   margin: 0 29px;
   background-color: chocolate;
+  display: flex;
+}
+#book7 .eventarry .eslider .ebox .ebox1 .txtbox {
+  width: 50%;
+}
+#book7 .eventarry .eslider .ebox .ebox1 .imgbox img {
+  width: 100%;
 }
 
 #footerbox {
@@ -798,4 +884,4 @@ li {
 }
 #footermain #footersub > li a:hover {
   color: #aaa8a8;
-}/*# sourceMappingURL=index.css.map */
+}

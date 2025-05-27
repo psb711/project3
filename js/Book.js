@@ -69,7 +69,7 @@ async function bookData1() {
             $('.book2box').eq(i).append('<div class="book2box1"></div>');
             const div = $('.book2box').eq(i).find('.book2box1').last();
               let content = data.documents[j].contents;
-            let str = content.substring(0, 50);
+            let str = content.substring(0, 40);
             div.append(`<a href="">
                   <div class="book2box1-Thumnail">
                      <img src=${data.documents[j].thumbnail}>
@@ -94,48 +94,96 @@ async function bookData1() {
 
 async function bookData4() {
    try {
-      const querys = ['인기'];
+      const querys = ['사랑'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
 
-         // 썸네일, 내용 없는 책 제외
+         //썸네일이 빈 문자열인것은 제외
          const origin = data.documents;
-         const book = origin.filter((val) => {
+         let book = origin.filter((val) => {
             return val.thumbnail != '' && val.contents != '';
-         });
+         })
 
-         // 최대 18권 출력 (최소 book.length 확인)
-         for (let j = 0; j < Math.min(18, book.length); j++) {
-            $('.TLankbox').eq(i).append('<div class="TLankbox1"></div>');
-            const div = $('.TLankbox').eq(i).find('.TLankbox1').last();
+         // for문 (18개)
+         for (let j = 0; j < 18; j++) {
 
-            let content = book[j].contents;
-            let str = content.substring(0, 50);
-
-            div.append(`
-               <a href="">
-                  <div class="book2box1-Thumnail">
-                     <img src="${book[j].thumbnail}" alt="책 썸네일">
-                  </div>
-                  <div class="titbox2">
-                     <h4>${book[j].title}</h4>
-                     <p>${book[j].authors}</p>
-                     <p>${str}...</p>
-                  </div>
-               </a>
-            `);
+            // $('.TLankbox').append('<div class="TLankbox1"></div>');
+            // const div = $('.TLankbox').eq(i).find('.TLankbox1');
+            let content = data.documents[j].contents;
+            let str = content.substring(0, 40);
+            $('.TLankbox').append(`
+               <div class="TLankbox1">
+                  <a href="">
+                     <div class="book2box1-Thumnail">
+                        <img src=${data.documents[j].thumbnail}>
+                     </div>
+                     <div class="titbox2">
+                        <h4>${data.documents[j].title}</h4>
+                        <p>${data.documents[j].authors}</p>
+                        <p>${str}...</p>
+                     </div>
+                  </a>
+               </div>`)
          }
-      });
+      })
    } catch (error) {
-      console.log('에러 발생:', error);
+      console.log('에러발생', error);
+   }
+}
+
+async function bookData5() {
+   try {
+      const querys = ['호의', '성공', '감정수업', '탁영', '감자', '나는 어떻게 삶의 해답을 찾는가', '나비'];
+
+      querys.forEach(async (query, i) => {
+         const data = await fetchBooks(query);
+
+         const divs = $('#book4-1 .bookbox')
+
+         divs.eq(i).append(`
+            <a href="">
+               <div class="bookbox1">
+                  <img src=${data.documents[0].thumbnail}>
+               </div>
+               <div class="titbox1">
+                  <h4>${data.documents[0].title}</h4>
+               </div>
+            </a>`);
+      })
+
+   } catch (error) {
+      console.log('에러발생', error);
+   }
+}
+async function bookData6() {
+   try {
+      const querys = ['감사', '성공', '수업', '탁영', '감자', '나는 어떻게 삶의 해답을 찾는가', '나비'];
+
+      querys.forEach(async (query, i) => {
+         const data = await fetchBooks(query);
+
+         const divs = $('#book5-1 .bookbox')
+
+         divs.eq(i).append(`
+            <a href="">
+               <div class="bookbox1">
+                  <img src=${data.documents[2].thumbnail}>
+               </div>
+               <div class="titbox1">
+                  <h4>${data.documents[2].title}</h4>
+               </div>
+            </a>`);
+      })
+
+   } catch (error) {
+      console.log('에러발생', error);
    }
 }
 
 
-
 bookData0();
 bookData1();
-bookData2();
-bookData3();
 bookData4();
+bookData5();
+bookData6();
