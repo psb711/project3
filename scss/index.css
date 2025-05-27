@@ -568,6 +568,10 @@ li {
   height: 200px;
   margin: 0 auto;
 }
+#book3 .book3-1 .mdslider .mdbox .mdbox1 .bookimg img {
+  width: 80%;
+  margin: 0 18px;
+}
 #book3 .book3-1 .mdslider .mdbox .mdbox1 .bground {
   background-color: #c9d1d6;
   width: 368.66px;
@@ -577,6 +581,7 @@ li {
   left: 0px;
 }
 #book3 .book3-1 .mdslider .mdbox .mdbox1 .tbox {
+  background-color: #f3f3f3;
   width: 80%;
   height: 100px;
   position: absolute;
@@ -755,7 +760,13 @@ li {
   display: flex;
 }
 #book6 .eventarry .eslider .ebox .ebox1 .txtbox {
-  width: 50%;
+  width: 70%;
+}
+#book6 .eventarry .eslider .ebox .ebox1 .txtbox h4 {
+  color: #fff;
+}
+#book6 .eventarry .eslider .ebox .ebox1 .txtbox p {
+  color: #fff;
 }
 #book6 .eventarry .eslider .ebox .ebox1 .imgbox img {
   width: 100%;
@@ -796,7 +807,13 @@ li {
   display: flex;
 }
 #book7 .eventarry .eslider .ebox .ebox1 .txtbox {
-  width: 50%;
+  width: 70%;
+}
+#book7 .eventarry .eslider .ebox .ebox1 .txtbox h4 {
+  color: #fff;
+}
+#book7 .eventarry .eslider .ebox .ebox1 .txtbox p {
+  color: #fff;
 }
 #book7 .eventarry .eslider .ebox .ebox1 .imgbox img {
   width: 100%;
@@ -884,4 +901,4 @@ li {
 }
 #footermain #footersub > li a:hover {
   color: #aaa8a8;
-}
+}/*# sourceMappingURL=index.css.map */

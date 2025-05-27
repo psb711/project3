@@ -92,6 +92,27 @@ async function bookData1() {
    }
 }
 
+async function bookData2() {
+   try {
+      const querys = ['빛들의 환대', '사람은 무엇으로 사는가', '감정수업', '탁영', '파과', '나는 어떻게 삶의 해답을 찾는가', '호랑골동품점'];
+
+      querys.forEach(async (query, i) => {
+         const data = await fetchBooks(query);
+
+         const divs = $('.book3-1 .bookimg')
+
+         divs.eq(i).append(`
+            <a href="">
+        <img src=${data.documents[i].thumbnail}>
+            </a>`);
+      })
+
+   } catch (error) {
+      console.log('에러발생', error);
+   }
+}
+
+
 async function bookData4() {
    try {
       const querys = ['사랑'];
@@ -184,6 +205,7 @@ async function bookData6() {
 
 bookData0();
 bookData1();
+bookData2();
 bookData4();
 bookData5();
 bookData6();

@@ -86,7 +86,9 @@ padding-left: 8px;}
                margin: 0 29px;
                background-color: chocolate;
                display: flex;
-               .txtbox{width: 50%;}
+               .txtbox{width: 70%;
+                h4{ color: #fff;}
+               p{color: #fff;}}
                .imgbox{ img {width: 100%}}
             }
 
@@ -649,7 +651,8 @@ background-color: transparentize($color, 0.8);
                         background-color: #1e9eff;
                         width: 184.33px;
                         height: 200px;
-                         margin: 0 auto;                  
+                         margin: 0 auto;
+                         img{width: 80%;margin: 0 18px }                  
                      }
                      .bground {
                            background-color: #c9d1d6;
@@ -661,7 +664,7 @@ background-color: transparentize($color, 0.8);
                           
                         }
                      .tbox {
-                  
+                  background-color: #f3f3f3;
                         width: 80%;
                         height: 100px;
                         position: absolute;
