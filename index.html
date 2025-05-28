@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LIDI</title>
-   <link rel="stylesheet" href="./scss/index.css">
+   <link rel="stylesheet" href="./css/index.css">
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="./js/index.js"></script>
    <script src="./js/Book.js"></script>
@@ -15,7 +15,13 @@
 
 <body>
    <div id="wrap">
-      <div id="banner"></div>
+      <div id="banner"> 
+         <button>x</button>
+         <div>
+         <a href=""><p>캐쉬충전</p></a>
+         <a href=""><p>내 서재 보기</p></a >
+         </div>
+      </div>
       <div id="headerbox">
          <header class="container">
             <div id="headertop">
@@ -457,17 +463,17 @@
 
 
             <div class="book2boxslider btnArea">
-               <div class="book2box">
+               <div class="book2box" id="pol">
 
                </div>
                <div class="buttonbox">
-                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                  <button type="button" class="leftbutton leftbuttone"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="fig-0">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                            d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
                            fill="currentColor"></path>
                      </svg></button>
-                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                  <button type="button" class="rightbutton rightbuttone"><svg width="1em" height="1em" viewBox="0 0 16 16"
                         fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                            d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
@@ -482,18 +488,18 @@
 
 
             <div class="book2boxslider btnArea">
-               <div class="book2box">
+               <div class="book2box" id="econ">
 
                </div>
 
                <div class="buttonbox">
-                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                  <button type="button" class="leftbutton leftbuttonr"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="fig-0">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                            d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
                            fill="currentColor"></path>
                      </svg></button>
-                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                  <button type="button" class="rightbutton rightbuttonr"><svg width="1em" height="1em" viewBox="0 0 16 16"
                         fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                            d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
@@ -504,21 +510,21 @@
          </div>
          <h4>에세이</h4>
          <div class="book2-1 ">
-
-
             <div class="book2boxslider btnArea">
-               <div class="book2box">
+               <div class="book2box" id="Ess">
 
                </div>
 
                <div class="buttonbox">
-                  <button type="button" class="leftbutton"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                  <button type="button" class="leftbutton leftbuttont">
+                     <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="fig-0">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                            d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
                            fill="currentColor"></path>
                      </svg></button>
-                  <button type="button" class="rightbutton"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                  <button type="button" class="rightbutton rightbuttont">
+                     <svg width="1em" height="1em" viewBox="0 0 16 16"
                         fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-0">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                            d="M4.63859 14.2293C4.36522 13.9559 4.36522 13.5127 4.63859 13.2394L9.87695 8.00099L4.63859 2.76263C4.36522 2.48927 4.36522 2.04605 4.63859 1.77268C4.91195 1.49932 5.35517 1.49932 5.62854 1.77268L11.3619 7.50602C11.6352 7.77939 11.6352 8.2226 11.3619 8.49597L5.62854 14.2293C5.35517 14.5027 4.91195 14.5027 4.63859 14.2293Z"
@@ -536,45 +542,45 @@
                <div class="mdbox">
                   <div class="mdbox1">
                      <div class="bookimg"></div>
-                     <div class="bground"></div>
+                     <div class="bground"style="background-color: navy;"></div>
                      <div class="tbox">
                         <p>일상의 어둠 속에서 마주한 따뜻한 빛, <br> 마음을 안아주는 환대의 이야기</p>
-                        <p> 앵콜! 열린채</p>
+                        <p><빛들의환대>단독 선 출간 </p>
                      </div>
                   </div>
                   <div class="mdbox1">
                    <div class="bookimg"></div>
-                       <div class="bground"></div>
+                       <div class="bground"style="background-color: navy;"></div>
                      <div class="tbox">
-                        <p></p>
-                        <p></p>
+                        <p>톨스토이의 단편소설, <br>사랑·신앙 통해 인간존재 의미 탐구</p>
+                        <p><사람은 무엇으로 사는가></p>
                      </div>
                   </div>
-                  <div class="mdbox1">
-                   <div class="bookimg"></div>
-                       <div class="bground"></div>
-                     <div class="tbox">
-                        <p></p>
-                        <p></p>
-                     </div>
-                  </div>
+                
                  <div class="mdbox1">
                    <div class="bookimg"></div>
-                       <div class="bground"></div>
+                       <div class="bground"style="background-color: navy;"></div>
                      <div class="tbox">
-                        <p></p>
-                        <p></p>
+                        <p>감정을 알면 인생이 달라진다! <br> 감정의 힘으로 깊고 풍요로운 삶</p>
+                        <p><감정수업> 단독 선 출간</p>
                      </div>
                   </div>
                   <div class="mdbox1">
                    <div class="bookimg"></div>
-                       <div class="bground"></div>
+                       <div class="bground"style="background-color: navy;"></div>
                      <div class="tbox">
-                       <h4></h4>
-                        <p></p>
+                      <p>남의 시선에서 벗어나 나로 사는 법! <br> 인생이 가벼워지는 용기의 철학.</p>
+                        <p><미움받을용기> 전권 세트 할인</p>
                      </div>
                   </div>
-
+  <div class="mdbox1">
+                   <div class="bookimg"></div>
+                       <div class="bground"style="background-color: navy;"></div>
+                     <div class="tbox">
+                        <p>60대 여성 킬러의 마지막 연민, <br> 삶의 빛과 상처를 그린 감성 스릴러</p>
+                        <p><파과>리디 단독 선출간</p>
+                     </div>
+                  </div>
                </div>
 
 
@@ -598,13 +604,14 @@
 
    </div>
    <div class="TLank container">
-      <h3>지금 많이 읽고있는작품</h3>
+      <h3>지금 많이 읽고있는 작품</h3>
       <div id="TLankDiv" class="bookarry btnArea">
 
 
          <div class="TLankslider">
             <div class="TLankbox">
-
+               <div class="TLankbox2"></div>
+               <div class="TLankbox2"></div>
             </div>
          </div>
          <div class="buttonbox">
@@ -704,7 +711,7 @@
 
          <div class="eslider">
             <div class="ebox">
-                <div class="ebox1 Abox">
+                <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
                      <h4> 시대의 금기와 모순 <br>
                      처연한 사랑, 비극적 운명
@@ -715,7 +722,7 @@
                      <img src="./img/selector1.png" alt="">
                   </div>
                </div>
-                <div class="ebox1 Abox">
+                <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
                      <h4>과학으로 삶과 우주를 <br>
                      이해하는 지적 여정</h4>
@@ -725,7 +732,7 @@
                      <img src="./img/selector2.png" alt="">
                   </div>
                </div>
-                <div class="ebox1 Abox">
+                <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
                      <h4>세상의 진짜 소중함을 <br>바라보는 아이들의 시선</h4>
                      <p><스몰 트라우마></p>
@@ -734,9 +741,9 @@
                      <img src="./img/selector3.png" alt="">
                   </div>
                </div>
-                <div class="ebox1 Abox">
+                <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
-                     <h4>얻으려면, 잃어야겠지? <br> 악마의 제안을 받으시겠습니까?</h4>
+                     <h4 >얻으려면, 잃어야겠지? <br> 악마의 제안, 받으시겠습니까?</h4>
                      <p><세상에서 고양이가 사라진다면></p>
                   </div>
                   <div class="imgbox">
@@ -769,40 +776,40 @@
       
          <div class="eslider">
             <div class="ebox">
-               <div class="ebox1 Abox">
+               <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
-                     <h4> <열린책들 세계문학전집> <br>특가 50년 대여 OPEN</h4>
+                     <h4> 세게 각국의 역사를 한눈에! <br><먼나라 이웃나라></h4>
                   
                   </div>
                   <div class="imgbox">
-                     <img src="" alt="">
+                     <img src="./img/event1.png" alt="책표지1">
                   </div>
                </div>
-               <div class="ebox1 Abox">
+               <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
                      <h4>비과학적인 재난의 <br>해답을 쥔 천재 과학자 </h4>
                     
                   </div>
                   <div class="imgbox">
-                     <img src="" alt="">
+                     <img src="./img/event3.png" alt="책표지2 "style="height: 97px; margin-left:45px" >
                   </div>
                </div>
-                <div class="ebox1 Abox">
+                <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
-                     <h4><날씨가 좋으면 찾아가겠어요> <br> 이도우 신작 대여 50% </h4>
+                     <h4>최대 20,000P 증정 <br> 5월 리뷰 챌린지</h4>
                  
                   </div>
                   <div class="imgbox">
-                     <img src="" alt="">
+                     <img src="./img/event2.png" alt="책표지3" style="height: 97px; margin-left:45px">
                   </div>
                </div>
-                <div class="ebox1 Abox">
+                <div class="ebox1 Abox"style="background-color: navy;">
                   <div class="txtbox">
                      <h4>폭력으로부터 살아남은 여자들 <br> <파이널 걸 서포트 그룹></h4>
                 
                   </div>
                   <div class="imgbox">
-                     <img src="" alt="">
+                     <img src="./img/event4.png" alt="책표지4" >
                   </div>
                </div>
             </div>

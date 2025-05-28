@@ -32,17 +32,43 @@ ol {
   width: 1280px;
   height: auto;
   margin: 0 auto;
-  border: 1px solid rgb(207, 191, 191);
 }
 
 .BOOK,
 .MD {
-  height: 360px;
+  height: 430px;
 }
 
 h3 {
   align-self: flex-start;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 50px 0;
+}
+
+#banner {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  z-index: 10;
+  top: 750px;
+  right: 60px;
+  position: absolute;
+}
+#banner div {
+  background-color: #1e9eff;
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+  background-image: url(../img/banner.png);
+  position: relative;
+}
+#banner div a {
+  margin: 16px 15px 16px 14px;
+}
+#banner button {
+  all: unset;
+  cursor: pointer;
 }
 
 .btnArea {
@@ -61,9 +87,11 @@ h3 {
 }
 
 .buttonbox button {
+  border-radius: 150px;
+  height: 40px;
   pointer-events: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(48, 48, 48, 0.5);
+  color: rgb(255, 255, 255);
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -183,7 +211,7 @@ li {
   display: none;
   height: 400px;
   position: absolute;
-  top: 38px;
+  top: 36px;
   right: -2px;
 }
 .subwrap .sub {
@@ -418,26 +446,22 @@ li {
 #book1 > div {
   height: 350px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book1 > div .arryboxslider {
-  background-color: bisque;
   width: 1280px;
   height: 290px;
   overflow: hidden;
 }
 #book1 > div .arryboxslider .arrybox {
   width: 2560px;
-  background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book1 > div .arryboxslider .arrybox > div {
-  background-color: chocolate;
   width: 215px;
   height: 295px;
   margin: 0 15px 0 5px;
@@ -446,9 +470,14 @@ li {
   text-align: left;
   padding-left: 8px;
 }
+#book1 > div .arryboxslider .arrybox > div p {
+  text-align: left;
+  padding-left: 28px;
+}
 
 .bookbox {
   text-align: center;
+  flex-shrink: 0;
 }
 .bookbox .bookbox1 img {
   width: 155px;
@@ -462,13 +491,11 @@ li {
 
 #book2 {
   width: 1230px;
-  background-color: #333;
-  height: 1000px;
+  height: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: -50px;
   margin-bottom: 40px;
 }
 #book2 h3 {
@@ -477,6 +504,8 @@ li {
 }
 #book2 h4 {
   font-size: 1.4rem;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
 }
 #book2 > div {
   height: 200px;
@@ -486,7 +515,6 @@ li {
   align-items: center;
 }
 #book2 > div .book2boxslider {
-  background-color: bisque;
   width: 1240px;
   height: 200px;
   overflow: hidden;
@@ -494,11 +522,9 @@ li {
 #book2 > div .book2boxslider .book2box {
   width: 2478px;
   height: 200px;
-  background-color: rgb(32, 192, 11);
   display: flex;
 }
 #book2 > div .book2boxslider .book2box .book2box1 {
-  background-color: chocolate;
   width: 408.3333px;
   height: 220px;
   margin: 0 5px;
@@ -515,12 +541,15 @@ li {
 }
 #book2 > div .book2boxslider .book2box .book2box1 a .book2box1-Thumnail img {
   width: 130px;
+  border-radius: 10px;
 }
 #book2 > div .book2boxslider .book2box .book2box1 a .titbox2 {
   width: 50%;
 }
-#book2 > div .book2boxslider .book2box .book2box1 a .titbox2 h4 {
-  font-size: 1.1rem;
+#book2 > div .book2boxslider .book2box .book2box1 a .titbox2 h5 {
+  font-size: 1.3rem;
+  padding: 5px 5px 5px 0;
+  font-weight: 800;
 }
 #book2 > div .book2boxslider .book2box .book2box1 a .titbox2 p:first-of-type {
   margin: 4px 0;
@@ -537,33 +566,28 @@ li {
 #book3 .book3-1 {
   height: 355px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book3 .book3-1 .mdslider {
-  background-color: bisque;
   width: 1280px;
-  height: 300px;
+  height: 350px;
   overflow: hidden;
 }
 #book3 .book3-1 .mdslider .mdbox {
   width: 2133.333px;
-  height: 300px;
-  background-color: aqua;
+  height: 350px;
   display: flex;
   align-items: center;
 }
 #book3 .book3-1 .mdslider .mdbox .mdbox1 {
   width: 368.666px;
-  height: 300px;
+  height: 350px;
   margin: 0 29px;
-  background-color: chocolate;
   position: relative;
 }
 #book3 .book3-1 .mdslider .mdbox .mdbox1 .bookimg {
-  background-color: #1e9eff;
   width: 184.33px;
   height: 200px;
   margin: 0 auto;
@@ -577,15 +601,24 @@ li {
   width: 368.66px;
   height: 100px;
   position: absolute;
-  bottom: 99px;
+  bottom: 143px;
   left: 0px;
+  z-index: -1;
 }
 #book3 .book3-1 .mdslider .mdbox .mdbox1 .tbox {
-  background-color: #f3f3f3;
-  width: 80%;
-  height: 100px;
+  width: 90%;
+  height: 150px;
   position: absolute;
-  margin: 0 37px;
+  margin: 15px 20px;
+  text-align: center;
+}
+#book3 .book3-1 .mdslider .mdbox .mdbox1 .tbox p:nth-of-type(1) {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#book3 .book3-1 .mdslider .mdbox .mdbox1 .tbox p:nth-of-type(2) {
+  color: rgb(105, 105, 110);
 }
 
 .TLank {
@@ -597,13 +630,11 @@ li {
 .TLank #TLankDiv {
   height: 685px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 .TLank #TLankDiv .TLankslider {
-  background-color: bisque;
   width: 1260px;
   height: 650px;
   overflow: hidden;
@@ -611,15 +642,18 @@ li {
 .TLank #TLankDiv .TLankslider .TLankbox {
   width: 2520px;
   height: 650px;
-  background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
 }
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox2 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 {
-  background-color: chocolate;
   width: 362px;
   height: 200px;
   margin: 0px 29px;
@@ -636,6 +670,15 @@ li {
 }
 .TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .book2box1-Thumnail img {
   width: 100px;
+}
+.TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .book2box1-Thumnail p {
+  border: 2px solid #1e9eff;
+  width: 24px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0 0 5px -30px;
+  color: rgb(71, 71, 71);
+  font-weight: 700;
 }
 .TLank #TLankDiv .TLankslider .TLankbox .TLankbox1 a .titbox2 {
   width: 60%;
@@ -658,26 +701,22 @@ li {
 #book4 > div {
   height: 350px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book4 > div .arryboxslider {
-  background-color: bisque;
   width: 1280px;
   height: 290px;
   overflow: hidden;
 }
 #book4 > div .arryboxslider .arrybox {
   width: 2560px;
-  background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book4 > div .arryboxslider .arrybox > div {
-  background-color: chocolate;
   width: 215px;
   height: 295px;
   margin: 0 15px 0 5px;
@@ -685,6 +724,10 @@ li {
 #book4 > div .arryboxslider .arrybox > div h4 {
   text-align: left;
   padding-left: 8px;
+}
+#book4 > div .arryboxslider .arrybox > div p {
+  text-align: left;
+  padding-left: 28px;
 }
 
 #book5 {
@@ -696,26 +739,22 @@ li {
 #book5 > div {
   height: 350px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book5 > div .arryboxslider {
-  background-color: bisque;
   width: 1280px;
   height: 290px;
   overflow: hidden;
 }
 #book5 > div .arryboxslider .arrybox {
   width: 2560px;
-  background-color: aqua;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book5 > div .arryboxslider .arrybox > div {
-  background-color: chocolate;
   width: 215px;
   height: 295px;
   margin: 0 15px 0 5px;
@@ -723,6 +762,10 @@ li {
 #book5 > div .arryboxslider .arrybox > div h4 {
   text-align: left;
   padding-left: 8px;
+}
+#book5 > div .arryboxslider .arrybox > div p {
+  text-align: left;
+  padding-left: 28px;
 }
 
 #book6 {
@@ -734,13 +777,11 @@ li {
 #book6 .eventarry {
   height: 200px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book6 .eventarry .eslider {
-  background-color: bisque;
   width: 1280px;
   height: 130px;
   overflow: hidden;
@@ -748,28 +789,36 @@ li {
 #book6 .eventarry .eslider .ebox {
   width: 1706.666px;
   height: 130px;
-  background-color: aqua;
   display: flex;
   align-items: center;
 }
 #book6 .eventarry .eslider .ebox .ebox1 {
   width: 397.6666px;
-  height: 109px;
+  height: 97px;
   margin: 0 29px;
-  background-color: chocolate;
   display: flex;
+  overflow: hidden;
 }
 #book6 .eventarry .eslider .ebox .ebox1 .txtbox {
   width: 70%;
+  float: left;
+  text-align: center;
 }
 #book6 .eventarry .eslider .ebox .ebox1 .txtbox h4 {
   color: #fff;
+  font-size: 1.2rem;
+  margin: 13px -80px 0 5px;
+  width: 205px;
 }
 #book6 .eventarry .eslider .ebox .ebox1 .txtbox p {
-  color: #fff;
+  color: #8f8f8f;
+  margin: 3px -60px 0 10px;
+}
+#book6 .eventarry .eslider .ebox .ebox1 .imgbox {
+  width: 100%;
 }
 #book6 .eventarry .eslider .ebox .ebox1 .imgbox img {
-  width: 100%;
+  width: 103%;
 }
 
 #book7 {
@@ -781,13 +830,11 @@ li {
 #book7 .eventarry {
   height: 200px;
   width: 1280px;
-  background-color: rgb(84, 156, 132);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 #book7 .eventarry .eslider {
-  background-color: bisque;
   width: 1280px;
   height: 130px;
   overflow: hidden;
@@ -795,28 +842,36 @@ li {
 #book7 .eventarry .eslider .ebox {
   width: 1706.666px;
   height: 130px;
-  background-color: aqua;
   display: flex;
   align-items: center;
 }
 #book7 .eventarry .eslider .ebox .ebox1 {
   width: 397.6666px;
-  height: 109px;
+  height: 97px;
   margin: 0 29px;
-  background-color: chocolate;
   display: flex;
+  overflow: hidden;
 }
 #book7 .eventarry .eslider .ebox .ebox1 .txtbox {
   width: 70%;
+  float: left;
+  text-align: center;
 }
 #book7 .eventarry .eslider .ebox .ebox1 .txtbox h4 {
   color: #fff;
+  font-size: 1.2rem;
+  margin: 13px -80px 0 5px;
+  width: 205px;
 }
 #book7 .eventarry .eslider .ebox .ebox1 .txtbox p {
-  color: #fff;
+  color: #8f8f8f;
+  margin: 3px -60px 0 10px;
+}
+#book7 .eventarry .eslider .ebox .ebox1 .imgbox {
+  width: 100%;
 }
 #book7 .eventarry .eslider .ebox .ebox1 .imgbox img {
-  width: 100%;
+  width: 103%;
 }
 
 #footerbox {
@@ -901,4 +956,4 @@ li {
 }
 #footermain #footersub > li a:hover {
   color: #aaa8a8;
-}/*# sourceMappingURL=index.css.map */
+}

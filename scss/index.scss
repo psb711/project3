@@ -11,6 +11,7 @@
 $Lidi: #1e9eff;
 
 @mixin bookx {
+   
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -20,37 +21,42 @@ $Lidi: #1e9eff;
 
       height: 350px;
       width: 1280px;
-      background-color: rgb(84, 156, 132);
+
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
       .arryboxslider {
-         background-color: bisque;
+ 
          width: 1280px;
          height: 290px;
          overflow: hidden;
 
          .arrybox {
             width: 2560px;
-            background-color: aqua;
+          
             display: flex;
             justify-content: space-evenly;
             align-items: center;
 
             >div {
-               background-color: chocolate;
+         
                width: 215px;
                height: 295px;
            margin: 0 15px 0 5px;
 h4{text-align:left ;
 padding-left: 8px;}
+p{text-align:left ;
+padding-left: 28px;}
+
+
             }
 
          }
       }
    }
 }
+
 
 @mixin event {
    display: flex;
@@ -61,13 +67,13 @@ padding-left: 8px;}
    .eventarry {
       height: 200px;
       width: 1280px;
-      background-color: rgb(84, 156, 132);
+
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
       .eslider {
-         background-color: bisque;
+
          width: 1280px;
          height: 130px;
          overflow: hidden;
@@ -75,21 +81,29 @@ padding-left: 8px;}
          .ebox {
             width: 1706.666px;
             height: 130px;
-            background-color: aqua;
+
             display: flex;
 
             align-items: center;
 
             .ebox1 {
                width: 397.6666px;
-               height: 109px;
+               height: 97px;
                margin: 0 29px;
-               background-color: chocolate;
+    
                display: flex;
-               .txtbox{width: 70%;
-                h4{ color: #fff;}
-               p{color: #fff;}}
-               .imgbox{ img {width: 100%}}
+               overflow: hidden;
+               .txtbox{
+                  width: 70%;
+                  float: left;
+                  text-align: center;
+                h4{ color: #fff;
+    font-size: 1.2rem;
+    margin: 13px -80px 0 5px;
+    width: 205px;}
+               p{color: #8f8f8f;margin: 3px -60px 0 10px}}
+               .imgbox{ width: 100%;
+                  img {width: 103%}}
             }
 
          }
@@ -102,17 +116,45 @@ padding-left: 8px;}
    width: 1280px;
    height: auto;
    margin: 0 auto;
-   border: 1px solid rgb(207, 191, 191);
+ 
 }
 
 .BOOK,
 .MD {
-   height: 360px;
+   height: 430px;
 }
 
 h3 {
    align-self: flex-start;
-   font-size: 1.4rem;
+   font-size: 1.6rem;
+   font-weight: 800;
+   margin: 50px 0;
+}
+
+// 배너
+#banner {
+   div {
+      background-color: $Lidi;
+      border-radius: 100%;
+      width: 140px;
+      height: 140px;
+      background-image: url(../img/banner.png);
+position: relative;
+a{margin: 16px 15px 16px 14px;}
+   }
+
+   width: 200px;
+   height: 200px;
+   position: fixed;
+   z-index: 10;
+   top: 750px;
+   right: 60px;
+   position: absolute;
+   button{
+  all: unset;
+
+  cursor: pointer;
+}
 }
 
 // 전체버튼공통
@@ -132,9 +174,11 @@ h3 {
 }
 
 .buttonbox button {
+   border-radius: 150px;
+   height: 40px;
    pointer-events: auto;
-   background-color: rgba(0, 0, 0, 0.5);
-   color: white;
+   background-color: rgba(48, 48, 48, 0.5);
+   color: rgb(255, 255, 255);
    border: none;
    padding: 10px;
    cursor: pointer;
@@ -277,7 +321,7 @@ li {
    display: none;
    height: 400px;
    position: absolute;
-   top: 38px;
+   top: 36px;
    right: -2px;
 
    .sub {
@@ -518,7 +562,7 @@ background-color: transparentize($color, 0.8);
    @include bookx()
   
 }
- .bookbox{text-align: center;
+ .bookbox{text-align: center; flex-shrink: 0;
 .bookbox1{ img{
    width: 155px;
 }}
@@ -528,14 +572,14 @@ background-color: transparentize($color, 0.8);
 // 한주,분야별 리디랭킹
 #book2 {
        width: 1230px;
-    background-color: #333;
-    height: 1000px;
+
+    height: 1200px;
     display: flex
 ;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: -50px;
+ 
     margin-bottom: 40px;
 
    h3 {
@@ -546,6 +590,9 @@ background-color: transparentize($color, 0.8);
    h4 {
 
       font-size: 1.4rem;
+      border-top: solid 1px gray;
+      border-bottom: solid 1px gray;
+    
    }
 
       >div {
@@ -559,7 +606,7 @@ background-color: transparentize($color, 0.8);
    
    
          .book2boxslider {
-            background-color: bisque;
+        
             width: 1240px;
             height: 200px;
             overflow: hidden;
@@ -567,11 +614,11 @@ background-color: transparentize($color, 0.8);
             .book2box {
                width: 2478px;
                height: 200px;
-               background-color: rgb(32, 192, 11);
+
                display: flex;
    
                .book2box1 {
-                  background-color: chocolate;
+           
                   width: 408.3333px;
                   height: 220px;
                   margin: 0 5px;
@@ -585,15 +632,18 @@ background-color: transparentize($color, 0.8);
    
                      .book2box1-Thumnail {
                         width: 50%;
-                        img{width: 130px;}
+                        img{width: 130px; border-radius: 10px;}
                         
                      }
    
                      .titbox2 {
                         width: 50%;
    
-                        h4 {
-                           font-size: 1.1rem
+                        h5 {
+                           font-size: 1.3rem;
+                           padding:5px 5px 5px 0;
+                           font-weight: 800;
+                        
                         }
    
                         p:first-of-type {
@@ -622,33 +672,33 @@ background-color: transparentize($color, 0.8);
    .book3-1 {
       height: 355px;
       width: 1280px;
-      background-color: rgb(84, 156, 132);
+
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
       .mdslider {
-         background-color: bisque;
+
          width: 1280px;
-         height: 300px;
+         height: 350px;
          overflow: hidden;
 
          .mdbox {
             width: 2133.333px;
-            height: 300px;
-            background-color: aqua;
+            height: 350px;
+ 
             display: flex;
 
             align-items: center;
 
               .mdbox1 {
                width: 368.666px;
-                  height: 300px;
+                  height: 350px;
                   margin: 0 29px;
-                  background-color: chocolate;
+       
                         position: relative;   
                   .bookimg {
-                        background-color: #1e9eff;
+                   
                         width: 184.33px;
                         height: 200px;
                          margin: 0 auto;
@@ -659,21 +709,35 @@ background-color: transparentize($color, 0.8);
                            width: 368.66px;
                            height: 100px;
                            position: absolute;
-                           bottom: 99px;
+                           bottom: 143px;
                            left: 0px;
+                           z-index: -1;
                           
                         }
                      .tbox {
-                  background-color: #f3f3f3;
-                        width: 80%;
-                        height: 100px;
+                
+                        width: 90%;
+                        height: 150px;
                         position: absolute;
-                        margin:0 37px;
-                     }
-                  }
+                        margin: 15px 20px;
+                        text-align: center;
 
-         }
-      }
+                        
+                           p:nth-of-type(1) {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                           }
+                        
+                           p:nth-of-type(2) {
+                        
+                              color: rgb(105, 105, 110);
+                           }
+                        }
+                        }
+                        
+                        }
+                        }
    }
 }
 
@@ -687,13 +751,13 @@ background-color: transparentize($color, 0.8);
    #TLankDiv {
       height: 685px;
       width: 1280px;
-      background-color: rgb(84, 156, 132);
+   
       display: flex;
       justify-content: space-evenly;
       align-items: center;
 
       .TLankslider {
-         background-color: bisque;
+        
          width: 1260px;
          height: 650px;
          overflow: hidden;
@@ -701,15 +765,20 @@ background-color: transparentize($color, 0.8);
          .TLankbox {
             width: 2520px;
             height: 650px;
-            background-color: aqua;
+   
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
             flex-direction: row;
+            .TLankbox2{ 
+               width: 50%;
+               display: flex;
+               flex-wrap: wrap;
+            }
 
             .TLankbox1 {
-               background-color: chocolate;
+     
                width: 362px;
                height: 200px;
 
@@ -724,6 +793,7 @@ background-color: transparentize($color, 0.8);
                      .book2box1-Thumnail {
                         width: 40%;
                         img{width: 100px;}
+                        p{border: 2px solid $Lidi; width: 24px; text-align: center; border-radius: 100%; margin:0 0 5px -30px; color: rgb(71, 71, 71); font-weight: 700;}
                      }
    
                      .titbox2 {

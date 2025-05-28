@@ -27,7 +27,7 @@ async function fetchBooks(query) {
 
 async function bookData0() {
    try {
-      const querys = ['빛들의 환대', '사람은 무엇으로 사는가', '감정수업', '탁영', '파과', '나는 어떻게 삶의 해답을 찾는가', '호랑골동품점'];
+      const querys = ['빛들의 환대', '사과', '감정수업', '탁영', '파과', '도전', '호랑골동품점', '호의', '사랑', '행복'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
@@ -39,8 +39,16 @@ async function bookData0() {
                <div class="bookbox1">
                   <img src=${data.documents[0].thumbnail}>
                </div>
-               <div class="titbox1">
-                  <h4>${data.documents[0].title}</h4>
+               <div class="titbox1"> 
+               <h4>
+                   ${data.documents[0].title.length > 9
+               ? data.documents[0].title.substring(0, 9) + '...'
+               : data.documents[0].title
+            }</h4>
+
+               </div>
+                <div id="authorsbox1">
+                  <p>${data.documents[0].authors}<p>
                </div>
             </a>`);
       })
@@ -52,7 +60,7 @@ async function bookData0() {
 
 async function bookData1() {
    try {
-      const querys = ['정치', '경제', '에세이'];
+      const querys = ['대통령', '경제', '에세이'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
@@ -68,21 +76,26 @@ async function bookData1() {
 
             $('.book2box').eq(i).append('<div class="book2box1"></div>');
             const div = $('.book2box').eq(i).find('.book2box1').last();
-              let content = data.documents[j].contents;
+            let content = data.documents[j].contents;
             let str = content.substring(0, 40);
             div.append(`<a href="">
                   <div class="book2box1-Thumnail">
                      <img src=${data.documents[j].thumbnail}>
                   </div>
                   <div class="titbox2">
-                     <h4>${data.documents[j].title}</h4>
-                     <p>${data.documents[j].authors }</p>
-                     <p>${str }...</p>
+                     <h5>${data.documents[j].title}</h5>
+          <p>
+  ${data.documents[j].authors[0].length > 8
+                  ? data.documents[j].authors[0].substring(0, 8) + '...'
+                  : data.documents[j].authors[0]
+               }
+</p>
+                     <p>${str}...</p>
                   </div>
                </a>`)
-          
 
-        
+
+
 
 
          }
@@ -94,7 +107,7 @@ async function bookData1() {
 
 async function bookData2() {
    try {
-      const querys = ['빛들의 환대', '사람은 무엇으로 사는가', '감정수업', '탁영', '파과', '나는 어떻게 삶의 해답을 찾는가', '호랑골동품점'];
+      const querys = ['빛들', '사람은 무엇으로 사는가', '감정수업', '미움받을용기', '파과', '나는 어떻게 삶의 해답을 찾는가', '호랑골동품점'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
@@ -103,7 +116,7 @@ async function bookData2() {
 
          divs.eq(i).append(`
             <a href="">
-        <img src=${data.documents[i].thumbnail}>
+        <img src=${data.documents[1].thumbnail}>
             </a>`);
       })
 
@@ -133,10 +146,12 @@ async function bookData4() {
             // const div = $('.TLankbox').eq(i).find('.TLankbox1');
             let content = data.documents[j].contents;
             let str = content.substring(0, 40);
-            $('.TLankbox').append(`
+
+            let appendtag= `
                <div class="TLankbox1">
-                  <a href="">
-                     <div class="book2box1-Thumnail">
+                  <a href="">                
+                     <div class="book2box1-Thumnail"> 
+                     <p>${j+1}</p>
                         <img src=${data.documents[j].thumbnail}>
                      </div>
                      <div class="titbox2">
@@ -145,7 +160,12 @@ async function bookData4() {
                         <p>${str}...</p>
                      </div>
                   </a>
-               </div>`)
+               </div>`
+
+            if(j<9){
+               $('.TLankbox2').eq(0).append(appendtag)
+            }else if(9<j<18)  {$('.TLankbox2').eq(1).append(appendtag)}
+            
          }
       })
    } catch (error) {
@@ -170,6 +190,9 @@ async function bookData5() {
                <div class="titbox1">
                   <h4>${data.documents[0].title}</h4>
                </div>
+                 <div class="authorsbox1">
+                  <h4>${data.documents[0].authors}</h4>
+               </div>
             </a>`);
       })
 
@@ -193,6 +216,9 @@ async function bookData6() {
                </div>
                <div class="titbox1">
                   <h4>${data.documents[2].title}</h4>
+               </div>
+                 <div class="authorsbox1">
+                  <h4>${data.documents[2].authors}</h4>
                </div>
             </a>`);
       })
