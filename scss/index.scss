@@ -85,28 +85,46 @@ padding-left: 28px;}
             display: flex;
 
             align-items: center;
+            box-shadow: -5px 2px 5px #333;
 
             .ebox1 {
-               width: 397.6666px;
-               height: 97px;
-               margin: 0 29px;
-    
-               display: flex;
-               overflow: hidden;
-               .txtbox{
-                  width: 70%;
-                  float: left;
-                  text-align: center;
-                h4{ color: #fff;
-    font-size: 1.2rem;
-    margin: 13px -80px 0 5px;
-    width: 205px;}
-               p{color: #8f8f8f;margin: 3px -60px 0 10px}}
-               .imgbox{ width: 100%;
-                  img {width: 103%}}
-            }
-
-         }
+                  width: 397.6666px;
+                  height: 97px;
+                  margin: 0 29px;
+               
+                  display: flex;
+                  overflow: hidden;
+                  position: relative;
+                  z-index: 1;
+            
+                  .txtbox {
+                     width: 70%;
+                     float: left;
+                     text-align: center;
+                     position: relative;
+                     z-index: 5;
+            
+                  
+                     
+                        p {
+                           color: #8f8e8e;
+                           margin: 3px -60px 0 10px;
+                           font-weight: 700;
+                        }
+                     }
+                     
+                     .imgbox {
+                        width: 100%;
+                        position: relative;
+                        z-index: 0;
+                     
+                        img {
+                           width: 103%;
+                        }
+                     }
+                     }
+                     
+                     }
       }
    }
 }
@@ -137,24 +155,54 @@ h3 {
       background-color: $Lidi;
       border-radius: 100%;
       width: 140px;
-      height: 140px;
-      background-image: url(../img/banner.png);
-position: relative;
-a{margin: 16px 15px 16px 14px;}
-   }
-
-   width: 200px;
-   height: 200px;
-   position: fixed;
-   z-index: 10;
-   top: 750px;
-   right: 60px;
-   position: absolute;
-   button{
-  all: unset;
-
-  cursor: pointer;
+         height: 135px;
+         background-image: url(../img/banner.png);
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+         
+            a {
+               text-align: center;
+         
+               p {
+                  color: #fff;
+                  font-weight: 500;
+                  font-size: 1.2rem;
+                  margin-top: -10px;
+                   transition: transform 0.2s ease;
+               }
+            p:hover { 
+  animation: shake 0.3s ease-in-out;
 }
+            }
+         }
+         
+         width: 200px;
+         height: 200px;
+      position: fixed;
+      z-index: 10;
+      top: 750px;
+      right: 40px;
+   
+      
+      button {
+         all: unset;
+      
+         cursor: pointer;
+         float: right;
+         margin-right: 55px;
+         margin-top: -15px;
+         font-weight: 600;
+         color: #333;
+      }
+      }
+      @keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-2px); }
+  50%  { transform: translateX(2px); }
+  75%  { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
 }
 
 // 전체버튼공통
@@ -165,8 +213,8 @@ a{margin: 16px 15px 16px 14px;}
 .buttonbox {
    position: absolute;
    top: 50%;
-   left: 0;
-   width: 100%;
+   left: -50px;
+   width: 110%;
    display: flex;
    justify-content: space-between;
    transform: translateY(-50%);
@@ -176,15 +224,16 @@ a{margin: 16px 15px 16px 14px;}
 .buttonbox button {
    border-radius: 150px;
    height: 40px;
+   width: 40px;
    pointer-events: auto;
-   background-color: rgba(48, 48, 48, 0.5);
+   background-color: rgba(134, 134, 134, 0.5);
    color: rgb(255, 255, 255);
    border: none;
    padding: 10px;
    cursor: pointer;
    font-size: 16px;
 }
-.leftbutton{transform: rotate(180deg);}
+.leftbutton{transform: rotate(180deg); }
 
 // 전체UL하위들공통
 ul {
@@ -502,11 +551,11 @@ $color: #1f1e1e;
 background-color: transparentize($color, 0.8);
          border-radius: 20px;
          padding: 10px;
-         font-size: 1.4rem;
+         font-size: 1.2rem;
          bottom: 20px;
          right: 40px;
          color: #f3f3f3;
-      span{font-weight: 700;}
+      span{font-weight: 500;}
       }
    }
    }
@@ -565,6 +614,7 @@ background-color: transparentize($color, 0.8);
  .bookbox{text-align: center; flex-shrink: 0;
 .bookbox1{ img{
    width: 155px;
+       box-shadow: 2px 2px 5px #333;
 }}
 .titbox1{padding: 0 21px ; h4{font-size: 1.3rem;} }
 }
@@ -632,7 +682,7 @@ background-color: transparentize($color, 0.8);
    
                      .book2box1-Thumnail {
                         width: 50%;
-                        img{width: 130px; border-radius: 10px;}
+                        img{width: 130px; border-radius: 10px;border: 0.1px solid lightgray;}
                         
                      }
    
@@ -702,14 +752,16 @@ background-color: transparentize($color, 0.8);
                         width: 184.33px;
                         height: 200px;
                          margin: 0 auto;
-                         img{width: 80%;margin: 0 18px }                  
+                         img{width: 80%;margin: 0 18px;
+                        border: 0.1px solid lightgray;
+                     border-bottom: none; }                  
                      }
                      .bground {
                            background-color: #c9d1d6;
                            width: 368.66px;
                            height: 100px;
                            position: absolute;
-                           bottom: 143px;
+                           bottom: 138px;
                            left: 0px;
                            z-index: -1;
                           
@@ -792,11 +844,24 @@ background-color: transparentize($color, 0.8);
    
                      .book2box1-Thumnail {
                         width: 40%;
-                        img{width: 100px;}
-                        p{border: 2px solid $Lidi; width: 24px; text-align: center; border-radius: 100%; margin:0 0 5px -30px; color: rgb(71, 71, 71); font-weight: 700;}
-                     }
-   
-                     .titbox2 {
+                        img {
+                              width: 100px;
+                           }
+                        
+                           p {
+                              border: 2px solid (233, 232, 232);
+                              width: 27px;
+                              height: 25px;
+                              text-align: center;
+                              border-radius: 100%;
+                              margin: 0 0 5px -30px;
+                              color: $Lidi;
+                              font-weight: 700;
+                              background-color: rgb(233, 232, 232);
+                           }
+                        }
+                        
+                        .titbox2 {
                         width: 60%;
    
                         h4 {
@@ -833,14 +898,25 @@ background-color: transparentize($color, 0.8);
 
 // 한주한주,셀렉트레터
 #book6 {
-   @include event
-   
+   @include event;
+     h4 {
+                           color: #fff;
+                           font-size: 1.2rem;
+                          margin: 10px -80px 5px 5px;
+                           width: 205px;
+                        } 
 }
 
 // 이벤트
 #book7 {
-   @include event
+   @include event;   h4 {
+                           color: #fff;
+                           font-size: 1.2rem;
+                          margin: 20px -100px 0px 40px;
+                           width: 220px;
+                        }
 }
+
 
 // 푸터
 #footerbox {
@@ -914,7 +990,7 @@ background-color: transparentize($color, 0.8);
                }
             }
 
-            p {
+            .hi {
                display: none;
             }
          }
@@ -936,7 +1012,7 @@ background-color: transparentize($color, 0.8);
    justify-content: space-evenly;
 
 
-   #footersub {
+   .footersub {
       display: flex;
       flex-direction: column;
 
@@ -960,3 +1036,4 @@ background-color: transparentize($color, 0.8);
       }
    }
 }
+.BizInfo:hover{cursor: pointer;}

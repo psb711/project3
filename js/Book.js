@@ -116,7 +116,7 @@ async function bookData2() {
 
          divs.eq(i).append(`
             <a href="">
-        <img src=${data.documents[1].thumbnail}>
+        <img src=${data.documents[0].thumbnail}>
             </a>`);
       })
 
@@ -175,7 +175,7 @@ async function bookData4() {
 
 async function bookData5() {
    try {
-      const querys = ['호의', '성공', '감정수업', '탁영', '감자', '나는 어떻게 삶의 해답을 찾는가', '나비'];
+      const querys = ['마음', '성공', '감정수업', '탁영', '자긍심', '나는 어떻게 삶의 해답을 찾는가', '나비','해답','피곤','우유'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
@@ -191,7 +191,7 @@ async function bookData5() {
                   <h4>${data.documents[0].title}</h4>
                </div>
                  <div class="authorsbox1">
-                  <h4>${data.documents[0].authors}</h4>
+                  <p>${data.documents[0].authors}</p>
                </div>
             </a>`);
       })
@@ -202,7 +202,7 @@ async function bookData5() {
 }
 async function bookData6() {
    try {
-      const querys = ['감사', '성공', '수업', '탁영', '감자', '나는 어떻게 삶의 해답을 찾는가', '나비'];
+      const querys = ['항구', '기회', '조아', '배려', '젤라또', '나는 어떻게 삶의 해답을 찾는가', '나비','우유','포용','마음'];
 
       querys.forEach(async (query, i) => {
          const data = await fetchBooks(query);
@@ -212,13 +212,13 @@ async function bookData6() {
          divs.eq(i).append(`
             <a href="">
                <div class="bookbox1">
-                  <img src=${data.documents[2].thumbnail}>
+                  <img src=${data.documents[0].thumbnail}>
                </div>
                <div class="titbox1">
-                  <h4>${data.documents[2].title}</h4>
+                  <h4>${data.documents[0].title}</h4>
                </div>
                  <div class="authorsbox1">
-                  <h4>${data.documents[2].authors}</h4>
+                  <p>${data.documents[0].authors}</p>
                </div>
             </a>`);
       })
