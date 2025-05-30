@@ -1,0 +1,56 @@
+@import "reset";
+
+// 기본크기
+.wrap {
+   width: 1280px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+
+}
+
+// 왼쪽사이드
+#mainleft {
+   width: 75%;
+   background-color: aqua;
+
+   #BD {height: 604px+188px+60px;
+   
+   
+         width: 95%;
+         background-color: blanchedalmond;
+         margin: 0 auto;
+   
+         #BDTop {
+   
+            display: flex;
+   
+            #bookimgbox {
+               width: 35%;
+            }
+   
+            #bookinfobox {
+               width: 65%
+            }
+         }
+  
+         #BDBottom { 
+            background-color: blueviolet;
+            height: 188px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+              
+              padding: 20px;
+              font-size: 0.8rem;
+.BDBottomInnerBox{height: 30%; margin: 20px;}
+         }
+      }
+}
+
+// 오른쪽사이드
+#mainright {
+   width: 25%;
+   background-color: rgb(197, 197, 18);
+}

@@ -1,0 +1,69 @@
+:root {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+#mainleft {
+  width: 75%;
+  background-color: aqua;
+}
+#mainleft #BD {
+  height: 852px;
+  width: 95%;
+  background-color: blanchedalmond;
+  margin: 0 auto;
+}
+#mainleft #BD #BDTop {
+  display: flex;
+}
+#mainleft #BD #BDTop #bookimgbox {
+  width: 35%;
+}
+#mainleft #BD #BDTop #bookinfobox {
+  width: 65%;
+}
+#mainleft #BD #BDBottom {
+  background-color: blueviolet;
+  height: 188px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  font-size: 0.8rem;
+}
+#mainleft #BD #BDBottom .BDBottomInnerBox {
+  height: 30%;
+  margin: 20px;
+}
+
+#mainright {
+  width: 25%;
+  background-color: rgb(197, 197, 18);
+}
