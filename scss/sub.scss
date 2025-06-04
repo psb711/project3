@@ -1,5 +1,5 @@
 @import "reset";
-$lidigray:#808080;
+$lidigray: #808080;
 $Lidi: #1e9eff;
 
 // 기본크기
@@ -34,7 +34,8 @@ $Lidi: #1e9eff;
          margin-left: 62px !important;
          ;
       }
-        .unuse {
+
+      .unuse {
          color: rgb(201, 201, 201) !important;
          ;
       }
@@ -48,56 +49,206 @@ $Lidi: #1e9eff;
          #bookimgbox {
             width: 35%;
          }
-#bookinfobox {
-   width: 65%;
 
-   #bookinfoTop {
-      background-color: aqua;
+         #bookinfobox {
+            width: 65%;
 
-      #Category {
-         display: flex;
-         margin: 10px 0;
-         font-weight: 550;
-         li{color: $lidigray;}
+            #bookinfoTop {
+               background-color: aqua;
+
+               #Category {
+                  display: flex;
+                  margin: 10px 0;
+                  font-weight: 550;
+
+                  li {
+                     color: $lidigray;
+                  }
+               }
+
+               #SubCategory::before {
+                  content: '>';
+                  margin-left: 10px;
+               }
+
+               h3 {
+                  font-size: 2.3rem;
+                  margin: 5px 0;
+               }
+
+               >p {
+                  font-size: 0.9rem;
+                  color: $lidigray;
+                  margin: 5px 0;
+               }
+
+               #Rating {
+                  display: flex;
+                  font-size: 0.99rem;
+               }
+
+               #RatingNo,
+               .star {
+                  color: red;
+                  font-weight: 600;
+               }
+
+               #RatingNo::after {
+                  content: '(30)';
+                  color: $lidigray;
+               }
+
+               .Interest::before {
+                  content: ' |';
+                  margin-left: 5px;
+               }
+
+               .Interest {
+                  color: $lidigray;
+               }
+
+               .infoP {
+                  font-weight: 600;
+               }
+
+               .infoP span {
+                  font-weight: 400;
+                  margin-left: 5px;
+               }
+
+               #InterBTN {
+
+           display: flex;
+           align-items: center;
+                  border-radius: 50px;
+                  border: solid 0.5px $Lidi;
+                  color: $Lidi;
+                  width: 68px;
+                   gap: 4px;
+                  height: 32px;
+                  font-size: 1rem;
+                  font-weight: 500;
+                  margin: 14px 0;
+                  justify-content: center;
+                  padding-bottom: 2px;
+                  background-color: white;
+                  
+                  svg{ width: 15px; height: 15px; } 
+               }
+            }
+
+                        #bookinfoBottom {
+                           .BinfoE {
+                              background-color: cornsilk;
+                              display: flex;
+                              flex-direction: column;
+                              height: 130px;
+                              width: 100%;
+                              border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                              border-bottom: solid 0.5px rgba(120, 120, 120, 0.3);
+                              margin-bottom: 20px;
+            
+                              .arrow1 {
+                                 margin-left: auto;
+                              }
+            
+                              a {
+                                 width: 100%;
+                                 position: relative;
+                                
+            
+                                 div {
+                                    padding: 5px 10px 5px 5px;
+                                    font-weight: 500;
+                                    
+                                   
+                                 }
+            
+                                 span {
+                                    position: absolute;
+                                    right: 0px;
+                                    top: 6px;
+                                    color: #787878;
+                                 }
+                                 .arrow1{top: 13px;}
+                              }
+            
+                              .BinfoEName {
+                                 padding: 5px 7px;
+            
+                                 span {
+                                    width: 80%;
+                                    font-size: 0.8rem;
+                                    height: 20px;
+                                    background-color: aqua;
+                                    text-align: center;
+                                    padding: 3px;
+                                    border-radius: 10%;
+                                 }
+            
+                                 width: 60px;
+            
+                              }
+            
+                              .BinfoE1 .BinfoEName:nth-child(1)>span {
+                                 background-color: #E4E0F6;
+                                 color: #5D3FC3;
+                              }
+            
+                              .BinfoE2 .BinfoEName:nth-child(1)>span {
+                                 background-color: #F3EAD0;
+                                 color: #A87F24;
+                              }
+            
+                              .BinfoE1 {
+                                 display: flex;
+                                 height: 70%;
+            
+                                 ul {
+                                    display: flex;
+                                    flex-direction: column;
+            
+                                    li:nth-child(2) {
+                                       border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                                    }
+            
+                                    li {
+                                       width: 100%;
+                                    }
+                                 }
+                              }
+               
+                     .BinfoE2 {
+                         border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                        display: flex;
+                         height: 30%;
+                     }
+                  }
+          
+
+            }
+         }
       }
-      #SubCategory::before{content: '>'; margin-left: 10px;}
-      h3{font-size: 2.3rem; margin: 5px 0;}
-      >p{font-size: 0.9rem;color: $lidigray; margin: 5px 0;}
-      #Rating{display: flex; font-size: 0.99rem;}
-      #RatingNo,.star{color: red; font-weight: 600;}
-      #RatingNo::after{content: '(30)' ;color: $lidigray;}
-      .Interest::before{content: ' |'; margin-left: 5px;}
-      .Interest{color: $lidigray;}
-      .infoP {font-weight: 600;}
- .infoP span {font-weight: 400; margin-left: 5px;}
-     #InterBTN {border-radius: 50px; border: solid 0.5px $Lidi; color: $Lidi;width: 70px;height: 30px; font-size: 0.9rem; font-weight: 700; margin: 14px 0;padding-bottom: 1.8px;}
+      #BinfoP{display: flex;align-items: center; width: 100%; background-color: #A87F24; height: 100px;
+      #BinfoPL{width: 20%; text-align: center;}
+      #BinfoPR{width: 80%;}
+      .BinfoPR3{display: flex; justify-content: space-between;}
    }
-   #bookinfoBottom{
-      #BinfoE{border-top: solid 0.1px $lidigray; display: flex; height: 120px;}
-      #BinfoEContent{display: flex; flex-direction: column;
-      justify-content: space-around;}
-      #BinfoE > div:first-child {
-  width: 90px;
-  background-color: blue; 
- p{text-align: center; margin-top: 10px;}
+#EventP{ text-align: right; font-size:0.9rem ; font-weight: 300; color:rgba(120, 120, 120, 0.9); margin: 10px 0;}
+#BinfoB{text-align: right;
+    margin: 20px 0px 20px 192px;
+    display: flex
+;
+    width: 401px;
+    
+    align-items: flex-end;
+    justify-content: space-between;
+.BinfoBButton{ width: 50px;height:50px; font-size: 1.7rem; font-weight: 200; color: rgb(31, 31, 31); border: solid 0.2px rgba(120, 120, 120, 0.3); border-radius: 5px;background-color: transparent; }
 }
-
-#BinfoE > div:nth-child(2) {
-  width: 500px;
-}
-#BinfoE > div:nth-child(2) div {
-  width: 100%;
-}
-#BinfoEContent div {width: 450px; background-color: aquamarine; height: 120px; ;}
-#BinfoEContent a {width: 450px; background-color: rgb(88, 119, 109); padding: 0 5px; font-size: 0.9rem;}
-      #BinfoEContent div::after{ content: ">"; float: right;}
-   }
-}
-}
-
+.BinfoBButton1{width: 220px;height:50px; font-size: 1rem; font-weight: 600; color: rgb(255, 255, 255);  border-radius: 5px;background-color: $Lidi; border: none; margin-top: -35px;}
       #BDBottom {
          background-color: rgb(241, 241, 241);
-         border: 0.06px solid  rgb(204, 204, 204);
+         border: 0.06px solid rgb(204, 204, 204);
          border-radius: 10px;
          height: 188px;
          width: 100%;

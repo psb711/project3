@@ -85,7 +85,8 @@ ol {
   display: flex;
   font-size: 0.99rem;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoTop #RatingNo, #mainleft #BD #BDTop #bookinfobox #bookinfoTop .star {
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #RatingNo,
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop .star {
   color: red;
   font-weight: 600;
 }
@@ -108,54 +109,148 @@ ol {
   margin-left: 5px;
 }
 #mainleft #BD #BDTop #bookinfobox #bookinfoTop #InterBTN {
+  display: flex;
+  align-items: center;
   border-radius: 50px;
   border: solid 0.5px #1e9eff;
   color: #1e9eff;
-  width: 70px;
-  height: 30px;
-  font-size: 0.9rem;
-  font-weight: 700;
+  width: 68px;
+  gap: 4px;
+  height: 32px;
+  font-size: 1rem;
+  font-weight: 500;
   margin: 14px 0;
-  padding-bottom: 1.8px;
+  justify-content: center;
+  padding-bottom: 2px;
+  background-color: white;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE {
-  border-top: solid 0.1px #808080;
-  display: flex;
-  height: 120px;
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #InterBTN svg {
+  width: 15px;
+  height: 15px;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent {
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE {
+  background-color: cornsilk;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  height: 130px;
+  width: 100%;
+  border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+  border-bottom: solid 0.5px rgba(120, 120, 120, 0.3);
+  margin-bottom: 20px;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:first-child {
-  width: 90px;
-  background-color: blue;
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .arrow1 {
+  margin-left: auto;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:first-child p {
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE a {
+  width: 100%;
+  position: relative;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE a div {
+  padding: 5px 10px 5px 5px;
+  font-weight: 500;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE a span {
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  color: #787878;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE a .arrow1 {
+  top: 13px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoEName {
+  padding: 5px 7px;
+  width: 60px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoEName span {
+  width: 80%;
+  font-size: 0.8rem;
+  height: 20px;
+  background-color: aqua;
   text-align: center;
-  margin-top: 10px;
+  padding: 3px;
+  border-radius: 10%;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:nth-child(2) {
-  width: 500px;
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE1 .BinfoEName:nth-child(1) > span {
+  background-color: #E4E0F6;
+  color: #5D3FC3;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:nth-child(2) div {
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE2 .BinfoEName:nth-child(1) > span {
+  background-color: #F3EAD0;
+  color: #A87F24;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE1 {
+  display: flex;
+  height: 70%;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE1 ul {
+  display: flex;
+  flex-direction: column;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE1 ul li:nth-child(2) {
+  border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE1 ul li {
   width: 100%;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent div {
-  width: 450px;
-  background-color: aquamarine;
-  height: 120px;
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoE2 {
+  border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+  display: flex;
+  height: 30%;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent a {
-  width: 450px;
-  background-color: rgb(88, 119, 109);
-  padding: 0 5px;
+#mainleft #BD #BinfoP {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #A87F24;
+  height: 100px;
+}
+#mainleft #BD #BinfoP #BinfoPL {
+  width: 20%;
+  text-align: center;
+}
+#mainleft #BD #BinfoP #BinfoPR {
+  width: 80%;
+}
+#mainleft #BD #BinfoP .BinfoPR3 {
+  display: flex;
+  justify-content: space-between;
+}
+#mainleft #BD #EventP {
+  text-align: right;
   font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(120, 120, 120, 0.9);
+  margin: 10px 0;
 }
-#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent div::after {
-  content: ">";
-  float: right;
+#mainleft #BD #BinfoB {
+  text-align: right;
+  margin: 20px 0px 20px 192px;
+  display: flex;
+  width: 401px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#mainleft #BD #BinfoB .BinfoBButton {
+  width: 50px;
+  height: 50px;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: rgb(31, 31, 31);
+  border: solid 0.2px rgba(120, 120, 120, 0.3);
+  border-radius: 5px;
+  background-color: transparent;
+}
+#mainleft #BD .BinfoBButton1 {
+  width: 220px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: #1e9eff;
+  border: none;
+  margin-top: -35px;
 }
 #mainleft #BD #BDBottom {
   background-color: rgb(241, 241, 241);
