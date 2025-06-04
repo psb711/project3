@@ -1,6 +1,9 @@
 @import "reset";
+$lidigray:#808080;
+$Lidi: #1e9eff;
 
 // 기본크기
+
 .wrap {
    width: 1280px;
    margin: 0 auto;
@@ -14,40 +17,143 @@
    width: 75%;
    background-color: aqua;
 
-   #BD {height: 604px+188px+60px;
-   
-   
-         width: 95%;
-         background-color: blanchedalmond;
-         margin: 0 auto;
-   
-         #BDTop {
-   
-            display: flex;
-   
-            #bookimgbox {
-               width: 35%;
-            }
-   
-            #bookinfobox {
-               width: 65%
-            }
+   #BD {
+      height: 604px+188px+60px;
+
+
+      width: 95%;
+      background-color: blanchedalmond;
+      margin: 0 auto;
+
+      .BDBottomInnerBox:nth-of-type(5) ul li {
+         margin-left: 50px !important;
+         ;
+      }
+
+      .BDBottomInnerBox:nth-of-type(6) ul li {
+         margin-left: 62px !important;
+         ;
+      }
+        .unuse {
+         color: rgb(201, 201, 201) !important;
+         ;
+      }
+
+
+
+      #BDTop {
+
+         display: flex;
+
+         #bookimgbox {
+            width: 35%;
          }
-  
-         #BDBottom { 
-            background-color: blueviolet;
-            height: 188px;
+#bookinfobox {
+   width: 65%;
+
+   #bookinfoTop {
+      background-color: aqua;
+
+      #Category {
+         display: flex;
+         margin: 10px 0;
+         font-weight: 550;
+         li{color: $lidigray;}
+      }
+      #SubCategory::before{content: '>'; margin-left: 10px;}
+      h3{font-size: 2.3rem; margin: 5px 0;}
+      >p{font-size: 0.9rem;color: $lidigray; margin: 5px 0;}
+      #Rating{display: flex; font-size: 0.99rem;}
+      #RatingNo,.star{color: red; font-weight: 600;}
+      #RatingNo::after{content: '(30)' ;color: $lidigray;}
+      .Interest::before{content: ' |'; margin-left: 5px;}
+      .Interest{color: $lidigray;}
+      .infoP {font-weight: 600;}
+ .infoP span {font-weight: 400; margin-left: 5px;}
+     #InterBTN {border-radius: 50px; border: solid 0.5px $Lidi; color: $Lidi;width: 70px;height: 30px; font-size: 0.9rem; font-weight: 700; margin: 14px 0;padding-bottom: 1.8px;}
+   }
+   #bookinfoBottom{
+      #BinfoE{border-top: solid 0.1px $lidigray; display: flex; height: 120px;}
+      #BinfoEContent{display: flex; flex-direction: column;
+      justify-content: space-around;}
+      #BinfoE > div:first-child {
+  width: 90px;
+  background-color: blue; 
+ p{text-align: center; margin-top: 10px;}
+}
+
+#BinfoE > div:nth-child(2) {
+  width: 500px;
+}
+#BinfoE > div:nth-child(2) div {
+  width: 100%;
+}
+#BinfoEContent div {width: 450px; background-color: aquamarine; height: 120px; ;}
+#BinfoEContent a {width: 450px; background-color: rgb(88, 119, 109); padding: 0 5px; font-size: 0.9rem;}
+      #BinfoEContent div::after{ content: ">"; float: right;}
+   }
+}
+}
+
+      #BDBottom {
+         background-color: rgb(241, 241, 241);
+         border: 0.06px solid  rgb(204, 204, 204);
+         border-radius: 10px;
+         height: 188px;
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+
+         padding: 20px;
+
+
+         >ul {
             width: 100%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             flex-wrap: wrap;
-              
-              padding: 20px;
-              font-size: 0.8rem;
-.BDBottomInnerBox{height: 30%; margin: 20px;}
+            padding: -4px;
+            justify-content: space-between;
+
+            >li {
+               font-size: 0.75rem;
+               display: flex;
+               width: 37%;
+               align-items: center;
+               font-weight: 600;
+               color: rgb(37, 37, 37);
+               margin-top: -13px;
+
+               >ul {
+                  display: flex;
+                  flex-direction: row;
+                  width: 269px;
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+
+                  >li {
+                     font-size: 0.8rem;
+                     width: 152px;
+                     margin-left: 15px;
+                     display: flex;
+                     font-weight: 500;
+                     color: rgb(90, 90, 90);
+                     align-items: center;
+
+                     svg {
+                        font-size: 1rem;
+                     }
+                  }
+               }
+            }
          }
       }
+   }
+
 }
+
+
 
 // 오른쪽사이드
 #mainright {

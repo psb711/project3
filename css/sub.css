@@ -39,6 +39,15 @@ ol {
   background-color: blanchedalmond;
   margin: 0 auto;
 }
+#mainleft #BD .BDBottomInnerBox:nth-of-type(5) ul li {
+  margin-left: 50px !important;
+}
+#mainleft #BD .BDBottomInnerBox:nth-of-type(6) ul li {
+  margin-left: 62px !important;
+}
+#mainleft #BD .unuse {
+  color: rgb(201, 201, 201) !important;
+}
 #mainleft #BD #BDTop {
   display: flex;
 }
@@ -48,19 +57,152 @@ ol {
 #mainleft #BD #BDTop #bookinfobox {
   width: 65%;
 }
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop {
+  background-color: aqua;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #Category {
+  display: flex;
+  margin: 10px 0;
+  font-weight: 550;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #Category li {
+  color: #808080;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #SubCategory::before {
+  content: ">";
+  margin-left: 10px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop h3 {
+  font-size: 2.3rem;
+  margin: 5px 0;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop > p {
+  font-size: 0.9rem;
+  color: #808080;
+  margin: 5px 0;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #Rating {
+  display: flex;
+  font-size: 0.99rem;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #RatingNo, #mainleft #BD #BDTop #bookinfobox #bookinfoTop .star {
+  color: red;
+  font-weight: 600;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #RatingNo::after {
+  content: "(30)";
+  color: #808080;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop .Interest::before {
+  content: " |";
+  margin-left: 5px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop .Interest {
+  color: #808080;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop .infoP {
+  font-weight: 600;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop .infoP span {
+  font-weight: 400;
+  margin-left: 5px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoTop #InterBTN {
+  border-radius: 50px;
+  border: solid 0.5px #1e9eff;
+  color: #1e9eff;
+  width: 70px;
+  height: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 14px 0;
+  padding-bottom: 1.8px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE {
+  border-top: solid 0.1px #808080;
+  display: flex;
+  height: 120px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:first-child {
+  width: 90px;
+  background-color: blue;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:first-child p {
+  text-align: center;
+  margin-top: 10px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:nth-child(2) {
+  width: 500px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoE > div:nth-child(2) div {
+  width: 100%;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent div {
+  width: 450px;
+  background-color: aquamarine;
+  height: 120px;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent a {
+  width: 450px;
+  background-color: rgb(88, 119, 109);
+  padding: 0 5px;
+  font-size: 0.9rem;
+}
+#mainleft #BD #BDTop #bookinfobox #bookinfoBottom #BinfoEContent div::after {
+  content: ">";
+  float: right;
+}
 #mainleft #BD #BDBottom {
-  background-color: blueviolet;
+  background-color: rgb(241, 241, 241);
+  border: 0.06px solid rgb(204, 204, 204);
+  border-radius: 10px;
   height: 188px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   padding: 20px;
-  font-size: 0.8rem;
 }
-#mainleft #BD #BDBottom .BDBottomInnerBox {
-  height: 30%;
-  margin: 20px;
+#mainleft #BD #BDBottom > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: -4px;
+  justify-content: space-between;
+}
+#mainleft #BD #BDBottom > ul > li {
+  font-size: 0.75rem;
+  display: flex;
+  width: 37%;
+  align-items: center;
+  font-weight: 600;
+  color: rgb(37, 37, 37);
+  margin-top: -13px;
+}
+#mainleft #BD #BDBottom > ul > li > ul {
+  display: flex;
+  flex-direction: row;
+  width: 269px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#mainleft #BD #BDBottom > ul > li > ul > li {
+  font-size: 0.8rem;
+  width: 152px;
+  margin-left: 15px;
+  display: flex;
+  font-weight: 500;
+  color: rgb(90, 90, 90);
+  align-items: center;
+}
+#mainleft #BD #BDBottom > ul > li > ul > li svg {
+  font-size: 1rem;
 }
 
 #mainright {
