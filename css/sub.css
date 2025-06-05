@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   font-size: 15px;
 }
@@ -31,7 +32,6 @@ ol {
 
 #mainleft {
   width: 75%;
-  background-color: aqua;
 }
 #mainleft #BD {
   height: 852px;
@@ -298,6 +298,252 @@ ol {
 }
 #mainleft #BD #BDBottom > ul > li > ul > li svg {
   font-size: 1rem;
+}
+
+#Description {
+  width: 95%;
+  height: 6900px;
+  margin: 0 auto;
+}
+#Description h5 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#Description h4 {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+#Description #ContentInfoUL {
+  height: 5600px;
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  border-top: solid 1.5px rgb(54, 54, 54);
+  background-color: #cfc0a0;
+}
+#Description #ContentInfoUL #subtxt1 p {
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.6;
+}
+#Description #ContentInfoUL > li:not(:first-child) ul li {
+  display: none;
+}
+#Description #ContentInfoUL li:nth-child(1) {
+  border-right: solid 1px #808080;
+  border-bottom: solid 1px #808080;
+}
+#Description #ContentInfoUL li:nth-child(2) {
+  border-right: solid 1px #808080;
+  border-bottom: solid 1px #808080;
+}
+#Description #ContentInfoUL li:nth-child(3) {
+  border-bottom: solid 1px #808080;
+}
+#Description #ContentInfoUL > li {
+  width: 33.333333333%;
+  text-align: center;
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 60px;
+  color: #808080;
+  background-color: rgba(120, 120, 120, 0.3);
+}
+#Description #ContentInfoUL > li > ul {
+  position: relative;
+}
+#Description #ContentInfoUL > li > ul > li {
+  position: absolute;
+  top: 20px;
+}
+#Description #ContentInfoUL > li > ul > li img {
+  width: 911px;
+}
+#Description #AuthorInfoUL {
+  height: 600px;
+  background-color: #5D3FC3;
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  border-top: solid 1.5px rgb(54, 54, 54);
+}
+#Description #AuthorInfoUL li:nth-child(1) {
+  border-right: solid 1px #808080;
+  border-bottom: solid 1px #808080;
+}
+#Description #AuthorInfoUL li:nth-child(2) {
+  border-right: solid 1px #808080;
+  border-bottom: solid 1px #808080;
+}
+#Description #AuthorInfoUL li:nth-child(3) {
+  border-bottom: solid 1px #808080;
+}
+#Description #AuthorInfoUL > li {
+  width: 50%;
+  text-align: center;
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 60px;
+  color: #808080;
+  background-color: rgba(120, 120, 120, 0.3);
+}
+#Description #AuthorInfoUL > li > ul {
+  position: relative;
+}
+#Description #AuthorInfoUL > li > ul > li {
+  display: none;
+  position: absolute;
+  top: 20px;
+}
+#Description #AuthorInfoUL > li > ul > li img {
+  width: 911px;
+}
+
+#review {
+  width: 95%;
+  margin: 0 auto;
+}
+#review h4 {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+#review #reviewtop {
+  margin: 20px 0;
+}
+#review #reviewtop #reviewtop1 {
+  border-bottom: solid 1px #808080;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#review #reviewtop #reviewtop1 h3 {
+  font-size: 3rem;
+  margin-right: 10px;
+}
+#review #reviewtop #reviewtop1 > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#review #reviewtop #reviewtop1 > div > div {
+  font-size: 1rem;
+}
+#review #reviewtop #reviewtop1 > div .BuyerStar {
+  display: flex;
+  color: red;
+}
+
+#RatingDist {
+  display: flex;
+  flex-direction: column;
+  color: #808080;
+  font-weight: 500;
+}
+
+#reviewtop2 {
+  text-align: center;
+}
+#reviewtop2 h5 {
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+#reviewtop2 > div:nth-child(2) {
+  margin: 20px auto;
+  width: 29%;
+  display: flex;
+}
+#reviewtop2 > div:nth-child(2) svg {
+  width: 50px;
+}
+#reviewtop2 > div:nth-child(3) {
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+#reviewtop2 > div:nth-child(3) > input:nth-child(1) {
+  width: 100%;
+  height: 150px;
+  text-align: justify;
+  padding-bottom: 101px;
+  padding-left: 16px;
+  font-size: 1.05rem;
+  border: 0.5px solid rgba(120, 120, 120, 0.3);
+  border-radius: 5px;
+}
+#reviewtop2 > div:nth-child(3) #SpoilerChk {
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
+}
+#reviewtop2 > div:nth-child(3) #SpoilerChk .SpoilerTxT {
+  color: #808080;
+}
+#reviewtop2 > div:nth-child(3) #SpoilerChk input {
+  display: none;
+}
+#reviewtop2 > div:nth-child(3) #SpoilerChk .circle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+#reviewtop2 > div:nth-child(3) #SpoilerChk .circle span {
+  color: #808080;
+}
+#reviewtop2 > div:nth-child(3) #SpoilerChk .circle-check input:checked + .circle::after {
+  content: "✔";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #1e9eff;
+}
+#reviewtop2 > div:nth-child(3) button {
+  position: absolute;
+  bottom: 13px;
+  width: 85px;
+  right: 18px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(85, 84, 84, 0.3);
+  color: #f8f8f8;
+  font-weight: 700;
+}
+
+#reviewtop3 {
+  margin: 20px 0;
+}
+#reviewtop3 > div {
+  width: 100%;
+  background-color: #A87F24;
+  height: 350px;
+}
+
+#reviewbottom {
+  border-top: solid 1.5px rgb(54, 54, 54);
+  margin: 20px 0;
+}
+#reviewbottom #reviewtop4BTN {
+  margin: 20px 0;
+}
+#reviewbottom #reviewtop4BTN button {
+  height: 40px;
+  padding: 9px;
+  margin: 0 5px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: #808080;
 }
 
 #mainright {

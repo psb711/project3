@@ -15,7 +15,7 @@ $Lidi: #1e9eff;
 // 왼쪽사이드
 #mainleft {
    width: 75%;
-   background-color: aqua;
+
 
    #BD {
       height: 604px+188px+60px;
@@ -118,13 +118,13 @@ $Lidi: #1e9eff;
 
                #InterBTN {
 
-           display: flex;
-           align-items: center;
+                  display: flex;
+                  align-items: center;
                   border-radius: 50px;
                   border: solid 0.5px $Lidi;
                   color: $Lidi;
                   width: 68px;
-                   gap: 4px;
+                  gap: 4px;
                   height: 32px;
                   font-size: 1rem;
                   font-weight: 500;
@@ -132,120 +132,173 @@ $Lidi: #1e9eff;
                   justify-content: center;
                   padding-bottom: 2px;
                   background-color: white;
-                  
-                  svg{ width: 15px; height: 15px; } 
+
+                  svg {
+                     width: 15px;
+                     height: 15px;
+                  }
                }
             }
 
-                        #bookinfoBottom {
-                           .BinfoE {
-                              background-color: cornsilk;
-                              display: flex;
-                              flex-direction: column;
-                              height: 130px;
-                              width: 100%;
-                              border-top: solid 0.5px rgba(120, 120, 120, 0.3);
-                              border-bottom: solid 0.5px rgba(120, 120, 120, 0.3);
-                              margin-bottom: 20px;
-            
-                              .arrow1 {
-                                 margin-left: auto;
-                              }
-            
-                              a {
-                                 width: 100%;
-                                 position: relative;
-                                
-            
-                                 div {
-                                    padding: 5px 10px 5px 5px;
-                                    font-weight: 500;
-                                    
-                                   
-                                 }
-            
-                                 span {
-                                    position: absolute;
-                                    right: 0px;
-                                    top: 6px;
-                                    color: #787878;
-                                 }
-                                 .arrow1{top: 13px;}
-                              }
-            
-                              .BinfoEName {
-                                 padding: 5px 7px;
-            
-                                 span {
-                                    width: 80%;
-                                    font-size: 0.8rem;
-                                    height: 20px;
-                                    background-color: aqua;
-                                    text-align: center;
-                                    padding: 3px;
-                                    border-radius: 10%;
-                                 }
-            
-                                 width: 60px;
-            
-                              }
-            
-                              .BinfoE1 .BinfoEName:nth-child(1)>span {
-                                 background-color: #E4E0F6;
-                                 color: #5D3FC3;
-                              }
-            
-                              .BinfoE2 .BinfoEName:nth-child(1)>span {
-                                 background-color: #F3EAD0;
-                                 color: #A87F24;
-                              }
-            
-                              .BinfoE1 {
-                                 display: flex;
-                                 height: 70%;
-            
-                                 ul {
-                                    display: flex;
-                                    flex-direction: column;
-            
-                                    li:nth-child(2) {
-                                       border-top: solid 0.5px rgba(120, 120, 120, 0.3);
-                                    }
-            
-                                    li {
-                                       width: 100%;
-                                    }
-                                 }
-                              }
-               
-                     .BinfoE2 {
-                         border-top: solid 0.5px rgba(120, 120, 120, 0.3);
-                        display: flex;
-                         height: 30%;
+            #bookinfoBottom {
+               .BinfoE {
+                  background-color: cornsilk;
+                  display: flex;
+                  flex-direction: column;
+                  height: 130px;
+                  width: 100%;
+                  border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                  border-bottom: solid 0.5px rgba(120, 120, 120, 0.3);
+                  margin-bottom: 20px;
+
+                  .arrow1 {
+                     margin-left: auto;
+                  }
+
+                  a {
+                     width: 100%;
+                     position: relative;
+
+
+                     div {
+                        padding: 5px 10px 5px 5px;
+                        font-weight: 500;
+
+
+                     }
+
+                     span {
+                        position: absolute;
+                        right: 0px;
+                        top: 6px;
+                        color: #787878;
+                     }
+
+                     .arrow1 {
+                        top: 13px;
                      }
                   }
-          
+
+                  .BinfoEName {
+                     padding: 5px 7px;
+
+                     span {
+                        width: 80%;
+                        font-size: 0.8rem;
+                        height: 20px;
+                        background-color: aqua;
+                        text-align: center;
+                        padding: 3px;
+                        border-radius: 10%;
+                     }
+
+                     width: 60px;
+
+                  }
+
+                  .BinfoE1 .BinfoEName:nth-child(1)>span {
+                     background-color: #E4E0F6;
+                     color: #5D3FC3;
+                  }
+
+                  .BinfoE2 .BinfoEName:nth-child(1)>span {
+                     background-color: #F3EAD0;
+                     color: #A87F24;
+                  }
+
+                  .BinfoE1 {
+                     display: flex;
+                     height: 70%;
+
+                     ul {
+                        display: flex;
+                        flex-direction: column;
+
+                        li:nth-child(2) {
+                           border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                        }
+
+                        li {
+                           width: 100%;
+                        }
+                     }
+                  }
+
+                  .BinfoE2 {
+                     border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                     display: flex;
+                     height: 30%;
+                  }
+               }
+
 
             }
          }
       }
-      #BinfoP{display: flex;align-items: center; width: 100%; background-color: #A87F24; height: 100px;
-      #BinfoPL{width: 20%; text-align: center;}
-      #BinfoPR{width: 80%;}
-      .BinfoPR3{display: flex; justify-content: space-between;}
-   }
-#EventP{ text-align: right; font-size:0.9rem ; font-weight: 300; color:rgba(120, 120, 120, 0.9); margin: 10px 0;}
-#BinfoB{text-align: right;
-    margin: 20px 0px 20px 192px;
-    display: flex
-;
-    width: 401px;
-    
-    align-items: flex-end;
-    justify-content: space-between;
-.BinfoBButton{ width: 50px;height:50px; font-size: 1.7rem; font-weight: 200; color: rgb(31, 31, 31); border: solid 0.2px rgba(120, 120, 120, 0.3); border-radius: 5px;background-color: transparent; }
-}
-.BinfoBButton1{width: 220px;height:50px; font-size: 1rem; font-weight: 600; color: rgb(255, 255, 255);  border-radius: 5px;background-color: $Lidi; border: none; margin-top: -35px;}
+
+      #BinfoP {
+         display: flex;
+         align-items: center;
+         width: 100%;
+         background-color: #A87F24;
+         height: 100px;
+
+         #BinfoPL {
+            width: 20%;
+            text-align: center;
+         }
+
+         #BinfoPR {
+            width: 80%;
+         }
+
+         .BinfoPR3 {
+            display: flex;
+            justify-content: space-between;
+         }
+      }
+
+      #EventP {
+         text-align: right;
+         font-size: 0.9rem;
+         font-weight: 300;
+         color: rgba(120, 120, 120, 0.9);
+         margin: 10px 0;
+      }
+
+      #BinfoB {
+         text-align: right;
+         margin: 20px 0px 20px 192px;
+         display: flex;
+         width: 401px;
+
+         align-items: flex-end;
+         justify-content: space-between;
+
+         .BinfoBButton {
+            width: 50px;
+            height: 50px;
+            font-size: 1.7rem;
+            font-weight: 200;
+            color: rgb(31, 31, 31);
+            border: solid 0.2px rgba(120, 120, 120, 0.3);
+            border-radius: 5px;
+            background-color: transparent;
+         }
+      }
+
+      .BinfoBButton1 {
+         width: 220px;
+         height: 50px;
+         font-size: 1rem;
+         font-weight: 600;
+         color: rgb(255, 255, 255);
+         border-radius: 5px;
+         background-color: $Lidi;
+         border: none;
+         margin-top: -35px;
+      }
+
       #BDBottom {
          background-color: rgb(241, 241, 241);
          border: 0.06px solid rgb(204, 204, 204);
@@ -304,8 +357,275 @@ $Lidi: #1e9eff;
 
 }
 
+#Description {
+   width: 95%;
+   height: 6100px+800px;
+   
+   margin: 0 auto;
+
+   h5 {
+      font-size: 1.4rem;
+      font-weight: 400;
+   }
+
+   h4 {
+      font-size: 1.5rem;
+      font-weight: 550;
+   }
+
+   #ContentInfoUL {
+      #subtxt1{p{font-size: 1rem; text-align: left; font-weight: 400;  line-height: 1.6;}}
+      height: 5600px;
+      width: 100%;
+      display: flex;
+      margin: 20px 0;
+      border-top: solid 1.5px rgb(54, 54, 54);
+      background-color: #cfc0a0;
+       >li:not(:first-child)ul li {
+                  display: none;
+               }
+
+      li:nth-child(1) {
+         border-right: solid 1px $lidigray ;
+         border-bottom: solid 1px $lidigray ;
+      }
+
+      li:nth-child(2) {
+         border-right: solid 1px $lidigray ;
+         border-bottom: solid 1px $lidigray ;
+      }
+
+      li:nth-child(3) {
+         border-bottom: solid 1px $lidigray ;
+      }
+
+      >li {
+         width: 33.333333333%;
+         text-align: center;
+
+         height: 60px;
+         font-size: 1.2rem;
+         font-weight: 700;
+         line-height: 60px;
+         color: $lidigray;
+         background-color: rgba(120, 120, 120, 0.3);
+
+         >ul {
+               position: relative;
+         
+              
+         
+               >li {
+         
+                  position: absolute;
+                  top: 20px;
+         
+                  img {
+                     width: 911px;
+                  }
+               }
+            }
+         
+         }
+   }
+
+   #AuthorInfoUL {
+      height: 600px;
+      background-color: #5D3FC3;
+      width: 100%;
+      display: flex;
+      margin: 20px 0;
+      border-top: solid 1.5px rgb(54, 54, 54);
+
+      li:nth-child(1) {
+         border-right: solid 1px $lidigray ;
+         border-bottom: solid 1px $lidigray ;
+      }
+
+      li:nth-child(2) {
+         border-right: solid 1px $lidigray ;
+         border-bottom: solid 1px $lidigray ;
+      }
+
+      li:nth-child(3) {
+         border-bottom: solid 1px $lidigray ;
+      }
+
+      >li {
+         width: 50%;
+         text-align: center;
+
+         height: 60px;
+         font-size: 1.2rem;
+         font-weight: 700;
+         line-height: 60px;
+         color: $lidigray;
+         background-color: rgba(120, 120, 120, 0.3);
+
+         >ul {
+            position: relative;
+
+            >li {
+               display: none;
+               position: absolute;
+               top: 20px;
+
+               img {
+                  width: 911px;
+               }
+            }
+         }
+
+      }
+   }
+}
+
+#review {
+   width: 95%;
+   margin: 0 auto;
+
+   h4 {
+      font-size: 1.5rem;
+      font-weight: 550;
+   }
+
+   #reviewtop {
+      margin: 20px 0;
+
+      #reviewtop1 {
+         border-bottom: solid 1px $lidigray ;
+         padding-bottom: 20px;
+
+         h3 {
+            font-size: 3rem;
+            margin-right: 10px;
+         }
 
 
+         display: flex;
+         justify-content: space-between;
+
+         >div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            >div {
+               font-size: 1rem;
+            }
+
+            .BuyerStar {
+               display: flex;
+               color: red;
+            }
+         }
+      }
+   }
+}
+
+#RatingDist {
+   display: flex;
+   flex-direction: column;
+   color: $lidigray;
+   font-weight: 500;
+}
+
+#reviewtop2 {
+   h5 {
+      font-size: 1.1rem;
+      margin: 20px 0;
+   }
+
+   text-align: center;
+
+   >div:nth-child(2) {
+      margin: 20px auto;
+      width: 29%;
+      display: flex;
+
+      svg {
+         width: 50px;
+      }
+   }
+
+   >div:nth-child(3) {
+      width: 95%;
+      margin: 0 auto;
+      position: relative;
+      ;
+
+      >input:nth-child(1) {
+         width: 100%;
+         height: 150px;
+         text-align: justify;
+         padding-bottom: 101px;
+         padding-left: 16px;
+         font-size: 1.05rem;
+         border: 0.5px solid rgba(120, 120, 120, 0.3); border-radius: 5px;
+      }
+
+      #SpoilerChk {
+         position: absolute;
+         bottom: 10px;
+         left: 17px;
+         .SpoilerTxT{color: $lidigray;}
+         input{display: none;
+         }
+        .circle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 6px;
+  vertical-align: middle;
+  span{color: $lidigray;}
+}
+.circle-check input:checked + .circle::after {
+  content: "✔"; 
+  position: absolute;
+  top: 40%;
+  left: 50%;
+ 
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: $Lidi;
+}
+
+      }
+
+      button {
+         position: absolute;
+         bottom: 13px;
+         width: 85px;
+         right: 18px;
+         height: 35px;
+         border: none;
+         border-radius: 5px;
+         background-color: rgba(85, 84, 84, 0.3);
+         color: #f8f8f8;
+         font-weight: 700;
+      }
+   }
+}
+#reviewtop3 {
+   margin: 20px 0;
+
+   >div {
+      width: 100%;
+      background-color: #A87F24;
+      height: 350px;
+   }
+}
+
+#reviewbottom {
+   border-top: solid 1.5px rgb(54, 54, 54);margin: 20px 0;
+   #reviewtop4BTN{ margin: 20px 0;
+   button{height: 40px; padding: 9px; margin: 0 5px; border-radius: 20px; border: none;font-size: 1.02rem; font-weight: 500; color: $lidigray;}
+}
+  
+}
 // 오른쪽사이드
 #mainright {
    width: 25%;
