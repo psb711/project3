@@ -373,22 +373,44 @@ $Lidi: #1e9eff;
       font-weight: 550;
    }
 
-   #ContentInfoUL {
-      #subtxt1{p{font-size: 1rem; text-align: left; font-weight: 400;  line-height: 1.6;}}
-      height: 5600px;
-      width: 100%;
-      display: flex;
-      margin: 20px 0;
-      border-top: solid 1.5px rgb(54, 54, 54);
-      background-color: #cfc0a0;
-       >li:not(:first-child)ul li {
-                  display: none;
+            #ContentInfoUL {
+               .More {
+                  width: 910px;
+                  height: 60px;
+                  background-color: inherit;
+                  
+                  border: solid 0.2px rgba(120, 120, 120, 0.3);
+                  border-radius: 5px;
+                  span{font-size: 1.1rem; font-weight: 600;}
                }
-
-      li:nth-child(1) {
-         border-right: solid 1px $lidigray ;
-         border-bottom: solid 1px $lidigray ;
-      }
+      
+               #subtxt1 {
+                  p {
+                     font-size: 1rem;
+                     text-align: left;
+                     font-weight: 400;
+                     line-height: 1.6;
+                     margin: 10px 0;
+                     color: rgb(36, 36, 36);
+                  }
+      
+               }
+   
+         height: 5400px;
+         width: 100%;
+         display: flex;
+         margin: 20px 0;
+         border-top: solid 1.5px rgb(54, 54, 54);
+         background-color: #cfc0a0;
+   
+         >li>ul  {
+            display: none;
+         }
+   
+         >li:nth-child(1) {
+            border-right: solid 1px $lidigray ;
+            border-bottom: solid 1px $lidigray ;
+         }
 
       li:nth-child(2) {
          border-right: solid 1px $lidigray ;
@@ -412,10 +434,10 @@ $Lidi: #1e9eff;
 
          >ul {
                position: relative;
-         
+        
               
          
-               >li {
+               >li:nth-child(1) {
          
                   position: absolute;
                   top: 20px;
@@ -428,6 +450,7 @@ $Lidi: #1e9eff;
          
          }
    }
+
 
    #AuthorInfoUL {
       height: 600px;
