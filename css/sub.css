@@ -314,12 +314,13 @@ ol {
   font-weight: 550;
 }
 #Description #ContentInfoUL {
+  position: relative;
   height: 5400px;
   width: 100%;
   display: flex;
   margin: 20px 0;
   border-top: solid 1.5px rgb(54, 54, 54);
-  background-color: #cfc0a0;
+  background-color: #9ac2a2;
 }
 #Description #ContentInfoUL .More {
   width: 910px;
@@ -332,12 +333,15 @@ ol {
   font-size: 1.1rem;
   font-weight: 600;
 }
-#Description #ContentInfoUL #subtxt1 p {
-  font-size: 1rem;
+#Description #ContentInfoUL #subtxt0 p,
+#Description #ContentInfoUL #subtxt1 p,
+#Description #ContentInfoUL #subtxt2 p,
+#Description #ContentInfoUL #subtxt4 p {
+  font-size: 0.95rem;
   text-align: left;
   font-weight: 400;
   line-height: 1.6;
-  margin: 10px 0;
+  margin: 14px 0;
   color: rgb(36, 36, 36);
 }
 #Description #ContentInfoUL > li > ul {
@@ -364,33 +368,24 @@ ol {
   color: #808080;
   background-color: rgba(120, 120, 120, 0.3);
 }
-#Description #ContentInfoUL > li > ul {
-  position: relative;
-}
 #Description #ContentInfoUL > li > ul > li:nth-child(1) {
   position: absolute;
-  top: 20px;
+  top: 70px;
+  left: 0px;
 }
 #Description #ContentInfoUL > li > ul > li:nth-child(1) img {
   width: 911px;
 }
 #Description #AuthorInfoUL {
-  height: 600px;
-  background-color: #5D3FC3;
+  height: 500px;
   width: 100%;
   display: flex;
   margin: 20px 0;
   border-top: solid 1.5px rgb(54, 54, 54);
+  position: relative;
 }
-#Description #AuthorInfoUL li:nth-child(1) {
+#Description #AuthorInfoUL > li:nth-child(1) {
   border-right: solid 1px #808080;
-  border-bottom: solid 1px #808080;
-}
-#Description #AuthorInfoUL li:nth-child(2) {
-  border-right: solid 1px #808080;
-  border-bottom: solid 1px #808080;
-}
-#Description #AuthorInfoUL li:nth-child(3) {
   border-bottom: solid 1px #808080;
 }
 #Description #AuthorInfoUL > li {
@@ -404,15 +399,16 @@ ol {
   background-color: rgba(120, 120, 120, 0.3);
 }
 #Description #AuthorInfoUL > li > ul {
-  position: relative;
+  width: 200%;
+  height: 100%;
 }
 #Description #AuthorInfoUL > li > ul > li {
-  display: none;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 20px;
-}
-#Description #AuthorInfoUL > li > ul > li img {
-  width: 911px;
+  background-color: #cfc0a0;
+  top: 70px;
+  left: 0px;
 }
 
 #review {
