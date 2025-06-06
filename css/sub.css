@@ -335,8 +335,7 @@ ol {
 }
 #Description #ContentInfoUL #subtxt0 p,
 #Description #ContentInfoUL #subtxt1 p,
-#Description #ContentInfoUL #subtxt2 p,
-#Description #ContentInfoUL #subtxt4 p {
+#Description #ContentInfoUL #subtxt2 p {
   font-size: 0.95rem;
   text-align: left;
   font-weight: 400;
@@ -409,6 +408,90 @@ ol {
   background-color: #cfc0a0;
   top: 70px;
   left: 0px;
+}
+
+#subtxt3 {
+  height: 500PX;
+}
+#subtxt3 .newsBTN {
+  display: flex;
+  border-radius: 50px;
+  border: solid 0.5px #1e9eff;
+  color: #1e9eff;
+  width: 174px;
+  gap: 4px;
+  height: 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 14px 10px;
+  padding-bottom: 2px;
+  background-color: white;
+  align-items: center;
+}
+#subtxt3 .newsBTN svg {
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+}
+#subtxt3 h4 {
+  font-weight: 700;
+}
+#subtxt3 > div {
+  display: flex;
+}
+#subtxt3 > ul {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+#subtxt3 > ul > li {
+  font-size: 0.95rem;
+  position: relative;
+  color: #808080;
+}
+#subtxt3 > ul > li ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 60PX;
+}
+#subtxt3 > ul > li ul li {
+  height: 18PX;
+  font-size: 0.94rem;
+  font-weight: 380;
+  color: rgb(56, 56, 56);
+}
+#subtxt3 .update1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#subtxt3 .update1 p {
+  color: #a5a5a5;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#subtxt3 .update1 button {
+  margin-left: 10px;
+  padding: 2px 3px 6px 5px;
+  height: 25px;
+  font-size: 0.78rem;
+  color: #808080;
+  border: 0.5px solid #808080;
+  background-color: inherit;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+#subtxt4 p, #subtxt5 p {
+  font-size: 0.95rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 14px 0;
+  color: rgb(36, 36, 36);
 }
 
 #review {

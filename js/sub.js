@@ -17,7 +17,8 @@
 // textcall();
 
 
-const txtarry = ["./text/책상세설명.txt", "./text/목차상세설명.txt", "./text/출판사서평.txt", "./text/작가프로필.txt", "./text/작가소개.txt"
+const txtarry = ["./text/책상세설명.txt", "./text/목차상세설명.txt", "./text/출판사서평.txt", 
+   "./text/작가프로필.txt", "./text/작가소개.txt", "./text/리뷰작성유의사항.txt"
 
 ];
 

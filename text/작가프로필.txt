@@ -1,9 +1,9 @@
 <div>
-    <h4>유시민</h4><button type="button" class="rigrid-r3ndwn"><span class="rigrid-ronlx5"><svg width="10" height="10"
-                viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="rigrid-q3jk9d">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.46385 1.96359C8.64971 2.14943 8.64971 2.45073 8.46392 2.63656L3.98179 7.11871C3.89255 7.20795 3.77151 7.25809 3.6453 7.25809C3.5191 7.25809 3.39806 7.20795 3.30882 7.11871L1.04953 4.85944C0.863698 4.6736 0.863697 4.37231 1.04953 4.18647C1.23537 4.00063 1.53666 4.00063 1.7225 4.18647L3.6453 6.10926L7.79091 1.9636C7.97677 1.77776 8.27806 1.77776 8.46385 1.96359Z"
-                    fill="#1E9EFF"></path>
+    <h4>유시민</h4><button type="button" class="newsBTN">
+    <span class="rigrid-ronlx5">
+    <svg width="10" height="10"
+     viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="rigrid-q3jk9d">
+                
             </svg><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 class="rigrid-f97ms0">
                 <g clip-path="url(#clip0_5830_151576)">
@@ -20,22 +20,32 @@
                         </rect>
                     </clipPath>
                 </defs>
-            </svg></span><span class="rigrid-79elbk"><span class="rigrid-epvm6">작가 신간 알림 · 소식</span></span></button>
+            </svg></span><span class="rigrid-79elbk">작가 신간 알림 · 소식</span></button>
 </div>
 <ul>
+
+
+
     <li>국적
 <ul><li>대한민국</li></ul>
     </li>
+
+
     <li>출생
 <ul><li>1959년 7월 28일</li></ul>
     </li>
+
+
     <li>학력
 <ul>
     <li>1997년 마인츠요하네스구텐베르크대학교대학원 경제학 석사</li>
     <li>1991년 서울대학교 경제학 학사</li>
     <li>1978년 심인고등학교</li>
-</ul>
+    
+</ul> <br>
     </li>
+ 
+
     <li>경력
 <ul>
     <li>개혁국민정당 대표</li>
@@ -43,18 +53,25 @@
     <li>2011년 국민참여당 대표</li>
     <li>2013년 정의당</li>
     <li>2018년 사람사는세상 노무현재단 이사장</li>
+    <br>
 </ul>
     </li>
+  <br>
     <li>데뷔
-<ul><li>1986년 학민사 아침으로 가는 길</li></ul>
+<ul>
+<li>1986년 학민사 아침으로 가는 길</li>
+</ul>
     </li>
+
     <li>링크
 <ul>
     <li><a href="https://ww25.usimin.net/?subid1=20250606-1550-5400-80a5-2bc50c75efd5">공식사이트</a></li>
     <li><a href="https://x.com/u_simin">트위터</a></li>
- 
-</ul>
+ </ul>
     </li>
+
+
+
 </ul>
 
 <div class="update1">
