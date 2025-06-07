@@ -1,6 +1,87 @@
 @import "reset";
 $lidigray: #808080;
+
 $Lidi: #1e9eff;
+$lidired:rgb(235, 80, 80);
+$lidiLightgray:rgba(120, 120, 120, 0.3);
+
+@mixin bookx {
+   
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+
+   >div {
+
+      height: 230px;
+      width: 912px;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .arryboxslider {
+ 
+         width: 912px;
+         height: 220px;
+         overflow: hidden;
+
+         .arrybox {
+            width: 1824.2px;
+          
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .bookbox {
+          background-color: aqua;
+               width: 174.2px;
+               height: 200px;
+           margin: 0 5px;
+h4{text-align:left ;
+padding-left: 8px;}
+p{text-align:left ;
+padding-left: 28px;}
+
+
+            }
+
+         }
+      }
+   }
+}
+// 전체버튼공통
+.btnArea {
+   position: relative;
+}
+
+.buttonbox {
+      position: absolute;
+    top: 46%;
+    left: -16px;
+    width: 103%;
+    display: flex
+;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.buttonbox button {
+   border-radius: 150px;
+   height: 40px;
+   width: 40px;
+   pointer-events: auto;
+   background-color: rgba(134, 134, 134, 0.5);
+   color: rgb(255, 255, 255);
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   font-size: 16px;
+}
+.leftbutton{transform: rotate(180deg); }
 
 // 기본크기
 
@@ -89,7 +170,7 @@ $Lidi: #1e9eff;
 
                #RatingNo,
                .star {
-                  color: red;
+                  color:$lidired;
                   font-weight: 600;
                }
 
@@ -644,7 +725,7 @@ $Lidi: #1e9eff;
 
             .BuyerStar {
                display: flex;
-               color: red;
+               color:$lidired
             }
          }
       }
@@ -779,9 +860,93 @@ $Lidi: #1e9eff;
    }
 
 }
+#UserRating {
+   >div:first-of-type {
+      width: 100px;
 
-// 오른쪽사이드
-#mainright {
-   width: 25%;
-   background-color: rgb(197, 197, 18);
-}
+      svg {
+         width: 13px;
+         color: $lidired;
+      }
+
+
+   }
+
+   >p {
+      font-size: 0.8.5rem;
+      margin: 10px 0;
+   }
+
+   >div:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+   }
+
+   >div p:first-of-type {
+      font-size: 0.6rem;
+         border: 0.2px solid $lidigray;
+         width: 31px;
+         padding-left: 0.9px;
+         color: $lidigray;
+         border-radius: 2px;
+      }
+      
+      .nickname {
+         font-size: 0.75rem;
+         color: $lidigray;
+         margin-left: 3px;
+         margin-bottom: 2px;
+      }
+      
+      #UserRatingBottom {
+         display: flex;
+             justify-content: space-between;
+             border-bottom: 1px solid $lidiLightgray;
+             padding-bottom: 15px;
+      
+         button {
+            width: 50px;
+            font-size: 0.74rem;
+            color: $lidigray;
+            height: 30px;  border-radius: 5px;border: 0.2px solid $lidiLightgray; background-color: inherit;
+         }
+      }
+      
+      .date {
+         font-size: 0.8rem;
+         color: $lidigray;
+         font-weight: 600;
+      }
+      
+      .date+span {
+         font-size: 0.8rem;
+         color: $lidigray;
+         font-weight: 500;
+         margin-left: 5px;
+       
+      }
+    
+      } .page1{ul{display: flex;justify-content: center; li{
+         margin: 5px 5px;color: $lidigray;
+         font-weight: 600;
+      }}
+
+      }
+      #AuthorWorks{ @include bookx}
+      #book1{ @include bookx}
+      #book2{ @include bookx}
+      
+      // 오른쪽사이드
+      #mainright {
+         width: 25%;
+         background-color: rgb(197, 197, 18);
+         ul{
+            li{
+               span:first-child{
+                  +span{}
+               }
+               
+            }
+         }
+      }

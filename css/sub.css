@@ -23,6 +23,38 @@ ol {
   padding: 0;
 }
 
+.btnArea {
+  position: relative;
+}
+
+.buttonbox {
+  position: absolute;
+  top: 46%;
+  left: -16px;
+  width: 103%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.buttonbox button {
+  border-radius: 150px;
+  height: 40px;
+  width: 40px;
+  pointer-events: auto;
+  background-color: rgba(134, 134, 134, 0.5);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.leftbutton {
+  transform: rotate(180deg);
+}
+
 .wrap {
   width: 1280px;
   margin: 0 auto;
@@ -87,7 +119,7 @@ ol {
 }
 #mainleft #BD #BDTop #bookinfobox #bookinfoTop #RatingNo,
 #mainleft #BD #BDTop #bookinfobox #bookinfoTop .star {
-  color: red;
+  color: rgb(235, 80, 80);
   font-weight: 600;
 }
 #mainleft #BD #BDTop #bookinfobox #bookinfoTop #RatingNo::after {
@@ -525,7 +557,7 @@ ol {
 }
 #review #reviewtop #reviewtop1 > div .BuyerStar {
   display: flex;
-  color: red;
+  color: rgb(235, 80, 80);
 }
 
 #RatingDist {
@@ -636,6 +668,190 @@ ol {
   font-size: 1.02rem;
   font-weight: 500;
   color: #808080;
+}
+
+#UserRating > div:first-of-type {
+  width: 100px;
+}
+#UserRating > div:first-of-type svg {
+  width: 13px;
+  color: rgb(235, 80, 80);
+}
+#UserRating > p {
+  font-size: 0.8 0.5rem;
+  margin: 10px 0;
+}
+#UserRating > div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+#UserRating > div p:first-of-type {
+  font-size: 0.6rem;
+  border: 0.2px solid #808080;
+  width: 31px;
+  padding-left: 0.9px;
+  color: #808080;
+  border-radius: 2px;
+}
+#UserRating .nickname {
+  font-size: 0.75rem;
+  color: #808080;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+#UserRating #UserRatingBottom {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.3);
+  padding-bottom: 15px;
+}
+#UserRating #UserRatingBottom button {
+  width: 50px;
+  font-size: 0.74rem;
+  color: #808080;
+  height: 30px;
+  border-radius: 5px;
+  border: 0.2px solid rgba(120, 120, 120, 0.3);
+  background-color: inherit;
+}
+#UserRating .date {
+  font-size: 0.8rem;
+  color: #808080;
+  font-weight: 600;
+}
+#UserRating .date + span {
+  font-size: 0.8rem;
+  color: #808080;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.page1 ul {
+  display: flex;
+  justify-content: center;
+}
+.page1 ul li {
+  margin: 5px 5px;
+  color: #808080;
+  font-weight: 600;
+}
+
+#AuthorWorks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#AuthorWorks > div {
+  height: 230px;
+  width: 912px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#AuthorWorks > div .arryboxslider {
+  width: 912px;
+  height: 220px;
+  overflow: hidden;
+}
+#AuthorWorks > div .arryboxslider .arrybox {
+  width: 1824.2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#AuthorWorks > div .arryboxslider .arrybox .bookbox {
+  background-color: aqua;
+  width: 174.2px;
+  height: 200px;
+  margin: 0 5px;
+}
+#AuthorWorks > div .arryboxslider .arrybox .bookbox h4 {
+  text-align: left;
+  padding-left: 8px;
+}
+#AuthorWorks > div .arryboxslider .arrybox .bookbox p {
+  text-align: left;
+  padding-left: 28px;
+}
+
+#book1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book1 > div {
+  height: 230px;
+  width: 912px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book1 > div .arryboxslider {
+  width: 912px;
+  height: 220px;
+  overflow: hidden;
+}
+#book1 > div .arryboxslider .arrybox {
+  width: 1824.2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book1 > div .arryboxslider .arrybox .bookbox {
+  background-color: aqua;
+  width: 174.2px;
+  height: 200px;
+  margin: 0 5px;
+}
+#book1 > div .arryboxslider .arrybox .bookbox h4 {
+  text-align: left;
+  padding-left: 8px;
+}
+#book1 > div .arryboxslider .arrybox .bookbox p {
+  text-align: left;
+  padding-left: 28px;
+}
+
+#book2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book2 > div {
+  height: 230px;
+  width: 912px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book2 > div .arryboxslider {
+  width: 912px;
+  height: 220px;
+  overflow: hidden;
+}
+#book2 > div .arryboxslider .arrybox {
+  width: 1824.2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book2 > div .arryboxslider .arrybox .bookbox {
+  background-color: aqua;
+  width: 174.2px;
+  height: 200px;
+  margin: 0 5px;
+}
+#book2 > div .arryboxslider .arrybox .bookbox h4 {
+  text-align: left;
+  padding-left: 8px;
+}
+#book2 > div .arryboxslider .arrybox .bookbox p {
+  text-align: left;
+  padding-left: 28px;
 }
 
 #mainright {
