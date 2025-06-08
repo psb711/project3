@@ -234,15 +234,35 @@ ol {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #A87F24;
   height: 100px;
+  border-top: 1px solid rgba(120, 120, 120, 0.3);
+  border-bottom: 1px solid rgba(120, 120, 120, 0.3);
 }
 #mainleft #BD #BinfoP #BinfoPL {
   width: 20%;
+  height: 100px;
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(120, 120, 120, 0.3);
+  background-color: rgba(120, 120, 120, 0.3);
 }
 #mainleft #BD #BinfoP #BinfoPR {
   width: 80%;
+  margin-left: 10px;
+}
+#mainleft #BD #BinfoP #BinfoPR #discount1::before {
+  content: "29%↓";
+  font-size: 0.9rem;
+  color: rgb(235, 80, 80);
+  font-weight: 700;
+}
+#mainleft #BD #BinfoP #BinfoPR #discount2::before {
+  content: "10%↓";
+  font-size: 0.9rem;
+  color: rgb(235, 80, 80);
+  font-weight: 700;
 }
 #mainleft #BD #BinfoP .BinfoPR3 {
   display: flex;
@@ -250,9 +270,9 @@ ol {
 }
 #mainleft #BD #EventP {
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 300;
-  color: rgba(120, 120, 120, 0.9);
+  color: #808080;
   margin: 10px 0;
 }
 #mainleft #BD #BinfoB {
@@ -856,5 +876,22 @@ ol {
 
 #mainright {
   width: 25%;
-  background-color: rgb(197, 197, 18);
+  border-left: 1px solid rgba(120, 120, 120, 0.3);
+}
+#mainright #Lank {
+  margin: 0 0 10px 30px;
+}
+#mainright #Lank ul {
+  font-weight: 700;
+}
+#mainright #Lank ul li {
+  margin-top: 5px;
+}
+#mainright #Lank ul li span:first-child {
+  margin-right: 20px;
+  color: rgb(235, 80, 80);
+}
+#mainright #Lank ul li span:first-child + span {
+  font-weight: 400;
+  color: #808080;
 }
