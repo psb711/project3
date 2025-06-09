@@ -23,6 +23,10 @@ ol {
   padding: 0;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .btnArea {
   position: relative;
 }
@@ -62,13 +66,91 @@ ol {
   flex-direction: row;
 }
 
+#PRVModal {
+  width: 1714px;
+  height: 1291px;
+  margin: auto;
+  margin-top: 20px;
+}
+#PRVModal .popup {
+  width: 55%;
+  height: 70%;
+  background-color: #ffffff;
+  margin: auto auto;
+  display: flex;
+}
+#PRVModal .popup .modalleft {
+  width: 70%;
+}
+#PRVModal .popup .modalleft .modallefttop {
+  height: 80px;
+  display: flex;
+  background-color: #9ac2a2;
+  align-items: center;
+  justify-content: space-between;
+}
+#PRVModal .popup .modalleft .modallefttop > div {
+  margin: 0 10px;
+}
+#PRVModal .popup .modalleft .modallefttop > div a {
+  font-size: 20px;
+  font-weight: 500;
+}
+#PRVModal .popup .modalleft .modallefttop > div button {
+  width: 50px;
+  background-color: inherit;
+  border-radius: 20px;
+}
+#PRVModal .popup .modalleft .modalleftbottom {
+  width: 90%;
+  height: 750px;
+  background-color: #113881;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#PRVModal .popup .modalright {
+  width: 30%;
+  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#PRVModal .popup .modalright .modalrighttop {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+}
+#PRVModal .popup .modalright ul {
+  position: sticky;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#PRVModal .popup .modalright ul li {
+  height: 70px;
+  border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+  padding: 10px 0;
+  color: rgba(120, 120, 120, 0.3);
+}
+#PRVModal .popup .modalright ul li button {
+  all: unset;
+  cursor: pointer;
+  color: black;
+  font-weight: 400;
+}
+
 #mainleft {
   width: 75%;
 }
 #mainleft #BD {
   height: 852px;
   width: 95%;
-  background-color: blanchedalmond;
   margin: 0 auto;
 }
 #mainleft #BD .BDBottomInnerBox:nth-of-type(5) ul li {
@@ -82,15 +164,67 @@ ol {
 }
 #mainleft #BD #BDTop {
   display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
 }
 #mainleft #BD #BDTop #bookimgbox {
-  width: 35%;
+  margin-top: 30px;
+  padding-left: 49px;
+  width: 220px;
+}
+#mainleft #BD #BDTop #bookimgbox .book_imgs {
+  width: 220px;
+  height: 319.888px;
+  position: relative;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#mainleft #BD #BDTop #bookimgbox .book_imgs::before {
+  content: "";
+  width: 33.33px;
+  height: 100%;
+  position: absolute;
+  background-image: url(../img/bookside.jpg);
+  background-size: cover;
+  background-position: center;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+#mainleft #BD #BDTop #bookimgbox .book_imgs::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../img/bookback.jpg);
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(10px);
+  left: 0px;
+}
+#mainleft #BD #BDTop #bookimgbox img {
+  width: 220px;
+}
+#mainleft #BD #BDTop #bookimgbox .rotate {
+  transform: rotateY(180deg);
+}
+#mainleft #BD #BDTop #bookimgbox .book_imgs:hover {
+  transform: perspective(15cm) rotateY(35deg);
+  cursor: url(../img/rotate180.svg), pointer !important;
+}
+#mainleft #BD #BDTop #bookimgbox button {
+  width: 220px;
+  height: 60px;
+  background-color: inherit;
+  border: solid 0.2px rgba(120, 120, 120, 0.3);
+  border-radius: 5px;
+  margin-top: 70px;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 #mainleft #BD #BDTop #bookinfobox {
   width: 65%;
-}
-#mainleft #BD #BDTop #bookinfobox #bookinfoTop {
-  background-color: aqua;
 }
 #mainleft #BD #BDTop #bookinfobox #bookinfoTop #Category {
   display: flex;
@@ -161,7 +295,6 @@ ol {
   height: 15px;
 }
 #mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE {
-  background-color: cornsilk;
   display: flex;
   flex-direction: column;
   height: 130px;
@@ -537,7 +670,8 @@ ol {
   font-weight: 700;
 }
 
-#subtxt4 p, #subtxt5 p {
+#subtxt4 p,
+#subtxt5 p {
   font-size: 0.95rem;
   text-align: left;
   font-weight: 400;
@@ -877,6 +1011,10 @@ ol {
 #mainright {
   width: 25%;
   border-left: 1px solid rgba(120, 120, 120, 0.3);
+}
+#mainright img {
+  width: 250px;
+  margin-bottom: 20px;
 }
 #mainright #Lank {
   margin: 0 0 10px 30px;

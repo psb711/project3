@@ -138,3 +138,42 @@ $(document).ready(function () {
       e.stopPropagation();
    });
 });
+
+// 이미지 뒷면 보임
+$(".book_imgs").click(function () {
+  $(this).toggleClass("rotate");
+});
+// 모달창보임
+$("#PRVBTN").click(function(){
+   $("#PRVModal").toggle();
+})
+
+document.querySelectorAll('button[data-target]').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetSelector = button.getAttribute('data-target'); // ex) "#content2"
+
+    // 모든 콘텐츠 숨기기
+    document.querySelectorAll('div[id^="ridi_link_c"]').forEach(div => {
+      div.style.display = 'none';
+    });
+
+    // 클릭한 버튼에 해당하는 콘텐츠만 보이기
+    const targetElement = document.querySelector(targetSelector);
+    if (targetElement) {
+      targetElement.style.display = 'block';
+    }
+  });
+});
+
+// 글씨크기조정
+$(document).ready(function () {$(".smaller_button").click(function(){
+   let currentSize =parseInt($(".modalleftbottom p,.modalleftbottom h5").css('font-size'));
+   $( ".modalleftbottom p,.modalleftbottom h5").css('font-size', currentSize-2+"px")
+})
+
+   $(".bigger_button").click(function(){
+   let currentSize =parseInt($(".modalleftbottom p,.modalleftbottom h5").css('font-size'));
+   $( ".modalleftbottom p,.modalleftbottom h5").css('font-size', currentSize+2+"px")
+})
+
+});

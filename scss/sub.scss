@@ -2,12 +2,12 @@
 $lidigray: #808080;
 
 $Lidi: #1e9eff;
-$lidired:rgb(235, 80, 80);
-$lidiLightgray:rgba(120, 120, 120, 0.3);
+$lidired: rgb(235, 80, 80);
+$lidiLightgray: rgba(120, 120, 120, 0.3);
 
 @mixin bookx {
-   
-   
+
+
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -23,27 +23,33 @@ $lidiLightgray:rgba(120, 120, 120, 0.3);
       align-items: center;
 
       .arryboxslider {
- 
+
          width: 912px;
          height: 220px;
          overflow: hidden;
 
          .arrybox {
             width: 1824.2px;
-          
+
             display: flex;
             justify-content: space-evenly;
             align-items: center;
 
             .bookbox {
-          background-color: aqua;
+               background-color: aqua;
                width: 174.2px;
                height: 200px;
-           margin: 0 5px;
-h4{text-align:left ;
-padding-left: 8px;}
-p{text-align:left ;
-padding-left: 28px;}
+               margin: 0 5px;
+
+               h4 {
+                  text-align: left;
+                  padding-left: 8px;
+               }
+
+               p {
+                  text-align: left;
+                  padding-left: 28px;
+               }
 
 
             }
@@ -52,21 +58,22 @@ padding-left: 28px;}
       }
    }
 }
+
 // 전체버튼공통
+button:hover{cursor: pointer;;}
 .btnArea {
    position: relative;
 }
 
 .buttonbox {
-      position: absolute;
-    top: 46%;
-    left: -16px;
-    width: 103%;
-    display: flex
-;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
+   position: absolute;
+   top: 46%;
+   left: -16px;
+   width: 103%;
+   display: flex;
+   justify-content: space-between;
+   transform: translateY(-50%);
+   pointer-events: none;
 }
 
 .buttonbox button {
@@ -81,7 +88,10 @@ padding-left: 28px;}
    cursor: pointer;
    font-size: 16px;
 }
-.leftbutton{transform: rotate(180deg); }
+
+.leftbutton {
+   transform: rotate(180deg);
+}
 
 // 기본크기
 
@@ -92,7 +102,98 @@ padding-left: 28px;}
    flex-direction: row;
 
 }
+// 모달
+#PRVModal{
 
+   width: 1714px;
+      height: 1291px;
+      margin: auto;
+      margin-top: 20px;
+   
+      .popup {
+            width: 55%;
+            height: 70%;
+            background-color: #ffffff;
+            margin: auto auto;
+            display: flex;
+      
+            .modalleft {
+               .modallefttop{
+             height: 80px;
+   display: flex;
+      background-color: #9ac2a2;
+      align-items: center;
+      justify-content: space-between;
+   
+      >div {
+         margin: 0 10px;
+   
+         a {
+            font-size: 20px;
+            font-weight: 500;
+         }
+         button{width: 50px; background-color: inherit; border-radius: 20px;}
+      }
+   }
+   
+   width: 70%;
+   
+   .modalleftbottom {
+         width: 90%;
+    height: 750px;
+    background-color: #113881;
+    margin: 40px auto;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+      overflow-x: hidden;
+
+   }
+   
+   }
+      
+                        .modalright {
+                           .modalrighttop {
+                              height: 80px;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              position:static
+                           }
+            
+                           width: 30%;
+            
+                           overflow: scroll;
+                            overflow-y: auto;      
+  overflow-x: hidden; 
+            
+                           ul {
+                              position: sticky;
+                              text-align: center;
+                              display: flex;
+                              flex-direction: column;
+                              height: 100%;
+            
+                              li {
+                                 height: 70px;
+                                 border-top: solid 0.5px rgba(120, 120, 120, 0.3);
+                                 padding: 10px 0;
+                                 color: $lidiLightgray;
+            
+                                 button {
+                                    all: unset;
+                                    cursor: pointer;
+                                    color: black;
+                                    font-weight: 400;
+                                 }
+                              }
+                           }
+                        }
+         }
+
+}
 // 왼쪽사이드
 #mainleft {
    width: 75%;
@@ -103,7 +204,7 @@ padding-left: 28px;}
 
 
       width: 95%;
-      background-color: blanchedalmond;
+   
       margin: 0 auto;
 
       .BDBottomInnerBox:nth-of-type(5) ul li {
@@ -126,16 +227,84 @@ padding-left: 28px;}
       #BDTop {
 
          display: flex;
+         margin-top: 10px;
+         justify-content: space-between;
 
          #bookimgbox {
-            width: 35%;
+
+            margin-top: 30px;
+            padding-left: 49px;
+            width: 220px;
+
+            .book_imgs {
+               width: 220px;
+               height: 319.888px;
+               position: relative;
+               transition: 0.5s;
+               transform-style: preserve-3d;
+               box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .book_imgs::before {
+               content: "";
+               width: 33.33px;
+               height: 100%;
+               position: absolute;
+               background-image: url(../img/bookside.jpg);
+               background-size: cover;
+               background-position: center;
+               transform-origin: left;
+               transform: rotateY(90deg);
+            }
+
+            .book_imgs::after {
+              content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/bookback.jpg);
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    transform: rotateY(180deg) translateZ(10px);
+    left: 0px;
+
+            }
+
+            img {
+               width: 220px;
+
+
+            }
+
+            .rotate {
+               transform: rotateY(180deg);
+            }
+
+
+           .book_imgs:hover {
+               transform: perspective(15cm) rotateY(35deg);
+               cursor: url(../img/rotate180.svg), pointer !important;
+            }
+
+            button {
+               width: 220px;
+               height: 60px;
+               background-color: inherit;
+               border: solid 0.2px rgba(120, 120, 120, 0.3);
+               border-radius: 5px;
+               margin-top: 70px;
+               font-size: 1.1rem;
+               font-weight: 600;
+               
+            }
          }
 
          #bookinfobox {
             width: 65%;
 
             #bookinfoTop {
-               background-color: aqua;
+              
 
                #Category {
                   display: flex;
@@ -170,7 +339,7 @@ padding-left: 28px;}
 
                #RatingNo,
                .star {
-                  color:$lidired;
+                  color: $lidired;
                   font-weight: 600;
                }
 
@@ -223,7 +392,7 @@ padding-left: 28px;}
 
             #bookinfoBottom {
                .BinfoE {
-                  background-color: cornsilk;
+             
                   display: flex;
                   flex-direction: column;
                   height: 130px;
@@ -319,33 +488,43 @@ padding-left: 28px;}
 
       #BinfoP {
          display: flex;
-            align-items: center;
-            width: 100%;
-         
+         align-items: center;
+         width: 100%;
+
+         height: 100px;
+         border-top: 1px solid $lidiLightgray;
+         border-bottom: 1px solid $lidiLightgray;
+
+
+         #BinfoPL {
+            width: 20%;
             height: 100px;
-            border-top: 1px solid $lidiLightgray;
-            border-bottom: 1px solid $lidiLightgray;
-         
-         
-            #BinfoPL {
-               width: 20%;
-               height: 100px;
-               display: flex;
-               text-align: center;
-               align-items: center;
-               justify-content: center;
-                border-right: 1px solid $lidiLightgray;
-         background-color: $lidiLightgray;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid $lidiLightgray;
+            background-color: $lidiLightgray;
+         }
+
+         #BinfoPR {
+            width: 80%;
+            margin-left: 10px;
+
+            #discount1::before {
+               content: "29%↓";
+               font-size: 0.9rem;
+               color: $lidired;
+               font-weight: 700;
             }
-         
-                        #BinfoPR {
-                           width: 80%;
-                           margin-left: 10px;
-            
-                           #discount1::before {content: "29%↓"; font-size: 0.9rem; color: $lidired; font-weight: 700;}
-            
-                           #discount2::before  {content: "10%↓";font-size: 0.9rem; color: $lidired; font-weight: 700;}
-                        }
+
+            #discount2::before {
+               content: "10%↓";
+               font-size: 0.9rem;
+               color: $lidired;
+               font-weight: 700;
+            }
+         }
 
          .BinfoPR3 {
             display: flex;
@@ -357,7 +536,7 @@ padding-left: 28px;}
          text-align: right;
          font-size: 0.85rem;
          font-weight: 300;
-       color: $lidigray;
+         color: $lidigray;
          margin: 10px 0;
       }
 
@@ -692,7 +871,8 @@ padding-left: 28px;}
 
 }
 
-#subtxt4,#subtxt5 {
+#subtxt4,
+#subtxt5 {
    p {
       font-size: 0.95rem;
       text-align: left;
@@ -739,7 +919,7 @@ padding-left: 28px;}
 
             .BuyerStar {
                display: flex;
-               color:$lidired
+               color: $lidired
             }
          }
       }
@@ -874,6 +1054,7 @@ padding-left: 28px;}
    }
 
 }
+
 #UserRating {
    >div:first-of-type {
       width: 100px;
@@ -899,74 +1080,111 @@ padding-left: 28px;}
 
    >div p:first-of-type {
       font-size: 0.6rem;
-         border: 0.2px solid $lidigray;
-         width: 31px;
-         padding-left: 0.9px;
+      border: 0.2px solid $lidigray;
+      width: 31px;
+      padding-left: 0.9px;
+      color: $lidigray;
+      border-radius: 2px;
+   }
+
+   .nickname {
+      font-size: 0.75rem;
+      color: $lidigray;
+      margin-left: 3px;
+      margin-bottom: 2px;
+   }
+
+   #UserRatingBottom {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $lidiLightgray;
+      padding-bottom: 15px;
+
+      button {
+         width: 50px;
+         font-size: 0.74rem;
          color: $lidigray;
-         border-radius: 2px;
+         height: 30px;
+         border-radius: 5px;
+         border: 0.2px solid $lidiLightgray;
+         background-color: inherit;
       }
-      
-      .nickname {
-         font-size: 0.75rem;
+   }
+
+   .date {
+      font-size: 0.8rem;
+      color: $lidigray;
+      font-weight: 600;
+   }
+
+   .date+span {
+      font-size: 0.8rem;
+      color: $lidigray;
+      font-weight: 500;
+      margin-left: 5px;
+
+   }
+
+}
+
+.page1 {
+   ul {
+      display: flex;
+      justify-content: center;
+
+      li {
+         margin: 5px 5px;
          color: $lidigray;
-         margin-left: 3px;
-         margin-bottom: 2px;
+         font-weight: 600;
       }
-      
-      #UserRatingBottom {
-         display: flex;
-             justify-content: space-between;
-             border-bottom: 1px solid $lidiLightgray;
-             padding-bottom: 15px;
-      
-         button {
-            width: 50px;
-            font-size: 0.74rem;
-            color: $lidigray;
-            height: 30px;  border-radius: 5px;border: 0.2px solid $lidiLightgray; background-color: inherit;
+   }
+
+}
+
+#AuthorWorks {
+   @include bookx
+}
+
+#book1 {
+   @include bookx
+}
+
+#book2 {
+   @include bookx
+}
+
+// 오른쪽사이드
+#mainright {
+   width: 25%;
+   border-left: 1px solid $lidiLightgray;
+
+   img {
+      width: 250px;
+      margin-bottom: 20px;
+   }
+
+
+   #Lank {
+      margin: 0 0 10px 30px;
+
+      ul {
+         font-weight: 700;
+
+         li {
+            margin-top: 5px;
+
+            span:first-child {
+               margin-right: 20px;
+               color: $lidired;
+
+               +span {
+                  font-weight: 400;
+                  color: $lidigray;
+               }
+            }
+
          }
       }
-      
-      .date {
-         font-size: 0.8rem;
-         color: $lidigray;
-         font-weight: 600;
-      }
-      
-      .date+span {
-         font-size: 0.8rem;
-         color: $lidigray;
-         font-weight: 500;
-         margin-left: 5px;
-       
-      }
-    
-      } .page1{ul{display: flex;justify-content: center; li{
-         margin: 5px 5px;color: $lidigray;
-         font-weight: 600;
-      }}
+   }
 
-      }
-      #AuthorWorks{ @include bookx}
-      #book1{ @include bookx}
-      #book2{ @include bookx}
-      
-      // 오른쪽사이드
-            #mainright {
-               width: 25%;
-                border-left: 1px solid $lidiLightgray;
-
-      
-               #Lank { margin: 0 0 10px 30px;
-                  ul { font-weight: 700;
-                     
-                     li { margin-top: 5px;
-                        span:first-child { margin-right: 20px; color: $lidired;
-                           +span { font-weight: 400; color: $lidigray;}
-                        }
-      
-                     }
-                  }
-               }
-      
-            }
+}
