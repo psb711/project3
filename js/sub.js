@@ -30,7 +30,7 @@ async function textcall() {
             throw new Error("Network response was not ok");
          }
          const data = await response.text();
-         console.log(data);
+     
          document.getElementById("subtxt" + i).innerHTML = data;
       } catch (error) {
          console.error("There was a problem with the fetch operation:", error);
@@ -57,9 +57,10 @@ textcall();
 // 작품정보,작가메뉴 클릭
 $(document).ready(function () {
    const $items = $('#ContentInfoUL > li');
+   const $con = $('.mL')
 
    
-   $items.eq(0).children('ul').show(); 
+   $(".ML").eq(0).children('ul').show(); 
    $items.eq(0).css({
       'background-color': '#fff',
       'color': '#000',
@@ -69,7 +70,7 @@ $(document).ready(function () {
 
    $items.click(function (e) {
    
-      $items.not(this).children('ul').hide();
+      $(".ML").not(this).hide();
 
       
       $items.css({
@@ -77,9 +78,12 @@ $(document).ready(function () {
          'color': '',
          'border-bottom': ''
       });
-
+$('#ContentInfoUL li').click(function () {
+    const index = $(this).index(); // 몇 번째 li인지 확인
+    $('#ContentInfoULbottom .ML').hide().eq(index).css('display', 'block');
+  });
     
-      $(this).children('ul').toggle();
+     
 
     
       $(this).css({
@@ -100,8 +104,8 @@ $(document).ready(function () {
 $(document).ready(function () {
    const $items = $('#AuthorInfoUL > li');
 
-   // ⭐ 초기 설정: 첫 번째 li 열기 및 스타일 적용
-   $items.eq(0).children('ul').show(); // ul 보이기
+   // 초기 설정: 첫 번째 li 열기 및 스타일 적용
+   $('#AuthorInfoULTop li').eq(0).children('ul').show(); // ul 보이기
    $items.eq(0).css({
       'background-color': '#fff',
       'color': '#000',
@@ -111,7 +115,7 @@ $(document).ready(function () {
    // 클릭 이벤트 설정
    $items.click(function (e) {
       // 다른 li들의 ul은 닫기
-      $items.not(this).children('ul').hide();
+         $('#AuthorInfoULTop >li').not(this).hide();
 
       // 스타일 초기화
       $items.css({
@@ -121,7 +125,10 @@ $(document).ready(function () {
       });
 
       // 현재 li의 ul 토글
-      $(this).children('ul').toggle();
+    $('#AuthorInfoUL > li').click(function () {
+    const index = $(this).index(); // 몇 번째 li인지 확인
+    $('#AuthorInfoULTop> li').hide().eq(index).css('display', 'block');
+  });
 
       // 스타일 적용
       $(this).css({
@@ -137,6 +144,14 @@ $(document).ready(function () {
    $('#ContentInfoUL .More').click(function (e) {
       e.stopPropagation();
    });
+});
+
+
+document.querySelectorAll('[id^="subtxt"],#bookdetail').forEach(el => {
+  el.addEventListener('click', function(e) {
+    e.stopPropagation(); // 이벤트 전파 방지
+    e.preventDefault();  // 기본 동작 방지 (필요한 경우)
+  });
 });
 
 // 이미지 뒷면 보임
@@ -176,4 +191,71 @@ $(document).ready(function () {$(".smaller_button").click(function(){
    $( ".modalleftbottom p,.modalleftbottom h5").css('font-size', currentSize+2+"px")
 })
 
+});
+
+// 별점남기기
+
+
+  $(".BuyerStar1 svg").hover(function(){
+  $(this).css("color","#e54c43");
+  $(this).prevAll().css("color","#e54c43");
+},function(){
+  $(this).css("color","#e6e6e6");
+  $(this).prevAll().css("color","#e6e6e6");
+});
+// 더보기
+$(document).ready(function () {
+  $('.More').click(function () {
+    const index = $('.More').index(this);
+    const target = $('.ML').eq(index);
+
+    target.addClass('expanded');
+    $(this).hide();
+    $('.less').eq(index).show();
+  });
+
+  $('.less').click(function () {
+    const index = $('.less').index(this);
+    const target = $('.ML').eq(index);
+
+    target.removeClass('expanded');
+    $(this).hide();
+    $('.More').eq(index).show();
+  });
+});
+
+
+
+$(document).ready(function () {
+   $('.page1 li').hover(function(){
+      $(this).css('cursor','pointer')
+   })
+  $('.page1 li').click(function () {
+    const index = $(this).index();
+    
+
+    // 1. li 색상 변경
+    $('.page1 li').removeClass('active1');
+    $(this).addClass('active1');
+
+    // 2. 슬라이더 이동
+    const move = -866 * index;
+    $('#reviewarry').css('transform', `translateX(${move}px)`);
+  });
+
+  // 처음에 첫 번째 li 활성화
+  $('.page1 li').eq(0).addClass('active1');
+  $('#reviewarry').css('transform', 'translateX(0px)');
+});
+
+
+
+$(document).ready(function () {
+  $('#reviewtop3 span').click(function () {
+    // 텍스트 영역 토글
+    $('#subtxt5').slideToggle(200);
+
+    // svg 회전 토글
+    $(this).toggleClass('active3');
+  });
 });

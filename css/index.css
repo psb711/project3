@@ -22,28 +22,60 @@ ol {
   padding: 0;
 }
 
-@font-face {
-  font-family: "RIDIBatang";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+#headerbox {
+  border-bottom: 1px solid gray;
+  height: 120px;
 }
-.container {
-  width: 1280px;
-  height: auto;
-  margin: 0 auto;
+#headerbox header {
+  height: 120px;
 }
-
-.BOOK,
-.MD {
-  height: 430px;
-}
-
-h3 {
-  align-self: flex-start;
-  font-size: 1.6rem;
+#headerbox ul {
   font-weight: 800;
-  margin: 50px 0;
+  font-size: 1rem;
+}
+
+#headertop {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headertop ul {
+  display: flex;
+  font-weight: 800;
+}
+
+#headerbottom {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headerbottom ul {
+  font-weight: 700;
+}
+#headerbottom .search-wrapper {
+  border-radius: 5px;
+  width: 280px;
+  height: 45px;
+  background-color: rgb(235, 235, 235);
+  border-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-left: 30px;
+  margin-bottom: 9px;
+}
+#headerbottom .search-wrapper .search-icon {
+  color: #1e9eff;
+}
+#headerbottom .search-wrapper #search-input {
+  border-style: none;
+  background-color: rgb(235, 235, 235);
+  outline: none;
+  caret-color: #1e9eff;
 }
 
 #banner {
@@ -86,6 +118,114 @@ h3 {
   margin-top: -15px;
   font-weight: 600;
   color: #333;
+}
+
+#footerbox {
+  height: 300px;
+  border-top: 1px solid black;
+}
+#footerbox footer {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+#footerbox footer #footerleft {
+  width: 50%;
+}
+#footerbox footer #footerleft #snsbox .snsul {
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+#footerbox footer #footerleft #snsbox .snsul .snsli {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 0.5px solid rgb(185, 184, 184);
+  border-radius: 100px;
+  padding-top: 9px;
+}
+#footerbox footer #footerleft #snsbox .snsul .snsli:hover {
+  border: 1px solid #1e9eff;
+}
+#footerbox footer #footerleft #snsbox .snsul .snsli svg path {
+  margin: auto 0;
+}
+#footerbox footer #footerleft nav {
+  margin: 10px 0;
+}
+#footerbox footer #footerleft nav a::before {
+  content: "";
+  display: inline-block;
+  background: rgb(240, 240, 240);
+  width: 1px;
+  height: 9px;
+  margin: 2px 6px;
+}
+#footerbox footer #footerleft nav a:hover {
+  color: #aaa8a8;
+}
+#footerbox footer #footerleft #BRN span {
+  display: inline-flex;
+}
+#footerbox footer #footerleft #BRN span svg {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+  margin: 2px 0 0 3px;
+}
+#footerbox footer #footerleft #BRN .hi {
+  display: none;
+}
+#footerbox footer #footerright {
+  width: 50%;
+  color: #1e9eff;
+}
+
+#footermain {
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+}
+#footermain .footersub {
+  display: flex;
+  flex-direction: column;
+}
+#footermain .footersub > li {
+  margin: 2px 0;
+}
+#footermain .footersub > li:nth-of-type(2) a svg {
+  color: #1e9eff;
+  margin-left: 3px;
+  text-align: center;
+  vertical-align: baseline;
+}
+#footermain .footersub > li a:hover {
+  color: #aaa8a8;
+}
+
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  width: 1280px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.BOOK,
+.MD {
+  height: 430px;
+}
+
+h3 {
+  align-self: flex-start;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 50px 0;
 }
 
 @keyframes shake {
@@ -147,61 +287,6 @@ ul {
 
 li {
   margin: 0 10px;
-}
-
-#headerbox {
-  border-bottom: 1px solid gray;
-  height: 120px;
-}
-#headerbox header {
-  height: 120px;
-}
-#headerbox ul {
-  font-weight: 800;
-  font-size: 1rem;
-}
-
-#headertop {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#headertop ul {
-  font-weight: 800;
-}
-
-#headerbottom {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#headerbottom ul {
-  font-weight: 700;
-}
-#headerbottom .search-wrapper {
-  border-radius: 5px;
-  width: 280px;
-  height: 45px;
-  background-color: rgb(235, 235, 235);
-  border-style: none;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-left: 30px;
-  margin-bottom: 9px;
-}
-#headerbottom .search-wrapper .search-icon {
-  color: #1e9eff;
-}
-#headerbottom .search-wrapper #search-input {
-  border-style: none;
-  background-color: rgb(235, 235, 235);
-  outline: none;
-  caret-color: #1e9eff;
 }
 
 .s1 nav {
@@ -928,90 +1013,6 @@ li {
   font-size: 1.2rem;
   margin: 20px -100px 0px 40px;
   width: 220px;
-}
-
-#footerbox {
-  height: 300px;
-  border-top: 1px solid black;
-}
-#footerbox footer {
-  height: 100%;
-  padding: 30px;
-  display: flex;
-  font-size: 0.8rem;
-  overflow: hidden;
-}
-#footerbox footer #footerleft {
-  width: 50%;
-}
-#footerbox footer #footerleft #snsbox .snsul {
-  margin-bottom: 50px;
-  margin-top: 15px;
-}
-#footerbox footer #footerleft #snsbox .snsul .snsli {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border: 0.5px solid rgb(185, 184, 184);
-  border-radius: 100px;
-  padding-top: 9px;
-}
-#footerbox footer #footerleft #snsbox .snsul .snsli:hover {
-  border: 1px solid #1e9eff;
-}
-#footerbox footer #footerleft #snsbox .snsul .snsli svg path {
-  margin: auto 0;
-}
-#footerbox footer #footerleft nav {
-  margin: 10px 0;
-}
-#footerbox footer #footerleft nav a::before {
-  content: "";
-  display: inline-block;
-  background: rgb(240, 240, 240);
-  width: 1px;
-  height: 9px;
-  margin: 2px 6px;
-}
-#footerbox footer #footerleft nav a:hover {
-  color: #aaa8a8;
-}
-#footerbox footer #footerleft #BRN span {
-  display: inline-flex;
-}
-#footerbox footer #footerleft #BRN span svg {
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-  margin: 2px 0 0 3px;
-}
-#footerbox footer #footerleft #BRN .hi {
-  display: none;
-}
-#footerbox footer #footerright {
-  width: 50%;
-  color: #1e9eff;
-}
-
-#footermain {
-  text-align: left;
-  display: flex;
-  justify-content: space-evenly;
-}
-#footermain .footersub {
-  display: flex;
-  flex-direction: column;
-}
-#footermain .footersub > li {
-  margin: 2px 0;
-}
-#footermain .footersub > li:nth-of-type(2) a svg {
-  color: #1e9eff;
-  margin-left: 3px;
-  text-align: center;
-  vertical-align: baseline;
-}
-#footermain .footersub > li a:hover {
-  color: #aaa8a8;
 }
 
 .BizInfo:hover {

@@ -23,6 +23,202 @@ ol {
   padding: 0;
 }
 
+#headerbox {
+  border-bottom: 1px solid gray;
+  height: 120px;
+}
+#headerbox header {
+  height: 120px;
+}
+#headerbox ul {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+#headertop {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headertop ul {
+  display: flex;
+  font-weight: 800;
+}
+
+#headerbottom {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#headerbottom ul {
+  font-weight: 700;
+}
+#headerbottom .search-wrapper {
+  border-radius: 5px;
+  width: 280px;
+  height: 45px;
+  background-color: rgb(235, 235, 235);
+  border-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-left: 30px;
+  margin-bottom: 9px;
+}
+#headerbottom .search-wrapper .search-icon {
+  color: #1e9eff;
+}
+#headerbottom .search-wrapper #search-input {
+  border-style: none;
+  background-color: rgb(235, 235, 235);
+  outline: none;
+  caret-color: #1e9eff;
+}
+
+#banner {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  z-index: 10;
+  top: 750px;
+  right: 40px;
+}
+#banner div {
+  background-color: #1e9eff;
+  border-radius: 100%;
+  width: 140px;
+  height: 135px;
+  background-image: url(../img/banner.png);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#banner div a {
+  text-align: center;
+}
+#banner div a p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: -10px;
+  transition: transform 0.2s ease;
+}
+#banner div a p:hover {
+  animation: shake 0.3s ease-in-out;
+}
+#banner button {
+  all: unset;
+  cursor: pointer;
+  float: right;
+  margin-right: 55px;
+  margin-top: -15px;
+  font-weight: 600;
+  color: #333;
+}
+
+#footerbox {
+  height: 300px;
+  border-top: 1px solid black;
+}
+#footerbox footer {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+#footerbox footer #footerleft {
+  width: 50%;
+}
+#footerbox footer #footerleft #snsbox .snsul {
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+#footerbox footer #footerleft #snsbox .snsul .snsli {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 0.5px solid rgb(185, 184, 184);
+  border-radius: 100px;
+  padding-top: 9px;
+}
+#footerbox footer #footerleft #snsbox .snsul .snsli:hover {
+  border: 1px solid #1e9eff;
+}
+#footerbox footer #footerleft #snsbox .snsul .snsli svg path {
+  margin: auto 0;
+}
+#footerbox footer #footerleft nav {
+  margin: 10px 0;
+}
+#footerbox footer #footerleft nav a::before {
+  content: "";
+  display: inline-block;
+  background: rgb(240, 240, 240);
+  width: 1px;
+  height: 9px;
+  margin: 2px 6px;
+}
+#footerbox footer #footerleft nav a:hover {
+  color: #aaa8a8;
+}
+#footerbox footer #footerleft #BRN span {
+  display: inline-flex;
+}
+#footerbox footer #footerleft #BRN span svg {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+  margin: 2px 0 0 3px;
+}
+#footerbox footer #footerleft #BRN .hi {
+  display: none;
+}
+#footerbox footer #footerright {
+  width: 50%;
+  color: #1e9eff;
+}
+
+#footermain {
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+}
+#footermain .footersub {
+  display: flex;
+  flex-direction: column;
+}
+#footermain .footersub > li {
+  margin: 2px 0;
+}
+#footermain .footersub > li:nth-of-type(2) a svg {
+  color: #1e9eff;
+  margin-left: 3px;
+  text-align: center;
+  vertical-align: baseline;
+}
+#footermain .footersub > li a:hover {
+  color: #aaa8a8;
+}
+
+.bookbox1 img {
+  width: 155px;
+  box-shadow: 2px 2px 5px #333;
+}
+
+input:focus {
+  outline: none;
+  /* 포커스 아웃라인 제거 */
+  border-color: inherit;
+  /* 기존 보더 색 유지 */
+  box-shadow: none;
+  /* 추가적인 강조 제거 */
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -62,6 +258,9 @@ button:hover {
 .wrap {
   width: 1280px;
   margin: 0 auto;
+}
+
+.mainwrap {
   display: flex;
   flex-direction: row;
 }
@@ -85,7 +284,7 @@ button:hover {
 #PRVModal .popup .modalleft .modallefttop {
   height: 80px;
   display: flex;
-  background-color: #9ac2a2;
+  background-color: rgba(120, 120, 120, 0.3);
   align-items: center;
   justify-content: space-between;
 }
@@ -104,7 +303,6 @@ button:hover {
 #PRVModal .popup .modalleft .modalleftbottom {
   width: 90%;
   height: 750px;
-  background-color: #113881;
   margin: 40px auto;
   display: flex;
   justify-content: center;
@@ -123,10 +321,13 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: static;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid gray;
 }
 #PRVModal .popup .modalright ul {
-  position: sticky;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -143,6 +344,10 @@ button:hover {
   cursor: pointer;
   color: black;
   font-weight: 400;
+}
+
+[id^=subtxt] {
+  z-index: 5;
 }
 
 #mainleft {
@@ -330,8 +535,6 @@ button:hover {
 #mainleft #BD #BDTop #bookinfobox #bookinfoBottom .BinfoE .BinfoEName span {
   width: 80%;
   font-size: 0.8rem;
-  height: 20px;
-  background-color: aqua;
   text-align: center;
   padding: 3px;
   border-radius: 10%;
@@ -498,38 +701,15 @@ button:hover {
   font-size: 1.5rem;
   font-weight: 550;
 }
+#Description .less {
+  display: none;
+}
 #Description #ContentInfoUL {
   position: relative;
-  height: 5400px;
   width: 100%;
   display: flex;
   margin: 20px 0;
   border-top: solid 1.5px rgb(54, 54, 54);
-  background-color: #9ac2a2;
-}
-#Description #ContentInfoUL .More {
-  width: 910px;
-  height: 60px;
-  background-color: inherit;
-  border: solid 0.2px rgba(120, 120, 120, 0.3);
-  border-radius: 5px;
-}
-#Description #ContentInfoUL .More span {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-#Description #ContentInfoUL #subtxt0 p,
-#Description #ContentInfoUL #subtxt1 p,
-#Description #ContentInfoUL #subtxt2 p {
-  font-size: 0.95rem;
-  text-align: left;
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 14px 0;
-  color: rgb(36, 36, 36);
-}
-#Description #ContentInfoUL > li > ul {
-  display: none;
 }
 #Description #ContentInfoUL > li:nth-child(1) {
   border-right: solid 1px #808080;
@@ -560,19 +740,62 @@ button:hover {
 #Description #ContentInfoUL > li > ul > li:nth-child(1) img {
   width: 911px;
 }
-#Description #AuthorInfoUL {
+
+.ML {
   height: 500px;
+  /* 줄인 상태 높이 */
+  overflow: hidden;
+  transition: height 0.3s ease;
+  position: relative;
+}
+
+.ML.expanded {
+  height: auto;
+  /* 원래 길이로 */
+}
+
+.BTN1 {
+  width: 910px;
+  height: 60px;
+  background-color: inherit;
+  border: solid 0.2px rgba(120, 120, 120, 0.3);
+  border-radius: 5px;
+  z-index: 8;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+}
+.BTN1 span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#subtxt0 p,
+#subtxt1 p,
+#subtxt2 p {
+  font-size: 0.95rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 14px 0;
+  color: rgb(36, 36, 36);
+}
+
+#subtxt12 {
+  width: 912px;
+}
+
+#AuthorInfoUL {
   width: 100%;
   display: flex;
   margin: 20px 0;
   border-top: solid 1.5px rgb(54, 54, 54);
-  position: relative;
 }
-#Description #AuthorInfoUL > li:nth-child(1) {
+#AuthorInfoUL > li:nth-child(1) {
   border-right: solid 1px #808080;
   border-bottom: solid 1px #808080;
 }
-#Description #AuthorInfoUL > li {
+#AuthorInfoUL > li {
   width: 50%;
   text-align: center;
   height: 60px;
@@ -581,18 +804,6 @@ button:hover {
   line-height: 60px;
   color: #808080;
   background-color: rgba(120, 120, 120, 0.3);
-}
-#Description #AuthorInfoUL > li > ul {
-  width: 200%;
-  height: 100%;
-}
-#Description #AuthorInfoUL > li > ul > li {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #cfc0a0;
-  top: 70px;
-  left: 0px;
 }
 
 #subtxt3 {
@@ -687,6 +898,10 @@ button:hover {
 #review h4 {
   font-size: 1.5rem;
   font-weight: 550;
+}
+#review .BuyerStar1 svg {
+  cursor: pointer;
+  color: #e6e6e6;
 }
 #review #reviewtop {
   margin: 20px 0;
@@ -800,10 +1015,21 @@ button:hover {
 #reviewtop3 {
   margin: 20px 0;
 }
+#reviewtop3 span svg {
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+  transform: rotate(90deg);
+}
+#reviewtop3 span.active3 svg {
+  transform: rotate(270deg); /* 상하 반전 */
+}
 #reviewtop3 > div {
   width: 100%;
-  background-color: #A87F24;
   height: 350px;
+}
+
+#subtxt5 {
+  display: none;
 }
 
 #reviewbottom {
@@ -881,6 +1107,19 @@ button:hover {
   margin-left: 5px;
 }
 
+.reviewarrybox {
+  width: 866px;
+  overflow: hidden;
+}
+.reviewarrybox #reviewarry {
+  display: flex;
+  width: 2598px;
+  flex-wrap: wrap;
+}
+.reviewarrybox #reviewarry li > div {
+  width: 866px;
+}
+
 .page1 ul {
   display: flex;
   justify-content: center;
@@ -891,11 +1130,19 @@ button:hover {
   font-weight: 600;
 }
 
+.page1 li.active1 {
+  color: #000;
+  font-weight: bold;
+}
+
 #AuthorWorks {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+#AuthorWorks h6 {
+  font-size: 1.4rem;
 }
 #AuthorWorks > div {
   height: 230px;
@@ -906,7 +1153,6 @@ button:hover {
 }
 #AuthorWorks > div .arryboxslider {
   width: 912px;
-  height: 220px;
   overflow: hidden;
 }
 #AuthorWorks > div .arryboxslider .arrybox {
@@ -916,14 +1162,14 @@ button:hover {
   align-items: center;
 }
 #AuthorWorks > div .arryboxslider .arrybox .bookbox {
-  background-color: aqua;
   width: 174.2px;
-  height: 200px;
+  height: 220px;
   margin: 0 5px;
+  text-align: center;
 }
 #AuthorWorks > div .arryboxslider .arrybox .bookbox h4 {
-  text-align: left;
   padding-left: 8px;
+  font-size: 1rem;
 }
 #AuthorWorks > div .arryboxslider .arrybox .bookbox p {
   text-align: left;
@@ -936,6 +1182,10 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
 }
+#book1 h3 {
+  margin: 20px;
+  font-size: 1.3rem;
+}
 #book1 > div {
   height: 230px;
   width: 912px;
@@ -945,7 +1195,6 @@ button:hover {
 }
 #book1 > div .arryboxslider {
   width: 912px;
-  height: 220px;
   overflow: hidden;
 }
 #book1 > div .arryboxslider .arrybox {
@@ -955,14 +1204,14 @@ button:hover {
   align-items: center;
 }
 #book1 > div .arryboxslider .arrybox .bookbox {
-  background-color: aqua;
   width: 174.2px;
-  height: 200px;
+  height: 220px;
   margin: 0 5px;
+  text-align: center;
 }
 #book1 > div .arryboxslider .arrybox .bookbox h4 {
-  text-align: left;
   padding-left: 8px;
+  font-size: 1rem;
 }
 #book1 > div .arryboxslider .arrybox .bookbox p {
   text-align: left;
@@ -975,6 +1224,10 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
 }
+#book2 h3 {
+  margin: 20px;
+  font-size: 1.3rem;
+}
 #book2 > div {
   height: 230px;
   width: 912px;
@@ -984,7 +1237,6 @@ button:hover {
 }
 #book2 > div .arryboxslider {
   width: 912px;
-  height: 220px;
   overflow: hidden;
 }
 #book2 > div .arryboxslider .arrybox {
@@ -994,14 +1246,14 @@ button:hover {
   align-items: center;
 }
 #book2 > div .arryboxslider .arrybox .bookbox {
-  background-color: aqua;
   width: 174.2px;
-  height: 200px;
+  height: 220px;
   margin: 0 5px;
+  text-align: center;
 }
 #book2 > div .arryboxslider .arrybox .bookbox h4 {
-  text-align: left;
   padding-left: 8px;
+  font-size: 1rem;
 }
 #book2 > div .arryboxslider .arrybox .bookbox p {
   text-align: left;

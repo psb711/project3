@@ -235,3 +235,11 @@ bookData2();
 bookData4();
 bookData5();
 bookData6();
+
+
+$(document).ready(function() {
+    $('.bookbox img').on('click', function() {
+      window.location.href = './sub.html';
+    });
+   
+  });
