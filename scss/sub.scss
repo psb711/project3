@@ -31,9 +31,9 @@
             .bookbox {
              
                width: 174.2px;
-               height: 220px;
+               height: 237px;
                margin: 0 5px;
-               text-align: center;
+              text-align: left;
               
 
                h4 {
@@ -46,7 +46,7 @@
 
                p {
                   text-align: left;
-                  padding-left: 28px;
+                  padding-left: 8px;
                }
 
 
@@ -64,7 +64,7 @@ $Lidi: #1e9eff;
 $lidired: rgb(235, 80, 80);
 $lidiLightgray: rgba(120, 120, 120, 0.3);
 .bookbox1 img {
-    width: 155px;
+    width: 124px;
     box-shadow: 2px 2px 5px #333;
 }
 
@@ -674,9 +674,8 @@ button:hover {
 #Description {
 
    width: 95%;
-   height: 6100px+800px;
 
-   margin: 0 auto;
+   margin: 0  auto 150px auto;
 
    h5 {
       font-size: 1.4rem;
@@ -871,6 +870,9 @@ button:hover {
       text-align: left;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+    height: 378px;
+
 
       >li {
 
@@ -879,11 +881,12 @@ button:hover {
          color: $lidigray;
 
          ul {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 0;
-            left: 60PX;
+           display: flex
+;
+    flex-direction: column;
+    position: absolute;
+    top: -2px;
+    left: 48PX;
 
 
             li {
@@ -1234,7 +1237,7 @@ button:hover {
   font-weight: bold;
 }
 
-#AuthorWorks {h6{font-size: 1.4rem;}
+#AuthorWorks {h6{font-size: 1.4rem; margin: 40px 0;}
    @include bookx
 }
 

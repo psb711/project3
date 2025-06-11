@@ -33,6 +33,15 @@ ol {
   font-weight: 800;
   font-size: 1rem;
 }
+#headerbox ul {
+  display: flex;
+}
+#headerbox .sub {
+  display: none;
+}
+#headerbox li {
+  margin: 0 10px;
+}
 
 #headertop {
   height: 60px;
@@ -123,6 +132,15 @@ ol {
 #footerbox {
   height: 300px;
   border-top: 1px solid black;
+}
+#footerbox ul {
+  display: flex;
+}
+#footerbox .sub {
+  display: none;
+}
+#footerbox li {
+  margin: 0 10px;
 }
 #footerbox footer {
   height: 100%;

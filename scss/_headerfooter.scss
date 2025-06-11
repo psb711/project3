@@ -13,6 +13,18 @@ $Lidi: #1e9eff;
       font-weight: 800;
       font-size: 1rem;
    }
+   
+ul {
+   display: flex;
+}
+
+.sub {
+   display: none;
+}
+
+li {
+   margin: 0 10px;
+}
 }
 
 #headertop {
@@ -116,6 +128,18 @@ $Lidi: #1e9eff;
       }
 // 푸터
 #footerbox {
+   // 전체UL하위들공통
+ul {
+   display: flex;
+}
+
+.sub {
+   display: none;
+}
+
+li {
+   margin: 0 10px;
+}
    height: 300px;
    border-top: 1px solid black;
 

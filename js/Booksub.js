@@ -103,8 +103,8 @@ async function bookData1() {
                ? data.documents[0].title.substring(0, 9) + '...'
                : data.documents[0].title
             }</h4>
-
-            
+<p>${data.documents[0].authors}</p>
+            </div>
             </a>`);
       })
 
@@ -135,8 +135,9 @@ async function bookData2() {
                ? data.documents[0].title.substring(0, 9) + '...'
                : data.documents[0].title
             }</h4>
+        <p>${data.documents[0].authors}</p>
 
-            
+            </div>
             </a>`);
       })
 

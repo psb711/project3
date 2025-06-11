@@ -34,6 +34,15 @@ ol {
   font-weight: 800;
   font-size: 1rem;
 }
+#headerbox ul {
+  display: flex;
+}
+#headerbox .sub {
+  display: none;
+}
+#headerbox li {
+  margin: 0 10px;
+}
 
 #headertop {
   height: 60px;
@@ -125,6 +134,15 @@ ol {
   height: 300px;
   border-top: 1px solid black;
 }
+#footerbox ul {
+  display: flex;
+}
+#footerbox .sub {
+  display: none;
+}
+#footerbox li {
+  margin: 0 10px;
+}
 #footerbox footer {
   height: 100%;
   padding: 30px;
@@ -206,7 +224,7 @@ ol {
 }
 
 .bookbox1 img {
-  width: 155px;
+  width: 124px;
   box-shadow: 2px 2px 5px #333;
 }
 
@@ -690,8 +708,7 @@ button:hover {
 
 #Description {
   width: 95%;
-  height: 6900px;
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
 }
 #Description h5 {
   font-size: 1.4rem;
@@ -840,6 +857,8 @@ button:hover {
   text-align: left;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 378px;
 }
 #subtxt3 > ul > li {
   font-size: 0.95rem;
@@ -850,8 +869,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 0;
-  left: 60PX;
+  top: -2px;
+  left: 48PX;
 }
 #subtxt3 > ul > li ul li {
   height: 18PX;
@@ -1143,6 +1162,7 @@ button:hover {
 }
 #AuthorWorks h6 {
   font-size: 1.4rem;
+  margin: 40px 0;
 }
 #AuthorWorks > div {
   height: 230px;
@@ -1163,9 +1183,9 @@ button:hover {
 }
 #AuthorWorks > div .arryboxslider .arrybox .bookbox {
   width: 174.2px;
-  height: 220px;
+  height: 237px;
   margin: 0 5px;
-  text-align: center;
+  text-align: left;
 }
 #AuthorWorks > div .arryboxslider .arrybox .bookbox h4 {
   padding-left: 8px;
@@ -1173,7 +1193,7 @@ button:hover {
 }
 #AuthorWorks > div .arryboxslider .arrybox .bookbox p {
   text-align: left;
-  padding-left: 28px;
+  padding-left: 8px;
 }
 
 #book1 {
@@ -1205,9 +1225,9 @@ button:hover {
 }
 #book1 > div .arryboxslider .arrybox .bookbox {
   width: 174.2px;
-  height: 220px;
+  height: 237px;
   margin: 0 5px;
-  text-align: center;
+  text-align: left;
 }
 #book1 > div .arryboxslider .arrybox .bookbox h4 {
   padding-left: 8px;
@@ -1215,7 +1235,7 @@ button:hover {
 }
 #book1 > div .arryboxslider .arrybox .bookbox p {
   text-align: left;
-  padding-left: 28px;
+  padding-left: 8px;
 }
 
 #book2 {
@@ -1247,9 +1267,9 @@ button:hover {
 }
 #book2 > div .arryboxslider .arrybox .bookbox {
   width: 174.2px;
-  height: 220px;
+  height: 237px;
   margin: 0 5px;
-  text-align: center;
+  text-align: left;
 }
 #book2 > div .arryboxslider .arrybox .bookbox h4 {
   padding-left: 8px;
@@ -1257,7 +1277,7 @@ button:hover {
 }
 #book2 > div .arryboxslider .arrybox .bookbox p {
   text-align: left;
-  padding-left: 28px;
+  padding-left: 8px;
 }
 
 #mainright {
