@@ -116,7 +116,7 @@ bookData1();
 
 async function bookData2() {
    try {
-      const querys = ['빛들의 환대', '사과', '감정수업', '탁영', '파과', '도전', '호랑골동품점', '호의', '사랑', '행복'];
+      const querys = ['넥서스', '총균쇠', '내면소통', '한국요괴도감', '바른마음', '여덟 단어', '군주론', '이야기의탄생', '의', '행복'];
 
 
       querys.forEach(async (query, i) => {
@@ -238,7 +238,7 @@ $(function () {
       if ($slider.is(':animated')) return;
 
       $slider.find('.bookbox:last').prependTo($slider);
-      $slider.css('margin-left', -172.42);
+      $slider.css('margin-left', -172.42); 
       $slider.stop().animate({ marginLeft: 0 }, 700, function () {
          currentIndex--;
          updateButtons();
@@ -248,7 +248,7 @@ $(function () {
    $('#book1 .rightbutton').click(function () {
       if ($slider.is(':animated')) return;
 
-      $slider.stop().animate({ marginLeft: -172.42 }, 700, function () {
+      $slider.stop().animate({ marginLeft: 172.42 }, 700, function () {
          $slider.find('.bookbox:first').appendTo($slider);
          $slider.css({ marginLeft: 0 });
          currentIndex++;
@@ -290,7 +290,7 @@ $(function () {
 
 $(function () {
    const $slider = $('#book2 .arrybox');
-   const totalItems = $slider.find('.arrybox').length;
+   const totalItems = $slider.find('.bookbox').length;
    const visibleCount = 5;
    let currentIndex = 0;
 
@@ -360,7 +360,7 @@ $(function () {
 
 $(function () {
    const $slider = $('#AuthorWorks .arrybox');
-   const totalItems = $slider.find('.arrybox').length;
+   const totalItems = $slider.find('.bookbox').length;
    const visibleCount = 5;
    let currentIndex = 0;
 

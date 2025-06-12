@@ -81,7 +81,7 @@ input:focus {
 
 // 전체버튼공통
 button:hover {
-   cursor: pointer;
+   cursor: pointer; border: 1px solid $Lidi!important;
    ;
 }
 
@@ -1265,18 +1265,20 @@ button:hover {
 
       ul {
          font-weight: 700;
-
+   li:hover{cursor: pointer; }
          li {
             margin-top: 5px;
 
             span:first-child {
                margin-right: 20px;
                color: $lidired;
+            
 
                +span {
                   font-weight: 400;
                   color: $lidigray;
                }
+               +span:hover{color: #000;}
             }
 
          }

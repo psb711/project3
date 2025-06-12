@@ -120,9 +120,12 @@ ol {
 #banner div a p:hover {
   animation: shake 0.3s ease-in-out;
 }
+#banner button:hover {
+  border: none !important;
+  cursor: pointer;
+}
 #banner button {
   all: unset;
-  cursor: pointer;
   float: right;
   margin-right: 55px;
   margin-top: -15px;
@@ -223,6 +226,23 @@ ol {
   color: #aaa8a8;
 }
 
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .bookbox1 img {
   width: 124px;
   box-shadow: 2px 2px 5px #333;
@@ -239,6 +259,7 @@ input:focus {
 
 button:hover {
   cursor: pointer;
+  border: 1px solid #1e9eff !important;
 }
 
 .btnArea {
@@ -1294,6 +1315,9 @@ button:hover {
 #mainright #Lank ul {
   font-weight: 700;
 }
+#mainright #Lank ul li:hover {
+  cursor: pointer;
+}
 #mainright #Lank ul li {
   margin-top: 5px;
 }
@@ -1304,4 +1328,7 @@ button:hover {
 #mainright #Lank ul li span:first-child + span {
   font-weight: 400;
   color: #808080;
+}
+#mainright #Lank ul li span:first-child + span:hover {
+  color: #000;
 }

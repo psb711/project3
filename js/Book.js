@@ -35,7 +35,7 @@ async function bookData0() {
          const divs = $('#book1-1 .bookbox')
 
          divs.eq(i).append(`
-            <a href="">
+            <a href="sub.html">
                <div class="bookbox1">
                   <img src=${data.documents[0].thumbnail}>
                </div>
@@ -78,7 +78,7 @@ async function bookData1() {
             const div = $('.book2box').eq(i).find('.book2box1').last();
             let content = data.documents[j].contents;
             let str = content.substring(0, 40);
-            div.append(`<a href="">
+            div.append(`<a href="sub.html">
                   <div class="book2box1-Thumnail">
                      <img src=${data.documents[j].thumbnail}>
                   </div>
@@ -149,7 +149,7 @@ async function bookData4() {
 
             let appendtag= `
                <div class="TLankbox1">
-                  <a href="">                
+                  <a href="sub.html">                
                      <div class="book2box1-Thumnail"> 
                      <p>${j+1}</p>
                         <img src=${data.documents[j].thumbnail}>
@@ -183,7 +183,7 @@ async function bookData5() {
          const divs = $('#book4-1 .bookbox')
 
          divs.eq(i).append(`
-            <a href="">
+            <a href="sub.html">
                <div class="bookbox1">
                   <img src=${data.documents[0].thumbnail}>
                </div>
@@ -210,7 +210,7 @@ async function bookData6() {
          const divs = $('#book5-1 .bookbox')
 
          divs.eq(i).append(`
-            <a href="">
+            <a href="sub.html">
                <div class="bookbox1">
                   <img src=${data.documents[0].thumbnail}>
                </div>
@@ -237,9 +237,4 @@ bookData5();
 bookData6();
 
 
-$(document).ready(function() {
-    $('.bookbox img').on('click', function() {
-      window.location.href = './sub.html';
-    });
-   
-  });
+

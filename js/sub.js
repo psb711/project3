@@ -60,7 +60,7 @@ $(document).ready(function () {
    const $con = $('.mL')
 
    
-   $(".ML").eq(0).children('ul').show(); 
+   $(".ML").eq(0).show().siblings().hide(); 
    $items.eq(0).css({
       'background-color': '#fff',
       'color': '#000',
@@ -69,8 +69,9 @@ $(document).ready(function () {
 
 
    $items.click(function (e) {
-   
-      $(".ML").not(this).hide();
+      const index = $(this).index();
+      
+      $(".ML").eq(index).show().siblings().hide();
 
       
       $items.css({
@@ -78,10 +79,10 @@ $(document).ready(function () {
          'color': '',
          'border-bottom': ''
       });
-$('#ContentInfoUL li').click(function () {
-    const index = $(this).index(); // 몇 번째 li인지 확인
-    $('#ContentInfoULbottom .ML').hide().eq(index).css('display', 'block');
-  });
+// $('#ContentInfoUL li').click(function () {
+//     const index = $(this).index(); // 몇 번째 li인지 확인
+//     $('#ContentInfoULbottom .ML').hide().eq(index).css('display', 'block');
+//   });
     
      
 
@@ -105,7 +106,7 @@ $(document).ready(function () {
    const $items = $('#AuthorInfoUL > li');
 
    // 초기 설정: 첫 번째 li 열기 및 스타일 적용
-   $('#AuthorInfoULTop li').eq(0).children('ul').show(); // ul 보이기
+   $('#AuthorInfoULTop >li').eq(0).show().siblings().hide();  // ul 보이기
    $items.eq(0).css({
       'background-color': '#fff',
       'color': '#000',
@@ -115,7 +116,8 @@ $(document).ready(function () {
    // 클릭 이벤트 설정
    $items.click(function (e) {
       // 다른 li들의 ul은 닫기
-         $('#AuthorInfoULTop >li').not(this).hide();
+      const index = $(this).index();
+      $('#AuthorInfoULTop >li').eq(index).show().siblings().hide();
 
       // 스타일 초기화
       $items.css({
@@ -125,10 +127,10 @@ $(document).ready(function () {
       });
 
       // 현재 li의 ul 토글
-    $('#AuthorInfoUL > li').click(function () {
-    const index = $(this).index(); // 몇 번째 li인지 확인
-    $('#AuthorInfoULTop> li').hide().eq(index).css('display', 'block');
-  });
+//     $('#AuthorInfoUL >li').click(function () {
+//     const index = $(this).index(); // 몇 번째 li인지 확인
+//     $('#AuthorInfoULTop >li').hide().eq(index).css('display', 'block');
+//   });
 
       // 스타일 적용
       $(this).css({
@@ -140,10 +142,6 @@ $(document).ready(function () {
       e.stopPropagation(); // 이벤트 버블링 방지
    });
 
-   // 내부 버튼 클릭 시 이벤트 전파 방지 (접힘 방지용)
-   $('#ContentInfoUL .More').click(function (e) {
-      e.stopPropagation();
-   });
 });
 
 
@@ -259,3 +257,9 @@ $(document).ready(function () {
     $(this).toggleClass('active3');
   });
 });
+
+$(function () {
+
+  document.getElementById("closeBtn").addEventListener("click", function () {
+    document.getElementById("banner").style.display = "none";
+  });});

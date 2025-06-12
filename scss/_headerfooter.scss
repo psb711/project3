@@ -114,11 +114,11 @@ li {
       top: 750px;
       right: 40px;
    
-      
+        button:hover{border: none !important ; cursor: pointer;}
       button {
          all: unset;
       
-         cursor: pointer;
+        
          float: right;
          margin-right: 55px;
          margin-top: -15px;
@@ -255,4 +255,11 @@ li {
          }
       }
    }
+}
+      @keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-2px); }
+  50%  { transform: translateX(2px); }
+  75%  { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
 }
